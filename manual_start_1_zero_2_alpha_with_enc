@@ -1,0 +1,24 @@
+#!/bin/bash
+
+test_name=$0
+
+logs_dir=$PWD"/logs/${test_name:2}"
+data_dir=$PWD"/data/${test_name:2}"
+
+rm -rf $logs_dir; mkdir $logs_dir
+rm -rf $data_dir; mkdir $data_dir
+
+
+if ! [[ -f enc_key_file ]];
+then
+	dd if=/dev/random bs=1 count=32 of=enc_key_file	#create the encryption file if it doesn't exist
+fi
+
+o="1"
+dgraph zero -w "z$o" --cwd $data_dir &> "$logs_dir/z1" &
+
+o="1"
+dgraph alpha -o $o -p "p$o" -w "w$o" --cwd $data_dir --encryption_key_file "$PWD/enc_key_file" &> "$logs_dir/a$o" &
+
+o="2"
+dgraph alpha -o $o -p "p$o" -w "w$o" --cwd $data_dir --encryption_key_file "$PWD/enc_key_file" &> "$logs_dir/a$o" &

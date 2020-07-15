@@ -1,0 +1,47 @@
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/14 12:03:22 Integration installed: ContextifyFrames
+[Sentry] 2020/07/14 12:03:22 Integration installed: Environment
+[Sentry] 2020/07/14 12:03:22 Integration installed: Modules
+[Sentry] 2020/07/14 12:03:22 Integration installed: IgnoreErrors
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/14 12:03:23 Integration installed: ContextifyFrames
+[Sentry] 2020/07/14 12:03:23 Integration installed: Environment
+[Sentry] 2020/07/14 12:03:23 Integration installed: Modules
+[Sentry] 2020/07/14 12:03:23 Integration installed: IgnoreErrors
+I0714 12:03:23.700644    6472 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
+I0714 12:03:23.702987    6472 run.go:561] HMAC secret loaded successfully.
+I0714 12:03:23.703153    6472 config.go:102] LRU memory (--lru_mb) set to 2048MB, 25% of the total RAM found (8192MB)
+For more information on --lru_mb please read https://docs.dgraph.io/deploy/#config
+I0714 12:03:23.978141    6472 init.go:99] 
+
+Dgraph version   : v20.03.4-rc1-12-g322139c8f
+Dgraph SHA-256   : 7ccfecbb652bc14b2773dd3b8ef60d4238730c7b74eba7f664f85b1e446f4176
+Commit SHA-1     : 322139c8f
+Commit timestamp : 2020-07-13 15:55:04 +0530
+Branch           : new_branch
+Go version       : go1.14.2
+
+For Dgraph official documentation, visit https://docs.dgraph.io.
+For discussions about Dgraph     , visit https://discuss.dgraph.io.
+To say hi to the community       , visit https://dgraph.slack.com.
+
+Licensed variously under the Apache Public License 2.0 and Dgraph Community License.
+Copyright 2015-2020 Dgraph Labs, Inc.
+
+
+I0714 12:03:23.978161    6472 run.go:609] x.Config: {PortOffset:2 QueryEdgeLimit:1000000 NormalizeNodeLimit:10000}
+I0714 12:03:23.978204    6472 run.go:610] x.WorkerConfig: {ExportPath:export NumPendingProposals:256 Tracing:0.01 MyAddr: ZeroAddr:[localhost:5080] RaftId:0 WhiteListedIPRanges:[] MaxRetries:-1 StrictMutations:false AclEnabled:true AbortOlderThan:5m0s SnapshotAfter:10000 ProposedGroupId:0 StartTime:2020-07-14 12:03:23.102523 +0530 IST m=+0.021964029 LudicrousMode:false BadgerKeyFile:}
+I0714 12:03:23.978298    6472 run.go:611] worker.Config: {PostingDir:p2 BadgerTables:mmap BadgerVlog:mmap BadgerKeyFile: BadgerCompressionLevel:3 WALDir:w2 MutationsMode:0 AuthToken: AllottedMemory:2048 HmacSecret:**** AccessJwtTtl:6h0m0s RefreshJwtTtl:720h0m0s AclRefreshInterval:30s}
+I0714 12:03:23.978518    6472 server_state.go:83] Setting Badger Compression Level: 3
+I0714 12:03:23.978529    6472 server_state.go:92] Setting Badger table load option: mmap
+I0714 12:03:23.978536    6472 server_state.go:104] Setting Badger value log load option: mmap
+I0714 12:03:23.978550    6472 server_state.go:149] Opening write-ahead log BadgerDB with options: {Dir:w2 ValueDir:w2 SyncWrites:false TableLoadingMode:1 ValueLogLoadingMode:2 NumVersionsToKeep:1 ReadOnly:false Truncate:true Logger:0x5d2d648 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1048576 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:10485760 MaxBfCacheSize:0 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:10000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:false KeepBlocksInCache:false managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0714 12:03:24.052718    6472 log.go:34] All 0 tables opened in 0s
+I0714 12:03:24.082251    6472 server_state.go:83] Setting Badger Compression Level: 3
+I0714 12:03:24.082333    6472 server_state.go:92] Setting Badger table load option: mmap
+I0714 12:03:24.082385    6472 server_state.go:104] Setting Badger value log load option: mmap
+I0714 12:03:24.082404    6472 server_state.go:173] Opening postings BadgerDB with options: {Dir:p2 ValueDir:p2 SyncWrites:false TableLoadingMode:2 ValueLogLoadingMode:2 NumVersionsToKeep:2147483647 ReadOnly:false Truncate:true Logger:0x5d2d648 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1024 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:1073741824 MaxBfCacheSize:524288000 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:1000000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:true KeepBlocksInCache:true managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0714 12:03:24.161054    6472 log.go:34] All 0 tables opened in 0s
+I0714 12:03:24.183667    6472 groups.go:107] Current Raft Id: 0x0
+2020/07/14 12:03:24 listen tcp 0.0.0.0:8082: bind: address already in use
+2020/07/14 12:03:24 While running server: listen tcp 0.0.0.0:7082: bind: address already in use

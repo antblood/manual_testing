@@ -1,0 +1,94 @@
+[Decoder]: Using assembly version of decoder
+I0714 18:19:55.331025   21356 config.go:113] LRU memory (--lru_mb) set to 2048MB, 25% of the total RAM found (8192MB)
+For more information on --lru_mb please read https://docs.dgraph.io/deploy/#config
+I0714 18:19:55.593019   21356 init.go:98] 
+
+Dgraph version   : v2.0.0-rc1-25-g17ce5d31a
+Dgraph SHA-256   : bb010038d002b2ceef0d348b283a5aff68e2c6dfe3c0a312fcb07a113a10ff73
+Commit SHA-1     : 17ce5d31a
+Commit timestamp : 2020-02-20 15:02:16 -0800
+Branch           : release/v2.0
+Go version       : go1.14.2
+
+For Dgraph official documentation, visit https://docs.dgraph.io.
+For discussions about Dgraph     , visit https://discuss.dgraph.io.
+To say hi to the community       , visit https://dgraph.slack.com.
+
+Licensed variously under the Apache Public License 2.0 and Dgraph Community License.
+Copyright 2015-2018 Dgraph Labs, Inc.
+
+
+I0714 18:19:55.607194   21356 run.go:596] x.Config: {PortOffset:2 QueryEdgeLimit:1000000 NormalizeNodeLimit:10000}
+I0714 18:19:55.607307   21356 run.go:597] x.WorkerConfig: {ExportPath:export NumPendingProposals:256 Tracing:1 MyAddr: ZeroAddr:localhost:5080 RaftId:0 WhiteListedIPRanges:[] MaxRetries:-1 StrictMutations:false AclEnabled:false AbortOlderThan:5m0s SnapshotAfter:10000 ProposedGroupId:0 StartTime:2020-07-14 18:19:55.035852 +0530 IST m=+0.021089175}
+I0714 18:19:55.607461   21356 run.go:598] worker.Config: {PostingDir:p2 BadgerTables:mmap BadgerVlog:mmap BadgerKeyFile: WALDir:w2 MutationsMode:0 AuthToken: AllottedMemory:2048 HmacSecret:[] AccessJwtTtl:0s RefreshJwtTtl:0s AclRefreshInterval:0s}
+I0714 18:19:55.619410   21356 server_state.go:74] Setting Badger table load option: mmap
+I0714 18:19:55.619487   21356 server_state.go:86] Setting Badger value log load option: mmap
+I0714 18:19:55.619532   21356 server_state.go:131] Opening write-ahead log BadgerDB with options: {Dir:w2 ValueDir:w2 SyncWrites:false TableLoadingMode:1 ValueLogLoadingMode:2 NumVersionsToKeep:1 ReadOnly:false Truncate:true Logger:0x5c350e0 Compression:2 EventLogging:true InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1048576 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:true MaxCacheSize:10485760 NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:10000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:1 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s ChecksumVerificationMode:0 managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0714 18:19:55.743145   21356 log.go:34] All 0 tables opened in 1ms
+I0714 18:19:55.811001   21356 server_state.go:74] Setting Badger table load option: mmap
+I0714 18:19:55.811180   21356 server_state.go:86] Setting Badger value log load option: mmap
+I0714 18:19:55.811355   21356 server_state.go:153] Opening postings BadgerDB with options: {Dir:p2 ValueDir:p2 SyncWrites:false TableLoadingMode:2 ValueLogLoadingMode:2 NumVersionsToKeep:2147483647 ReadOnly:false Truncate:true Logger:0x5c350e0 Compression:2 EventLogging:true InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1024 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:true MaxCacheSize:1073741824 NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:1000000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:1 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s ChecksumVerificationMode:0 managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0714 18:19:55.893047   21356 log.go:34] All 0 tables opened in 0s
+I0714 18:19:55.943379   21356 groups.go:104] Current Raft Id: 0x0
+I0714 18:19:55.946591   21356 worker.go:96] Worker listening at address: [::]:7082
+I0714 18:19:55.947959   21356 run.go:476] Bringing up GraphQL HTTP API at 0.0.0.0:8082/graphql
+I0714 18:19:55.948013   21356 run.go:477] Bringing up GraphQL HTTP admin API at 0.0.0.0:8082/admin
+I0714 18:19:55.948070   21356 run.go:508] gRPC server started.  Listening on port 9082
+I0714 18:19:55.948174   21356 run.go:509] HTTP server started.  Listening on port 8082
+I0714 18:19:56.044992   21356 pool.go:160] CONNECTING to localhost:5080
+I0714 18:20:00.121111   21356 groups.go:131] Connected to group zero. Assigned group: 2
+I0714 18:20:00.121744   21356 groups.go:133] Raft Id after connection to Zero: 0x2
+I0714 18:20:00.126340   21356 pool.go:160] CONNECTING to localhost:7080
+I0714 18:20:00.149141   21356 draft.go:76] Node ID: 0x2 with GroupID: 2
+I0714 18:20:00.160381   21356 node.go:145] Setting raft.Config to: &{ID:2 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc0004d6d80 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x5c350e0 DisableProposalForwarding:false}
+I0714 18:20:00.160816   21356 node.go:323] Group 2 found 1 entries
+I0714 18:20:00.160880   21356 draft.go:1463] New Node for group: 2
+I0714 18:20:00.161111   21356 log.go:34] 2 became follower at term 0
+I0714 18:20:00.161235   21356 log.go:34] newRaft 2 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+I0714 18:20:00.161287   21356 log.go:34] 2 became follower at term 1
+I0714 18:20:00.161698   21356 draft.go:806] Found Raft progress: 0
+I0714 18:20:00.162006   21356 groups.go:151] Server is ready
+I0714 18:20:00.162123   21356 groups.go:774] Got address of a Zero leader: localhost:5080
+I0714 18:20:00.162382   21356 groups.go:787] Starting a new membership stream receive from localhost:5080.
+I0714 18:20:00.163210   21356 groups.go:804] Received first state update from Zero: counter:5 groups:<key:1 value:<members:<key:1 value:<id:1 group_id:1 addr:"localhost:7080" leader:true last_update:1594731000 > > > > groups:<key:2 value:<members:<key:2 value:<id:2 group_id:2 addr:"localhost:7082" > > > > zeros:<key:1 value:<id:1 addr:"localhost:5080" leader:true > > maxRaftId:2 
+I0714 18:20:00.172552   21356 node.go:182] Setting conf state to nodes:2 
+I0714 18:20:00.173693   21356 log.go:34] 2 is starting a new election at term 1
+I0714 18:20:00.173719   21356 log.go:34] 2 became pre-candidate at term 1
+I0714 18:20:00.173733   21356 log.go:34] 2 received MsgPreVoteResp from 2 at term 1
+I0714 18:20:00.173758   21356 log.go:34] 2 became candidate at term 2
+I0714 18:20:00.173770   21356 log.go:34] 2 received MsgVoteResp from 2 at term 2
+I0714 18:20:00.173788   21356 log.go:34] 2 became leader at term 2
+I0714 18:20:00.173801   21356 log.go:34] raft.node: 2 elected leader 2 at term 2
+I0714 18:20:00.953453   21356 admin.go:387] No GraphQL schema in Dgraph; serving empty GraphQL API
+I0714 18:20:01.162290   21356 groups.go:855] Leader idx=0x2 of group=2 is connecting to Zero for txn updates
+I0714 18:20:01.166958   21356 groups.go:864] Got Zero leader: localhost:5080
+I0714 18:21:29.308197   21356 backup_ee.go:37] Backup request: group 2 at 2097
+I0714 18:21:29.311743   21356 log.go:34] Dgraph.Backup Created batch of size: 370 B in 940.711µs.
+I0714 18:21:29.311841   21356 log.go:34] Dgraph.Backup Sent 5 keys
+I0714 18:21:29.325063   21356 backup.go:164] Backup complete: group 2 at 2097
+I0714 18:23:06.160023   21356 run.go:639] Caught Ctrl-C. Terminating now (this may take a few seconds)...
+E0714 18:23:06.160370   21356 run.go:388] GRPC listener canceled: accept tcp [::]:9082: use of closed network connection
+E0714 18:23:06.160434   21356 run.go:407] Stopped taking more http(s) requests. Err: accept tcp [::]:8082: use of closed network connection
+I0714 18:23:06.169072   21356 run.go:662] GRPC and HTTP stopped.
+I0714 18:23:06.169103   21356 worker.go:112] Stopping group...
+E0714 18:23:06.164216   21356 groups.go:1092] Error from worker subscribe stream: rpc error: code = Unavailable desc = transport is closing
+W0714 18:23:06.164334   21356 pool.go:254] Connection lost with localhost:7080. Error: rpc error: code = Unavailable desc = transport is closing
+E0714 18:23:06.164649   21356 groups.go:795] Unable to sync memberships. Error: rpc error: code = Unknown desc = Server is being shut down. State: <nil>
+E0714 18:23:06.164759   21356 groups.go:895] Error in oracle delta stream. Error: rpc error: code = Unknown desc = Server is being shut down
+I0714 18:23:06.169692   21356 worker.go:115] Stopping node...
+I0714 18:23:06.169723   21356 draft.go:758] Stopping node.Run
+I0714 18:23:06.170190   21356 draft.go:817] Raft node done.
+I0714 18:23:06.170292   21356 worker.go:118] Stopping worker server...
+E0714 18:23:06.174444   21356 groups.go:1083] Error from alpha client subscribe: rpc error: code = Unavailable desc = all SubConns are in TransientFailure, latest connection error: connection error: desc = "transport: Error while dialing dial tcp [::1]:7080: connect: connection refused"
+I0714 18:23:06.276123   21356 run.go:666] Disposing server state.
+I0714 18:23:06.277315   21356 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefix:[]}
+I0714 18:23:06.277389   21356 log.go:34] Running for level: 0
+I0714 18:23:06.306569   21356 log.go:34] LOG Compact 0->1, del 1 tables, add 1 tables, took 29.137265ms
+I0714 18:23:06.316042   21356 log.go:34] Compaction for level: 0 DONE
+I0714 18:23:06.316119   21356 log.go:34] Force compaction on level 0 done
+I0714 18:23:06.334007   21356 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefix:[]}
+I0714 18:23:06.334065   21356 log.go:34] Running for level: 0
+I0714 18:23:06.359586   21356 log.go:34] LOG Compact 0->1, del 1 tables, add 1 tables, took 25.48455ms
+I0714 18:23:06.360586   21356 log.go:34] Compaction for level: 0 DONE
+I0714 18:23:06.360645   21356 log.go:34] Force compaction on level 0 done
+I0714 18:23:06.371960   21356 run.go:668] Server shutdown. Bye!

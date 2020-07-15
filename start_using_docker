@@ -1,0 +1,9 @@
+#!/bin/bash
+
+test_name=$0
+
+logs_dir=$PWD"/logs/${test_name:2}"
+
+rm -rf $logs_dir; mkdir $logs_dir
+
+dgosx down && dgosx up &> "$logs_dir/docker_logs" & #or docker-compose up (for ubuntu)

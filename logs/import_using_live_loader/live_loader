@@ -1,0 +1,42 @@
+[Decoder]: Using assembly version of decoder
+I0714 18:20:10.430116   21364 init.go:98] 
+
+Dgraph version   : v2.0.0-rc1-25-g17ce5d31a
+Dgraph SHA-256   : bb010038d002b2ceef0d348b283a5aff68e2c6dfe3c0a312fcb07a113a10ff73
+Commit SHA-1     : 17ce5d31a
+Commit timestamp : 2020-02-20 15:02:16 -0800
+Branch           : release/v2.0
+Go version       : go1.14.2
+
+For Dgraph official documentation, visit https://docs.dgraph.io.
+For discussions about Dgraph     , visit https://discuss.dgraph.io.
+To say hi to the community       , visit https://dgraph.slack.com.
+
+Licensed variously under the Apache Public License 2.0 and Dgraph Community License.
+Copyright 2015-2018 Dgraph Labs, Inc.
+
+
+
+Running transaction with dgraph endpoint: 127.0.0.1:9080
+
+Processing schema file "/Users/neerajbattan/go/src/github.com/dgraph-io/foo/run_here/1million.schema"
+Processed schema file "/Users/neerajbattan/go/src/github.com/dgraph-io/foo/run_here/1million.schema"
+
+Found 1 data file(s) to process
+Processing data file "/Users/neerajbattan/go/src/github.com/dgraph-io/foo/run_here/1million.rdf"
+[18:20:18+0530] Elapsed: 05s Txns: 44 N-Quads: 44000 N-Quads/s [last 5s]:  8800 Aborts: 0
+[18:20:23+0530] Elapsed: 10s Txns: 98 N-Quads: 98000 N-Quads/s [last 5s]: 10800 Aborts: 0
+[18:20:28+0530] Elapsed: 15s Txns: 174 N-Quads: 174000 N-Quads/s [last 5s]: 15200 Aborts: 0
+[18:20:33+0530] Elapsed: 20s Txns: 282 N-Quads: 282000 N-Quads/s [last 5s]: 21600 Aborts: 0
+[18:20:38+0530] Elapsed: 25s Txns: 362 N-Quads: 362000 N-Quads/s [last 5s]: 16000 Aborts: 0
+[18:20:43+0530] Elapsed: 30s Txns: 453 N-Quads: 453000 N-Quads/s [last 5s]: 18200 Aborts: 0
+[18:20:48+0530] Elapsed: 35s Txns: 588 N-Quads: 588000 N-Quads/s [last 5s]: 27000 Aborts: 0
+[18:20:53+0530] Elapsed: 40s Txns: 709 N-Quads: 709000 N-Quads/s [last 5s]: 24200 Aborts: 0
+[18:20:58+0530] Elapsed: 45s Txns: 825 N-Quads: 825000 N-Quads/s [last 5s]: 23200 Aborts: 0
+[18:21:03+0530] Elapsed: 50s Txns: 920 N-Quads: 919684 N-Quads/s [last 5s]: 18937 Aborts: 0
+[18:21:08+0530] Elapsed: 55s Txns: 982 N-Quads: 981684 N-Quads/s [last 5s]: 12400 Aborts: 0
+[18:21:13+0530] Elapsed: 01m00s Txns: 1034 N-Quads: 1033684 N-Quads/s [last 5s]: 10400 Aborts: 0
+                                                                                                    Number of TXs run            : 1042
+Number of N-Quads processed  : 1041684
+Time spent                   : 1m3.789132516s
+N-Quads processed per second : 16534

@@ -1,0 +1,305 @@
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/14 20:39:31 Integration installed: ContextifyFrames
+[Sentry] 2020/07/14 20:39:31 Integration installed: Environment
+[Sentry] 2020/07/14 20:39:31 Integration installed: Modules
+[Sentry] 2020/07/14 20:39:31 Integration installed: IgnoreErrors
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/14 20:39:32 Integration installed: ContextifyFrames
+[Sentry] 2020/07/14 20:39:32 Integration installed: Environment
+[Sentry] 2020/07/14 20:39:32 Integration installed: Modules
+[Sentry] 2020/07/14 20:39:32 Integration installed: IgnoreErrors
+I0714 20:39:32.798153   21987 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
+I0714 20:39:33.052583   21987 init.go:99] 
+
+Dgraph version   : v20.03.4-rc1-16-g7922c651a
+Dgraph SHA-256   : d60e217c9696f1d41b3d52719e9906ba5e1e80220b1c6c3e51425b52c3867115
+Commit SHA-1     : 7922c651a
+Commit timestamp : 2020-07-13 15:22:56 -0700
+Branch           : release/v20.03
+Go version       : go1.14.2
+
+For Dgraph official documentation, visit https://docs.dgraph.io.
+For discussions about Dgraph     , visit https://discuss.dgraph.io.
+To say hi to the community       , visit https://dgraph.slack.com.
+
+Licensed variously under the Apache Public License 2.0 and Dgraph Community License.
+Copyright 2015-2020 Dgraph Labs, Inc.
+
+
+I0714 20:39:33.052689   21987 run.go:108] Setting up grpc listener at: 0.0.0.0:5080
+I0714 20:39:33.053078   21987 run.go:108] Setting up http listener at: 0.0.0.0:6080
+badger 2020/07/14 20:39:33 INFO: All 0 tables opened in 0s
+I0714 20:39:33.136437   21987 node.go:148] Setting raft.Config to: &{ID:1 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc0000da4c0 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x5d2e648 DisableProposalForwarding:false}
+I0714 20:39:33.137916   21987 node.go:326] Group 0 found 0 entries
+I0714 20:39:33.138057   21987 log.go:34] 1 became follower at term 0
+I0714 20:39:33.138242   21987 log.go:34] newRaft 1 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+I0714 20:39:33.138272   21987 log.go:34] 1 became follower at term 1
+I0714 20:39:33.138640   21987 run.go:314] Running Dgraph Zero...
+E0714 20:39:33.139300   21987 raft.go:518] While proposing CID: Not Zero leader. Aborting proposal: cid:"613118a1-ee27-4caf-8832-3309396a4504" . Retrying...
+I0714 20:39:33.168698   21987 node.go:185] Setting conf state to nodes:1 
+I0714 20:39:33.223247   21987 raft.go:708] Done applying conf change at 0x1
+I0714 20:39:33.471175   21987 zero.go:422] Got connection request: cluster_info_only:true 
+I0714 20:39:33.471365   21987 log.go:34] 1 no leader at term 1; dropping index reading msg
+I0714 20:39:35.339339   21987 log.go:34] 1 is starting a new election at term 1
+I0714 20:39:35.339360   21987 log.go:34] 1 became pre-candidate at term 1
+I0714 20:39:35.339376   21987 log.go:34] 1 received MsgPreVoteResp from 1 at term 1
+I0714 20:39:35.339399   21987 log.go:34] 1 became candidate at term 2
+I0714 20:39:35.339404   21987 log.go:34] 1 received MsgVoteResp from 1 at term 2
+I0714 20:39:35.339426   21987 log.go:34] 1 became leader at term 2
+I0714 20:39:35.339447   21987 log.go:34] raft.node: 1 elected leader 1 at term 2
+I0714 20:39:35.339479   21987 raft.go:673] I've become the leader, updating leases.
+I0714 20:39:35.339496   21987 assign.go:42] Updated Lease id: 1. Txn Ts: 1
+W0714 20:39:35.471428   21987 node.go:674] [0x1] Read index context timed out
+I0714 20:39:35.471648   21987 zero.go:440] Connected: cluster_info_only:true 
+I0714 20:39:35.471817   21987 zero.go:422] Got connection request: cluster_info_only:true 
+I0714 20:39:35.471926   21987 zero.go:440] Connected: cluster_info_only:true 
+I0714 20:39:35.472954   21987 zero.go:422] Got connection request: addr:"localhost:7082" 
+I0714 20:39:35.473296   21987 pool.go:160] CONNECTING to localhost:7082
+W0714 20:39:35.476804   21987 pool.go:254] Connection lost with localhost:7082. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0714 20:39:35.483001   21987 zero.go:571] Connected: id:1 group_id:1 addr:"localhost:7082" 
+I0714 20:39:35.483125   21987 zero.go:422] Got connection request: addr:"localhost:7081" 
+I0714 20:39:35.483504   21987 pool.go:160] CONNECTING to localhost:7081
+W0714 20:39:35.487645   21987 pool.go:254] Connection lost with localhost:7081. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0714 20:39:35.494625   21987 zero.go:571] Connected: id:2 group_id:2 addr:"localhost:7081" 
+I0714 20:39:36.244452   21987 raft.go:510] CID set for cluster: 7d2999e7-1cbf-49a7-a7db-03b017b099f9
+I0714 20:39:36.258589   21987 license_ee.go:45] Enterprise trial license proposed to the cluster: key:"z1-4158312572951532577" license:<maxNodes:18446744073709551615 expiryTs:1597331376 > 
+I0714 20:47:33.155590   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 20:47:33.155691   21987 tablet.go:213] size_diff 156
+I0714 20:55:33.190686   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 20:55:33.190749   21987 tablet.go:213] size_diff 156
+I0714 21:03:33.202269   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 21:03:33.202321   21987 tablet.go:213] size_diff 156
+I0714 21:11:33.216733   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 21:11:33.216786   21987 tablet.go:213] size_diff 156
+I0714 21:19:33.234023   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 21:19:33.234076   21987 tablet.go:213] size_diff 156
+I0714 21:27:33.251363   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 21:27:33.251397   21987 tablet.go:213] size_diff 156
+I0714 21:35:33.265657   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 21:35:33.265711   21987 tablet.go:213] size_diff 156
+I0714 21:43:33.329038   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 21:43:33.329103   21987 tablet.go:213] size_diff 156
+I0714 21:51:33.340202   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 21:51:33.340255   21987 tablet.go:213] size_diff 156
+I0714 21:59:33.383046   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 21:59:33.383093   21987 tablet.go:213] size_diff 156
+I0714 22:07:33.396735   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 22:07:33.396768   21987 tablet.go:213] size_diff 156
+I0714 22:15:33.435602   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 22:15:33.435644   21987 tablet.go:213] size_diff 156
+I0714 22:23:33.476079   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 22:23:33.476164   21987 tablet.go:213] size_diff 156
+I0714 22:31:33.492188   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 22:31:33.492264   21987 tablet.go:213] size_diff 156
+I0714 22:39:33.506006   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 22:39:33.506076   21987 tablet.go:213] size_diff 156
+I0714 22:47:33.520207   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 22:47:33.520245   21987 tablet.go:213] size_diff 156
+I0714 22:55:33.576457   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 22:55:33.576508   21987 tablet.go:213] size_diff 156
+I0714 23:03:33.590134   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 23:03:33.590251   21987 tablet.go:213] size_diff 156
+I0714 23:11:33.634258   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 23:11:33.634290   21987 tablet.go:213] size_diff 156
+I0714 23:19:33.648362   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 23:19:33.648406   21987 tablet.go:213] size_diff 156
+I0714 23:27:33.686065   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 23:27:33.686117   21987 tablet.go:213] size_diff 156
+I0714 23:35:33.700620   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 23:35:33.700711   21987 tablet.go:213] size_diff 156
+I0714 23:43:33.714737   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 23:43:33.714786   21987 tablet.go:213] size_diff 156
+I0714 23:51:33.728698   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0714 23:51:33.728747   21987 tablet.go:213] size_diff 156
+I0715 04:07:13.427958   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 04:07:13.427990   21987 tablet.go:213] size_diff 156
+I0715 08:24:06.051683   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 08:24:06.051733   21987 tablet.go:213] size_diff 156
+I0715 08:32:06.086439   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 08:32:06.086624   21987 tablet.go:213] size_diff 156
+I0715 08:40:06.110820   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 08:40:06.110889   21987 tablet.go:213] size_diff 156
+I0715 08:48:06.135651   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 08:48:06.135720   21987 tablet.go:213] size_diff 156
+I0715 08:56:06.149597   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 08:56:06.149634   21987 tablet.go:213] size_diff 156
+I0715 09:04:06.180984   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 09:04:06.181036   21987 tablet.go:213] size_diff 156
+I0715 09:12:06.195465   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 09:12:06.195512   21987 tablet.go:213] size_diff 156
+I0715 09:20:06.238124   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 09:20:06.238162   21987 tablet.go:213] size_diff 156
+I0715 09:28:06.250088   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 09:28:06.250139   21987 tablet.go:213] size_diff 156
+I0715 09:36:06.283782   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 09:36:06.283834   21987 tablet.go:213] size_diff 156
+I0715 09:44:06.298631   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 09:44:06.298690   21987 tablet.go:213] size_diff 156
+I0715 09:52:06.335186   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 09:52:06.335232   21987 tablet.go:213] size_diff 156
+I0715 10:00:06.350732   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 10:00:06.350814   21987 tablet.go:213] size_diff 156
+I0715 10:08:06.386378   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 10:08:06.386427   21987 tablet.go:213] size_diff 156
+I0715 10:16:06.400459   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 10:16:06.400557   21987 tablet.go:213] size_diff 156
+I0715 10:24:06.437834   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 10:24:06.437886   21987 tablet.go:213] size_diff 156
+I0715 10:32:06.451878   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 10:32:06.451931   21987 tablet.go:213] size_diff 156
+I0715 10:40:06.479850   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 10:40:06.479894   21987 tablet.go:213] size_diff 156
+I0715 10:48:06.509323   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 10:48:06.509375   21987 tablet.go:213] size_diff 156
+I0715 10:56:06.531941   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 10:56:06.531992   21987 tablet.go:213] size_diff 156
+I0715 11:04:06.573948   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 11:04:06.573997   21987 tablet.go:213] size_diff 156
+I0715 11:12:06.588614   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 11:12:06.588660   21987 tablet.go:213] size_diff 156
+I0715 11:20:06.618094   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 11:20:06.618144   21987 tablet.go:213] size_diff 156

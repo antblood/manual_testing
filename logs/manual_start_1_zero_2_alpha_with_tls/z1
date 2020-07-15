@@ -1,0 +1,83 @@
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/14 12:04:55 Integration installed: ContextifyFrames
+[Sentry] 2020/07/14 12:04:55 Integration installed: Environment
+[Sentry] 2020/07/14 12:04:55 Integration installed: Modules
+[Sentry] 2020/07/14 12:04:55 Integration installed: IgnoreErrors
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/14 12:04:56 Integration installed: ContextifyFrames
+[Sentry] 2020/07/14 12:04:56 Integration installed: Environment
+[Sentry] 2020/07/14 12:04:56 Integration installed: Modules
+[Sentry] 2020/07/14 12:04:56 Integration installed: IgnoreErrors
+I0714 12:04:56.431640    6598 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
+I0714 12:04:56.740885    6598 init.go:99] 
+
+Dgraph version   : v20.03.4-rc1-12-g322139c8f
+Dgraph SHA-256   : 7ccfecbb652bc14b2773dd3b8ef60d4238730c7b74eba7f664f85b1e446f4176
+Commit SHA-1     : 322139c8f
+Commit timestamp : 2020-07-13 15:55:04 +0530
+Branch           : new_branch
+Go version       : go1.14.2
+
+For Dgraph official documentation, visit https://docs.dgraph.io.
+For discussions about Dgraph     , visit https://discuss.dgraph.io.
+To say hi to the community       , visit https://dgraph.slack.com.
+
+Licensed variously under the Apache Public License 2.0 and Dgraph Community License.
+Copyright 2015-2020 Dgraph Labs, Inc.
+
+
+I0714 12:04:56.741128    6598 run.go:108] Setting up grpc listener at: 0.0.0.0:5080
+I0714 12:04:56.741536    6598 run.go:108] Setting up http listener at: 0.0.0.0:6080
+badger 2020/07/14 12:04:56 INFO: All 0 tables opened in 0s
+I0714 12:04:56.945832    6598 node.go:148] Setting raft.Config to: &{ID:1 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc0001500c0 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x5d2d648 DisableProposalForwarding:false}
+I0714 12:04:56.946881    6598 node.go:326] Group 0 found 0 entries
+I0714 12:04:56.947088    6598 log.go:34] 1 became follower at term 0
+I0714 12:04:56.947216    6598 log.go:34] newRaft 1 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+I0714 12:04:56.947237    6598 log.go:34] 1 became follower at term 1
+I0714 12:04:56.947580    6598 run.go:314] Running Dgraph Zero...
+E0714 12:04:56.948457    6598 raft.go:518] While proposing CID: Not Zero leader. Aborting proposal: cid:"d29228e8-ce37-484e-936c-9fa4fdc39d91" . Retrying...
+I0714 12:04:56.971556    6598 node.go:185] Setting conf state to nodes:1 
+I0714 12:04:56.984716    6598 raft.go:708] Done applying conf change at 0x1
+I0714 12:04:57.144458    6598 zero.go:422] Got connection request: cluster_info_only:true 
+I0714 12:04:57.144612    6598 log.go:34] 1 no leader at term 1; dropping index reading msg
+W0714 12:04:59.147324    6598 node.go:674] [0x1] Read index context timed out
+I0714 12:04:59.147380    6598 log.go:34] 1 no leader at term 1; dropping index reading msg
+I0714 12:04:59.948672    6598 log.go:34] 1 is starting a new election at term 1
+I0714 12:04:59.948725    6598 log.go:34] 1 became pre-candidate at term 1
+I0714 12:04:59.948736    6598 log.go:34] 1 received MsgPreVoteResp from 1 at term 1
+I0714 12:04:59.948758    6598 log.go:34] 1 became candidate at term 2
+I0714 12:04:59.948763    6598 log.go:34] 1 received MsgVoteResp from 1 at term 2
+I0714 12:04:59.948783    6598 log.go:34] 1 became leader at term 2
+I0714 12:04:59.948796    6598 log.go:34] raft.node: 1 elected leader 1 at term 2
+I0714 12:04:59.948830    6598 raft.go:673] I've become the leader, updating leases.
+I0714 12:04:59.948844    6598 assign.go:42] Updated Lease id: 1. Txn Ts: 1
+E0714 12:04:59.990309    6598 raft.go:518] While proposing CID: Not Zero leader. Aborting proposal: cid:"5f4d1d2c-05bb-485c-b52d-21e43dc3bf5d" . Retrying...
+W0714 12:05:01.149426    6598 node.go:674] [0x1] Read index context timed out
+I0714 12:05:01.149590    6598 zero.go:440] Connected: cluster_info_only:true 
+I0714 12:05:01.149731    6598 zero.go:422] Got connection request: cluster_info_only:true 
+I0714 12:05:01.149941    6598 zero.go:440] Connected: cluster_info_only:true 
+I0714 12:05:01.150881    6598 zero.go:422] Got connection request: addr:"localhost:7081" 
+I0714 12:05:01.151556    6598 pool.go:160] CONNECTING to localhost:7081
+W0714 12:05:01.154630    6598 pool.go:254] Connection lost with localhost:7081. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0714 12:05:01.163151    6598 zero.go:571] Connected: id:1 group_id:1 addr:"localhost:7081" 
+I0714 12:05:01.163221    6598 zero.go:422] Got connection request: addr:"localhost:7082" 
+I0714 12:05:01.163505    6598 pool.go:160] CONNECTING to localhost:7082
+W0714 12:05:01.166236    6598 pool.go:254] Connection lost with localhost:7082. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0714 12:05:01.174259    6598 zero.go:571] Connected: id:2 group_id:2 addr:"localhost:7082" 
+I0714 12:05:03.003605    6598 raft.go:510] CID set for cluster: 1a65e5a8-5f24-462a-9b88-2e9da93519e9
+I0714 12:05:03.042432    6598 license_ee.go:45] Enterprise trial license proposed to the cluster: key:"z1-4901355295266556852" license:<maxNodes:18446744073709551615 expiryTs:1597300503 > 
+I0714 12:06:18.947588    6598 run.go:277] --- Received terminated signal
+I0714 12:06:18.949780    6598 run.go:277] --- Received terminated signal
+I0714 12:06:18.949803    6598 run.go:286] --- Ignoring interrupt signal.
+I0714 12:06:18.949834    6598 run.go:296] Shutting down...
+E0714 12:06:18.949900    6598 http.go:252] Stopped taking more http(s) requests. Err: accept tcp [::]:6080: use of closed network connection
+I0714 12:06:18.949929    6598 http.go:256] All http(s) requests finished.
+I0714 12:06:18.949966    6598 raft.go:637] Zero Node.Run finished.
+I0714 12:06:18.950014    6598 run.go:146] gRPC server stopped : accept tcp [::]:5080: use of closed network connection
+I0714 12:06:19.216855    6598 run.go:316] All done.
+badger 2020/07/14 12:06:19 INFO: Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+badger 2020/07/14 12:06:19 INFO: Running for level: 0
+badger 2020/07/14 12:06:19 INFO: LOG Compact 0->1, del 1 tables, add 1 tables, took 22.485488ms
+badger 2020/07/14 12:06:19 INFO: Compaction for level: 0 DONE
+badger 2020/07/14 12:06:19 INFO: Force compaction on level 0 done
+[Sentry] 2020/07/14 12:06:19 Buffer flushed successfully.

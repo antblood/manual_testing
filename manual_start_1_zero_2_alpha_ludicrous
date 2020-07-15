@@ -1,0 +1,18 @@
+#!/bin/bash
+
+test_name=$0
+
+logs_dir=$PWD"/logs/${test_name:2}"
+data_dir=$PWD"/data/${test_name:2}"
+
+rm -rf $logs_dir; mkdir $logs_dir
+rm -rf $data_dir; mkdir $data_dir
+
+o="1"
+dgraph zero -w "z$o" --cwd $data_dir &> "$logs_dir/z1" &
+
+o="1"
+dgraph alpha -o $o -p "p$o" -w "w$o" --cwd $data_dir --ludicrous_mode &> "$logs_dir/a$o" &
+
+o="2"
+dgraph alpha -o $o -p "p$o" -w "w$o" --cwd $data_dir --ludicrous_mode &> "$logs_dir/a$o" &
