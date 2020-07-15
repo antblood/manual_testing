@@ -303,3 +303,8 @@ I0715 11:20:06.618094   21987 tablet.go:208]
 Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
 
 I0715 11:20:06.618144   21987 tablet.go:213] size_diff 156
+I0715 11:28:06.630713   21987 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:156}]
+
+I0715 11:28:06.630789   21987 tablet.go:213] size_diff 156
