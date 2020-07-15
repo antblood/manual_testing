@@ -1,0 +1,343 @@
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/15 19:17:49 Integration installed: ContextifyFrames
+[Sentry] 2020/07/15 19:17:49 Integration installed: Environment
+[Sentry] 2020/07/15 19:17:49 Integration installed: Modules
+[Sentry] 2020/07/15 19:17:49 Integration installed: IgnoreErrors
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/15 19:17:50 Integration installed: ContextifyFrames
+[Sentry] 2020/07/15 19:17:50 Integration installed: Environment
+[Sentry] 2020/07/15 19:17:50 Integration installed: Modules
+[Sentry] 2020/07/15 19:17:50 Integration installed: IgnoreErrors
+I0715 19:17:50.371911   32049 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
+I0715 19:17:50.375648   32049 run.go:561] HMAC secret loaded successfully.
+I0715 19:17:50.375869   32049 config.go:102] LRU memory (--lru_mb) set to 2048MB, 25% of the total RAM found (8192MB)
+For more information on --lru_mb please read https://docs.dgraph.io/deploy/#config
+I0715 19:17:50.684349   32049 init.go:99] 
+
+Dgraph version   : v20.03.4-rc2
+Dgraph SHA-256   : 1bcd72d2bbb8d66d83bc37c0ced8caf0cf35a7ffd9c8b60b9f29aa56b5507f16
+Commit SHA-1     : f9401e303
+Commit timestamp : 2020-07-14 20:46:44 -0700
+Branch           : HEAD
+Go version       : go1.14.4
+
+For Dgraph official documentation, visit https://docs.dgraph.io.
+For discussions about Dgraph     , visit https://discuss.dgraph.io.
+To say hi to the community       , visit https://dgraph.slack.com.
+
+Licensed variously under the Apache Public License 2.0 and Dgraph Community License.
+Copyright 2015-2020 Dgraph Labs, Inc.
+
+
+I0715 19:17:50.684370   32049 run.go:609] x.Config: {PortOffset:0 QueryEdgeLimit:1000000 NormalizeNodeLimit:10000}
+I0715 19:17:50.684502   32049 run.go:610] x.WorkerConfig: {ExportPath:export NumPendingProposals:256 Tracing:0.01 MyAddr: ZeroAddr:[localhost:5080] RaftId:0 WhiteListedIPRanges:[] MaxRetries:-1 StrictMutations:false AclEnabled:true AbortOlderThan:5m0s SnapshotAfter:10000 ProposedGroupId:0 StartTime:2020-07-15 19:17:49.890104 +0530 IST m=+0.023803702 LudicrousMode:false BadgerKeyFile:}
+I0715 19:17:50.684590   32049 run.go:611] worker.Config: {PostingDir:p0 BadgerTables:mmap BadgerVlog:mmap BadgerKeyFile: BadgerCompressionLevel:3 WALDir:w0 MutationsMode:0 AuthToken: AllottedMemory:2048 HmacSecret:**** AccessJwtTtl:6h0m0s RefreshJwtTtl:720h0m0s AclRefreshInterval:30s}
+I0715 19:17:50.685627   32049 server_state.go:83] Setting Badger Compression Level: 3
+I0715 19:17:50.685646   32049 server_state.go:92] Setting Badger table load option: mmap
+I0715 19:17:50.685653   32049 server_state.go:104] Setting Badger value log load option: mmap
+I0715 19:17:50.685665   32049 server_state.go:149] Opening write-ahead log BadgerDB with options: {Dir:w0 ValueDir:w0 SyncWrites:false TableLoadingMode:1 ValueLogLoadingMode:2 NumVersionsToKeep:1 ReadOnly:false Truncate:true Logger:0x5d23648 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1048576 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:10485760 MaxBfCacheSize:0 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:10000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:false KeepBlocksInCache:false managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0715 19:17:50.772249   32049 log.go:34] All 0 tables opened in 0s
+I0715 19:17:50.800998   32049 server_state.go:83] Setting Badger Compression Level: 3
+I0715 19:17:50.801073   32049 server_state.go:92] Setting Badger table load option: mmap
+I0715 19:17:50.801118   32049 server_state.go:104] Setting Badger value log load option: mmap
+I0715 19:17:50.801138   32049 server_state.go:173] Opening postings BadgerDB with options: {Dir:p0 ValueDir:p0 SyncWrites:false TableLoadingMode:2 ValueLogLoadingMode:2 NumVersionsToKeep:2147483647 ReadOnly:false Truncate:true Logger:0x5d23648 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1024 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:1073741824 MaxBfCacheSize:524288000 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:1000000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:true KeepBlocksInCache:true managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0715 19:17:50.914910   32049 log.go:34] All 0 tables opened in 0s
+I0715 19:17:50.945048   32049 groups.go:107] Current Raft Id: 0x0
+I0715 19:17:50.948697   32049 worker.go:96] Worker listening at address: [::]:7080
+I0715 19:17:50.951463   32049 run.go:480] Bringing up GraphQL HTTP API at 0.0.0.0:8080/graphql
+I0715 19:17:50.951561   32049 run.go:481] Bringing up GraphQL HTTP admin API at 0.0.0.0:8080/admin
+I0715 19:17:50.952018   32049 run.go:512] gRPC server started.  Listening on port 9080
+I0715 19:17:50.952035   32049 run.go:513] HTTP server started.  Listening on port 8080
+I0715 19:17:51.049852   32049 pool.go:160] CONNECTING to localhost:5080
+I0715 19:17:53.070808   32049 groups.go:135] Connected to group zero. Assigned group: 1
+I0715 19:17:53.070852   32049 groups.go:137] Raft Id after connection to Zero: 0x1
+I0715 19:17:53.072489   32049 pool.go:160] CONNECTING to localhost:7080
+W0715 19:17:53.074791   32049 pool.go:254] Connection lost with localhost:7080. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0715 19:17:53.086226   32049 draft.go:196] Node ID: 0x1 with GroupID: 1
+I0715 19:17:53.086864   32049 node.go:148] Setting raft.Config to: &{ID:1 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc00057e040 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x5d23648 DisableProposalForwarding:false}
+I0715 19:17:53.097630   32049 node.go:326] Group 1 found 0 entries
+I0715 19:17:53.097745   32049 draft.go:1591] New Node for group: 1
+I0715 19:17:53.097874   32049 log.go:34] 1 became follower at term 0
+I0715 19:17:53.097992   32049 log.go:34] newRaft 1 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+I0715 19:17:53.098049   32049 log.go:34] 1 became follower at term 1
+I0715 19:17:53.098309   32049 draft.go:146] Operation started with id: opRollup
+I0715 19:17:53.098455   32049 groups.go:155] Server is ready
+I0715 19:17:53.098531   32049 draft.go:969] Found Raft progress: 0
+I0715 19:17:53.098930   32049 groups.go:782] Got address of a Zero leader: localhost:5080
+I0715 19:17:53.099091   32049 groups.go:796] Starting a new membership stream receive from localhost:5080.
+I0715 19:17:53.100635   32049 groups.go:813] Received first state update from Zero: counter:4 groups:<key:1 value:<members:<key:1 value:<id:1 group_id:1 addr:"localhost:7080" > > > > groups:<key:2 value:<members:<key:2 value:<id:2 group_id:2 addr:"localhost:7081" > > > > zeros:<key:1 value:<id:1 addr:"localhost:5080" leader:true > > maxRaftId:2 
+I0715 19:17:53.101716   32049 pool.go:160] CONNECTING to localhost:7081
+I0715 19:17:53.119338   32049 node.go:185] Setting conf state to nodes:1 
+I0715 19:17:53.119799   32049 log.go:34] 1 is starting a new election at term 1
+I0715 19:17:53.119814   32049 log.go:34] 1 became pre-candidate at term 1
+I0715 19:17:53.119820   32049 log.go:34] 1 received MsgPreVoteResp from 1 at term 1
+I0715 19:17:53.119843   32049 log.go:34] 1 became candidate at term 2
+I0715 19:17:53.119848   32049 log.go:34] 1 received MsgVoteResp from 1 at term 2
+I0715 19:17:53.119901   32049 log.go:34] 1 became leader at term 2
+I0715 19:17:53.119950   32049 log.go:34] raft.node: 1 elected leader 1 at term 2
+I0715 19:17:54.099598   32049 groups.go:865] Leader idx=0x1 of group=1 is connecting to Zero for txn updates
+I0715 19:17:54.099626   32049 groups.go:874] Got Zero leader: localhost:5080
+I0715 19:17:54.136221   32049 groups.go:493] Serving tablet for: dgraph.type
+I0715 19:17:54.194669   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:54.194811   32049 index.go:881] Deleting index for attr dgraph.type and tokenizers []
+I0715 19:17:54.194824   32049 index.go:895] Deleting index for attr dgraph.type and tokenizers [exact]
+I0715 19:17:54.194856   32049 log.go:34] DropPrefix Called
+I0715 19:17:54.194881   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:54.194901   32049 draft.go:112] Operation completed with id: opRollup
+I0715 19:17:54.198856   32049 log.go:34] DropPrefix done
+I0715 19:17:54.198894   32049 log.go:34] Resuming writes
+I0715 19:17:54.198941   32049 log.go:34] DropPrefix Called
+I0715 19:17:54.199093   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:54.201439   32049 log.go:34] DropPrefix done
+I0715 19:17:54.201477   32049 log.go:34] Resuming writes
+I0715 19:17:54.201569   32049 log.go:34] DropPrefix Called
+I0715 19:17:54.201590   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:54.203405   32049 log.go:34] DropPrefix done
+I0715 19:17:54.203473   32049 log.go:34] Resuming writes
+I0715 19:17:54.203485   32049 log.go:34] DropPrefix Called
+I0715 19:17:54.203503   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:54.206861   32049 log.go:34] DropPrefix done
+I0715 19:17:54.206957   32049 log.go:34] Resuming writes
+I0715 19:17:54.315061   32049 log.go:34] All 0 tables opened in 0s
+I0715 19:17:54.342151   32049 log.go:34] Rebuilding index for predicate dgraph.type (1/2): Sent 0 keys
+I0715 19:17:54.354511   32049 log.go:34] Rebuilding index for predicate dgraph.type (2/2): Sent 0 keys
+I0715 19:17:54.354963   32049 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0715 19:17:54.376402   32049 index.go:926] Rebuilding index for attr dgraph.type and tokenizers [exact]
+I0715 19:17:54.421407   32049 groups.go:493] Serving tablet for: dgraph.graphql.schema
+I0715 19:17:54.546461   32049 log.go:34] All 0 tables opened in 0s
+I0715 19:17:54.583009   32049 log.go:34] Rebuilding index for predicate dgraph.type (1/2): Sent 0 keys
+I0715 19:17:54.599326   32049 log.go:34] Rebuilding index for predicate dgraph.type (2/2): Sent 0 keys
+I0715 19:17:54.610445   32049 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0715 19:17:54.625622   32049 mutation.go:190] Done schema update predicate:"dgraph.type" value_type:STRING directive:INDEX tokenizer:"exact" list:true 
+I0715 19:17:54.625868   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:54.627268   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:54.627565   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:54.652728   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:54.664298   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:54.715765   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:54.716086   32049 index.go:881] Deleting index for attr dgraph.graphql.xid and tokenizers []
+I0715 19:17:54.716106   32049 index.go:895] Deleting index for attr dgraph.graphql.xid and tokenizers [exact]
+I0715 19:17:54.716120   32049 log.go:34] DropPrefix Called
+I0715 19:17:54.716137   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:54.958716   32049 log.go:34] Got compaction priority: {level:0 score:1.74 dropPrefixes:[[0 0 18 100 103 114 97 112 104 46 103 114 97 112 104 113 108 46 120 105 100 2 2] [33 98 97 100 103 101 114 33 109 111 118 101 0 0 18 100 103 114 97 112 104 46 103 114 97 112 104 113 108 46 120 105 100 2 2]]}
+I0715 19:17:54.958772   32049 log.go:34] Running for level: 0
+I0715 19:17:54.987250   32049 log.go:34] LOG Compact 0->1, del 1 tables, add 1 tables, took 28.443634ms
+I0715 19:17:54.987433   32049 log.go:34] Compaction for level: 0 DONE
+I0715 19:17:54.987484   32049 log.go:34] DropPrefix done
+I0715 19:17:54.987589   32049 log.go:34] Resuming writes
+I0715 19:17:54.987738   32049 log.go:34] DropPrefix Called
+I0715 19:17:54.987763   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:55.068293   32049 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:17:55.101615   32049 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 33.270318ms
+I0715 19:17:55.101640   32049 log.go:34] DropPrefix done
+I0715 19:17:55.101651   32049 log.go:34] Resuming writes
+I0715 19:17:55.101712   32049 log.go:34] DropPrefix Called
+I0715 19:17:55.101729   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:55.103748   32049 log.go:34] DropPrefix done
+I0715 19:17:55.103831   32049 log.go:34] Resuming writes
+I0715 19:17:55.103847   32049 log.go:34] DropPrefix Called
+I0715 19:17:55.103869   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:55.106326   32049 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:17:55.135350   32049 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 28.942881ms
+I0715 19:17:55.135383   32049 log.go:34] DropPrefix done
+I0715 19:17:55.135409   32049 log.go:34] Resuming writes
+I0715 19:17:55.135499   32049 index.go:926] Rebuilding index for attr dgraph.graphql.xid and tokenizers [exact]
+I0715 19:17:55.244871   32049 log.go:34] All 0 tables opened in 0s
+I0715 19:17:55.275873   32049 log.go:34] Rebuilding index for predicate dgraph.graphql.xid (1/2): Sent 0 keys
+I0715 19:17:55.286167   32049 log.go:34] Rebuilding index for predicate dgraph.graphql.xid (2/2): Sent 0 keys
+I0715 19:17:55.298514   32049 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0715 19:17:55.322242   32049 mutation.go:190] Done schema update predicate:"dgraph.graphql.xid" value_type:STRING directive:INDEX tokenizer:"exact" upsert:true 
+I0715 19:17:55.322340   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:55.323404   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:55.334568   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:55.358402   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:55.358821   32049 index.go:881] Deleting index for attr dgraph.xid and tokenizers []
+I0715 19:17:55.358849   32049 index.go:895] Deleting index for attr dgraph.xid and tokenizers [exact]
+I0715 19:17:55.358873   32049 log.go:34] DropPrefix Called
+I0715 19:17:55.358983   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:55.401197   32049 log.go:34] Got compaction priority: {level:0 score:1.74 dropPrefixes:[[0 0 10 100 103 114 97 112 104 46 120 105 100 2 2] [33 98 97 100 103 101 114 33 109 111 118 101 0 0 10 100 103 114 97 112 104 46 120 105 100 2 2]]}
+I0715 19:17:55.402963   32049 log.go:34] Running for level: 0
+I0715 19:17:55.440208   32049 log.go:34] LOG Compact 0->1, del 2 tables, add 1 tables, took 37.184002ms
+I0715 19:17:55.440255   32049 log.go:34] Compaction for level: 0 DONE
+I0715 19:17:55.440273   32049 log.go:34] DropPrefix done
+I0715 19:17:55.440288   32049 log.go:34] Resuming writes
+I0715 19:17:55.440302   32049 log.go:34] DropPrefix Called
+I0715 19:17:55.440322   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:55.451409   32049 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:17:55.484473   32049 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 32.991993ms
+I0715 19:17:55.484499   32049 log.go:34] DropPrefix done
+I0715 19:17:55.484510   32049 log.go:34] Resuming writes
+I0715 19:17:55.484554   32049 log.go:34] DropPrefix Called
+I0715 19:17:55.484568   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:55.498914   32049 log.go:34] DropPrefix done
+I0715 19:17:55.499059   32049 log.go:34] Resuming writes
+I0715 19:17:55.501001   32049 log.go:34] DropPrefix Called
+I0715 19:17:55.501372   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:55.513424   32049 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:17:55.547939   32049 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 34.464574ms
+I0715 19:17:55.547997   32049 log.go:34] DropPrefix done
+I0715 19:17:55.548009   32049 log.go:34] Resuming writes
+I0715 19:17:55.548416   32049 index.go:926] Rebuilding index for attr dgraph.xid and tokenizers [exact]
+I0715 19:17:55.746872   32049 log.go:34] All 0 tables opened in 0s
+I0715 19:17:55.764988   32049 log.go:34] Rebuilding index for predicate dgraph.xid (1/2): Sent 0 keys
+I0715 19:17:55.778247   32049 log.go:34] Rebuilding index for predicate dgraph.xid (2/2): Sent 0 keys
+I0715 19:17:55.778651   32049 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0715 19:17:55.808803   32049 mutation.go:190] Done schema update predicate:"dgraph.xid" value_type:STRING directive:INDEX tokenizer:"exact" upsert:true 
+I0715 19:17:55.808874   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:55.810296   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:55.810568   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:55.840671   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:55.849605   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:55.898135   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:55.898359   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:55.938474   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:55.938743   32049 index.go:1084] Deleting reverse index for dgraph.user.group
+I0715 19:17:55.938807   32049 log.go:34] DropPrefix Called
+I0715 19:17:55.938949   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:56.022338   32049 log.go:34] Got compaction priority: {level:0 score:1.74 dropPrefixes:[[0 0 17 100 103 114 97 112 104 46 117 115 101 114 46 103 114 111 117 112 4] [33 98 97 100 103 101 114 33 109 111 118 101 0 0 17 100 103 114 97 112 104 46 117 115 101 114 46 103 114 111 117 112 4]]}
+I0715 19:17:56.023103   32049 log.go:34] Running for level: 0
+I0715 19:17:56.052218   32049 log.go:34] LOG Compact 0->1, del 2 tables, add 1 tables, took 29.073939ms
+I0715 19:17:56.052809   32049 log.go:34] Compaction for level: 0 DONE
+I0715 19:17:56.052839   32049 log.go:34] DropPrefix done
+I0715 19:17:56.053687   32049 log.go:34] Resuming writes
+I0715 19:17:56.054687   32049 log.go:34] DropPrefix Called
+I0715 19:17:56.054876   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:56.262291   32049 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:17:56.296760   32049 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 34.148736ms
+I0715 19:17:56.296794   32049 log.go:34] DropPrefix done
+I0715 19:17:56.296808   32049 log.go:34] Resuming writes
+I0715 19:17:56.576786   32049 log.go:34] All 0 tables opened in 0s
+I0715 19:17:56.588879   32049 log.go:34] Rebuilding index for predicate dgraph.user.group (1/2): Sent 0 keys
+I0715 19:17:56.606401   32049 log.go:34] Rebuilding index for predicate dgraph.user.group (2/2): Sent 0 keys
+I0715 19:17:56.609280   32049 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0715 19:17:56.622203   32049 index.go:1095] Rebuilding reverse index for dgraph.user.group
+I0715 19:17:56.897233   32049 log.go:34] All 0 tables opened in 0s
+I0715 19:17:56.919912   32049 log.go:34] Rebuilding index for predicate dgraph.user.group (1/2): Sent 0 keys
+I0715 19:17:56.935048   32049 log.go:34] Rebuilding index for predicate dgraph.user.group (2/2): Sent 0 keys
+I0715 19:17:56.937544   32049 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0715 19:17:56.953793   32049 mutation.go:190] Done schema update predicate:"dgraph.user.group" value_type:UID directive:REVERSE list:true 
+I0715 19:17:56.953964   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:56.955219   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:56.955674   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:57.012330   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:57.071538   32049 log.go:34] All 0 tables opened in 0s
+I0715 19:17:57.085663   32049 log.go:34] Rebuilding index for predicate dgraph.acl.rule (1/2): Sent 0 keys
+I0715 19:17:57.097410   32049 log.go:34] Rebuilding index for predicate dgraph.acl.rule (2/2): Sent 0 keys
+I0715 19:17:57.100234   32049 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0715 19:17:57.127565   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:57.128681   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:57.129058   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:57.146641   32049 admin.go:577] No GraphQL schema in Dgraph; serving empty GraphQL API
+I0715 19:17:57.169772   32049 groups.go:493] Serving tablet for: dgraph.rule.predicate
+I0715 19:17:57.170619   32049 admin.go:354] Updating GraphQL schema from subscription.
+E0715 19:17:57.170737   32049 admin.go:384] Error processing GraphQL schema: input: No schema specified.  
+I0715 19:17:57.204050   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:57.204122   32049 index.go:881] Deleting index for attr dgraph.rule.predicate and tokenizers []
+I0715 19:17:57.204139   32049 index.go:895] Deleting index for attr dgraph.rule.predicate and tokenizers [exact]
+I0715 19:17:57.204160   32049 log.go:34] DropPrefix Called
+I0715 19:17:57.204182   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:57.241195   32049 log.go:34] Got compaction priority: {level:0 score:1.74 dropPrefixes:[[0 0 21 100 103 114 97 112 104 46 114 117 108 101 46 112 114 101 100 105 99 97 116 101 2 2] [33 98 97 100 103 101 114 33 109 111 118 101 0 0 21 100 103 114 97 112 104 46 114 117 108 101 46 112 114 101 100 105 99 97 116 101 2 2]]}
+I0715 19:17:57.241245   32049 log.go:34] Running for level: 0
+I0715 19:17:57.269481   32049 log.go:34] LOG Compact 0->1, del 2 tables, add 1 tables, took 28.199994ms
+I0715 19:17:57.269549   32049 log.go:34] Compaction for level: 0 DONE
+I0715 19:17:57.269587   32049 log.go:34] DropPrefix done
+I0715 19:17:57.269605   32049 log.go:34] Resuming writes
+I0715 19:17:57.269629   32049 log.go:34] DropPrefix Called
+I0715 19:17:57.269657   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:57.278656   32049 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:17:57.303999   32049 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 25.291638ms
+I0715 19:17:57.304032   32049 log.go:34] DropPrefix done
+I0715 19:17:57.304047   32049 log.go:34] Resuming writes
+I0715 19:17:57.304095   32049 log.go:34] DropPrefix Called
+I0715 19:17:57.304119   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:57.318899   32049 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:17:57.346778   32049 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 27.817169ms
+I0715 19:17:57.346830   32049 log.go:34] DropPrefix done
+I0715 19:17:57.346853   32049 log.go:34] Resuming writes
+I0715 19:17:57.346881   32049 log.go:34] DropPrefix Called
+I0715 19:17:57.346917   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:17:57.357738   32049 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:17:57.380981   32049 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 23.185224ms
+I0715 19:17:57.381015   32049 log.go:34] DropPrefix done
+I0715 19:17:57.381032   32049 log.go:34] Resuming writes
+I0715 19:17:57.381286   32049 index.go:926] Rebuilding index for attr dgraph.rule.predicate and tokenizers [exact]
+I0715 19:17:57.583532   32049 log.go:34] All 0 tables opened in 0s
+I0715 19:17:57.623525   32049 log.go:34] Rebuilding index for predicate dgraph.rule.predicate (1/2): Sent 0 keys
+I0715 19:17:57.641793   32049 log.go:34] Rebuilding index for predicate dgraph.rule.predicate (2/2): Sent 0 keys
+I0715 19:17:57.653183   32049 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0715 19:17:57.683660   32049 mutation.go:190] Done schema update predicate:"dgraph.rule.predicate" value_type:STRING directive:INDEX tokenizer:"exact" upsert:true 
+I0715 19:17:57.683804   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:57.685951   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:57.689870   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:57.731375   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:57.731633   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:57.734126   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:17:57.734325   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:17:58.265497   32049 access_ee.go:429] Unable to upsert the guardian group. Error: while upserting group with id guardians: rpc error: code = Aborted desc = Transaction has been aborted. Please retry
+I0715 19:17:58.421008   32049 access_ee.go:387] Successfully upserted the guardian group
+I0715 19:17:58.657845   32049 access_ee.go:440] Unable to upsert the groot account. Error: while upserting user with id groot: rpc error: code = Aborted desc = Transaction has been aborted. Please retry
+I0715 19:17:58.803119   32049 access_ee.go:421] Successfully upserted groot account
+I0715 19:18:04.628845   32049 draft.go:146] Operation started with id: opRollup
+I0715 19:18:11.542440   32049 access_ee.go:60] Login request from: 127.0.0.1:64426
+I0715 19:18:11.561925   32049 access_ee.go:60] Login request from: 127.0.0.1:64427
+E0715 19:18:11.562002   32049 access_ee.go:69] Authentication from address 127.0.0.1:64427 failed: invalid login request: the password should not be empty
+I0715 19:18:11.657905   32049 access_ee.go:72] groot logged in successfully
+I0715 19:18:17.110296   32049 groups.go:493] Serving tablet for: name
+I0715 19:18:22.778724   32049 health.go:32] Got health request
+I0715 19:18:37.642919   32049 http.go:560] Got alter request via HTTP from 127.0.0.1:64463
+I0715 19:18:37.643276   32049 server.go:137] Received ALTER op: schema:"<name>: string @index(term) ." 
+I0715 19:18:37.645015   32049 server.go:268] Got schema: &{Preds:[predicate:"name" value_type:STRING directive:INDEX tokenizer:"term" ] Types:[]}
+I0715 19:18:37.672191   32049 draft.go:146] Operation started with id: opIndexing
+I0715 19:18:37.672271   32049 index.go:881] Deleting index for attr name and tokenizers []
+I0715 19:18:37.672284   32049 index.go:895] Deleting index for attr name and tokenizers [term]
+I0715 19:18:37.672299   32049 log.go:34] DropPrefix Called
+I0715 19:18:37.672317   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:18:37.672334   32049 draft.go:112] Operation completed with id: opRollup
+I0715 19:18:37.815861   32049 log.go:34] Got compaction priority: {level:0 score:1.74 dropPrefixes:[[0 0 4 110 97 109 101 2 1] [33 98 97 100 103 101 114 33 109 111 118 101 0 0 4 110 97 109 101 2 1]]}
+I0715 19:18:37.815916   32049 log.go:34] Running for level: 0
+I0715 19:18:37.852961   32049 log.go:34] LOG Compact 0->1, del 2 tables, add 1 tables, took 36.998171ms
+I0715 19:18:37.853072   32049 log.go:34] Compaction for level: 0 DONE
+I0715 19:18:37.853150   32049 log.go:34] DropPrefix done
+I0715 19:18:37.853297   32049 log.go:34] Resuming writes
+I0715 19:18:37.853345   32049 log.go:34] DropPrefix Called
+I0715 19:18:37.853432   32049 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:18:37.990329   32049 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:18:38.016455   32049 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 26.014125ms
+I0715 19:18:38.016499   32049 log.go:34] DropPrefix done
+I0715 19:18:38.016519   32049 log.go:34] Resuming writes
+I0715 19:18:38.016606   32049 index.go:926] Rebuilding index for attr name and tokenizers [term]
+I0715 19:18:38.074256   32049 log.go:34] All 0 tables opened in 0s
+I0715 19:18:38.102039   32049 log.go:34] Rebuilding index for predicate name (1/2): Created batch of size: 83 B in 232.662µs.
+I0715 19:18:38.102260   32049 log.go:34] Rebuilding index for predicate name (1/2): Sent 2 keys
+I0715 19:18:38.114956   32049 log.go:34] Rebuilding index for predicate name (2/2): Created batch of size: 89 B in 74.96µs.
+I0715 19:18:38.114976   32049 log.go:34] Rebuilding index for predicate name (2/2): Sent 2 keys
+I0715 19:18:38.153679   32049 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0715 19:18:38.153759   32049 log.go:34] Running for level: 0
+I0715 19:18:38.180725   32049 log.go:34] LOG Compact 0->1, del 1 tables, add 1 tables, took 26.911871ms
+I0715 19:18:38.180931   32049 log.go:34] Compaction for level: 0 DONE
+I0715 19:18:38.181135   32049 log.go:34] Force compaction on level 0 done
+I0715 19:18:38.200721   32049 mutation.go:190] Done schema update predicate:"name" value_type:STRING directive:INDEX tokenizer:"term" 
+I0715 19:18:38.201467   32049 draft.go:112] Operation completed with id: opIndexing
+I0715 19:18:40.018052   32049 server.go:287] ALTER op: schema:"<name>: string @index(term) ."  done
+I0715 19:18:48.204477   32049 draft.go:146] Operation started with id: opRollup
+I0715 19:18:57.683467   32049 run.go:652] Caught Ctrl-C. Terminating now (this may take a few seconds)...
+E0715 19:18:57.683620   32049 run.go:391] GRPC listener canceled: accept tcp [::]:9080: use of closed network connection
+E0715 19:18:57.683708   32049 run.go:410] Stopped taking more http(s) requests. Err: accept tcp [::]:8080: use of closed network connection
+I0715 19:18:57.683781   32049 run.go:675] GRPC and HTTP stopped.
+I0715 19:18:57.683816   32049 worker.go:112] Stopping group...
+I0715 19:18:57.683869   32049 worker.go:116] Updating RAFT state before shutting down...
+I0715 19:18:57.684002   32049 worker.go:121] Stopping node...
+E0715 19:18:57.684085   32049 groups.go:804] Unable to sync memberships. Error: rpc error: code = Canceled desc = context canceled. State: <nil>
+E0715 19:18:57.684096   32049 groups.go:905] Error in oracle delta stream. Error: rpc error: code = Canceled desc = context canceled
+I0715 19:18:57.684179   32049 draft.go:911] Stopping node.Run
+I0715 19:18:57.684262   32049 draft.go:980] Raft node done.
+I0715 19:18:57.684303   32049 run.go:652] Caught Ctrl-C. Terminating now (this may take a few seconds)...
+I0715 19:18:57.694784   32049 draft.go:173] Stopped all ongoing registered tasks.
+I0715 19:18:57.694886   32049 worker.go:124] Stopping raftwal store...
+I0715 19:18:57.694910   32049 worker.go:127] Stopping worker server...
+I0715 19:18:57.695175   32049 draft.go:112] Operation completed with id: opRollup
+W0715 19:18:57.695935   32049 pool.go:254] Connection lost with localhost:7081. Error: rpc error: code = Unavailable desc = transport is closing
+E0715 19:18:57.695943   32049 groups.go:1105] Error from worker subscribe stream: rpc error: code = Unavailable desc = transport is closing
+I0715 19:18:57.696174   32049 run.go:679] Disposing server state.
+I0715 19:18:57.715886   32049 run.go:652] Caught Ctrl-C. Terminating now (this may take a few seconds)...
+I0715 19:18:57.715928   32049 run.go:654] Signaled thrice. Aborting!

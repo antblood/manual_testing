@@ -1,0 +1,80 @@
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/15 19:34:01 Integration installed: ContextifyFrames
+[Sentry] 2020/07/15 19:34:01 Integration installed: Environment
+[Sentry] 2020/07/15 19:34:01 Integration installed: Modules
+[Sentry] 2020/07/15 19:34:01 Integration installed: IgnoreErrors
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/15 19:34:01 Integration installed: ContextifyFrames
+[Sentry] 2020/07/15 19:34:01 Integration installed: Environment
+[Sentry] 2020/07/15 19:34:01 Integration installed: Modules
+[Sentry] 2020/07/15 19:34:01 Integration installed: IgnoreErrors
+I0715 19:34:02.171692   32622 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
+I0715 19:34:02.174274   32622 config.go:102] LRU memory (--lru_mb) set to 2048MB, 25% of the total RAM found (8192MB)
+For more information on --lru_mb please read https://docs.dgraph.io/deploy/#config
+I0715 19:34:02.405945   32622 init.go:99] 
+
+Dgraph version   : v20.03.4-rc2
+Dgraph SHA-256   : 1bcd72d2bbb8d66d83bc37c0ced8caf0cf35a7ffd9c8b60b9f29aa56b5507f16
+Commit SHA-1     : f9401e303
+Commit timestamp : 2020-07-14 20:46:44 -0700
+Branch           : HEAD
+Go version       : go1.14.4
+
+For Dgraph official documentation, visit https://docs.dgraph.io.
+For discussions about Dgraph     , visit https://discuss.dgraph.io.
+To say hi to the community       , visit https://dgraph.slack.com.
+
+Licensed variously under the Apache Public License 2.0 and Dgraph Community License.
+Copyright 2015-2020 Dgraph Labs, Inc.
+
+
+I0715 19:34:02.405971   32622 run.go:609] x.Config: {PortOffset:1 QueryEdgeLimit:1000000 NormalizeNodeLimit:10000}
+I0715 19:34:02.406107   32622 run.go:610] x.WorkerConfig: {ExportPath:export NumPendingProposals:256 Tracing:0.01 MyAddr: ZeroAddr:[localhost:5080] RaftId:0 WhiteListedIPRanges:[] MaxRetries:-1 StrictMutations:false AclEnabled:false AbortOlderThan:5m0s SnapshotAfter:10000 ProposedGroupId:0 StartTime:2020-07-15 19:34:01.651665 +0530 IST m=+0.020252721 LudicrousMode:false BadgerKeyFile:}
+I0715 19:34:02.406331   32622 run.go:611] worker.Config: {PostingDir:p1 BadgerTables:mmap BadgerVlog:mmap BadgerKeyFile: BadgerCompressionLevel:3 WALDir:w1 MutationsMode:0 AuthToken: AllottedMemory:2048 HmacSecret:**** AccessJwtTtl:0s RefreshJwtTtl:0s AclRefreshInterval:0s}
+I0715 19:34:02.406787   32622 server_state.go:83] Setting Badger Compression Level: 3
+I0715 19:34:02.406803   32622 server_state.go:92] Setting Badger table load option: mmap
+I0715 19:34:02.406921   32622 server_state.go:104] Setting Badger value log load option: mmap
+I0715 19:34:02.407010   32622 server_state.go:149] Opening write-ahead log BadgerDB with options: {Dir:w1 ValueDir:w1 SyncWrites:false TableLoadingMode:1 ValueLogLoadingMode:2 NumVersionsToKeep:1 ReadOnly:false Truncate:true Logger:0x5d23648 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1048576 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:10485760 MaxBfCacheSize:0 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:10000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:false KeepBlocksInCache:false managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0715 19:34:02.507355   32622 log.go:34] All 0 tables opened in 0s
+I0715 19:34:02.567051   32622 server_state.go:83] Setting Badger Compression Level: 3
+I0715 19:34:02.567083   32622 server_state.go:92] Setting Badger table load option: mmap
+I0715 19:34:02.567095   32622 server_state.go:104] Setting Badger value log load option: mmap
+I0715 19:34:02.567110   32622 server_state.go:173] Opening postings BadgerDB with options: {Dir:p1 ValueDir:p1 SyncWrites:false TableLoadingMode:2 ValueLogLoadingMode:2 NumVersionsToKeep:2147483647 ReadOnly:false Truncate:true Logger:0x5d23648 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1024 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:1073741824 MaxBfCacheSize:524288000 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:1000000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:true KeepBlocksInCache:true managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0715 19:34:02.680064   32622 log.go:34] All 0 tables opened in 0s
+I0715 19:34:02.724638   32622 groups.go:107] Current Raft Id: 0x0
+I0715 19:34:02.727337   32622 worker.go:96] Worker listening at address: [::]:7081
+I0715 19:34:02.729058   32622 run.go:480] Bringing up GraphQL HTTP API at 0.0.0.0:8081/graphql
+I0715 19:34:02.729081   32622 run.go:481] Bringing up GraphQL HTTP admin API at 0.0.0.0:8081/admin
+I0715 19:34:02.729234   32622 run.go:512] gRPC server started.  Listening on port 9081
+I0715 19:34:02.729254   32622 run.go:513] HTTP server started.  Listening on port 8081
+I0715 19:34:02.825405   32622 pool.go:160] CONNECTING to localhost:5080
+I0715 19:34:06.871022   32622 groups.go:135] Connected to group zero. Assigned group: 2
+I0715 19:34:06.871043   32622 groups.go:137] Raft Id after connection to Zero: 0x2
+I0715 19:34:06.872582   32622 pool.go:160] CONNECTING to localhost:7080
+I0715 19:34:06.874892   32622 draft.go:196] Node ID: 0x2 with GroupID: 2
+I0715 19:34:06.874960   32622 node.go:148] Setting raft.Config to: &{ID:2 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc0001b23c0 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x5d23648 DisableProposalForwarding:false}
+I0715 19:34:06.875099   32622 node.go:326] Group 2 found 0 entries
+I0715 19:34:06.875168   32622 draft.go:1591] New Node for group: 2
+I0715 19:34:06.875249   32622 log.go:34] 2 became follower at term 0
+I0715 19:34:06.875316   32622 log.go:34] newRaft 2 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+I0715 19:34:06.875325   32622 log.go:34] 2 became follower at term 1
+I0715 19:34:06.875368   32622 draft.go:146] Operation started with id: opRollup
+I0715 19:34:06.875453   32622 groups.go:155] Server is ready
+I0715 19:34:06.875728   32622 draft.go:969] Found Raft progress: 0
+I0715 19:34:06.875855   32622 groups.go:782] Got address of a Zero leader: localhost:5080
+I0715 19:34:06.876550   32622 groups.go:796] Starting a new membership stream receive from localhost:5080.
+I0715 19:34:06.877978   32622 groups.go:813] Received first state update from Zero: counter:4 groups:<key:1 value:<members:<key:1 value:<id:1 group_id:1 addr:"localhost:7080" > > > > groups:<key:2 value:<members:<key:2 value:<id:2 group_id:2 addr:"localhost:7081" > > > > zeros:<key:1 value:<id:1 addr:"localhost:5080" leader:true > > maxRaftId:2 
+I0715 19:34:06.888735   32622 node.go:185] Setting conf state to nodes:2 
+I0715 19:34:06.889315   32622 log.go:34] 2 is starting a new election at term 1
+I0715 19:34:06.889350   32622 log.go:34] 2 became pre-candidate at term 1
+I0715 19:34:06.889360   32622 log.go:34] 2 received MsgPreVoteResp from 2 at term 1
+I0715 19:34:06.889399   32622 log.go:34] 2 became candidate at term 2
+I0715 19:34:06.889409   32622 log.go:34] 2 received MsgVoteResp from 2 at term 2
+I0715 19:34:06.889437   32622 log.go:34] 2 became leader at term 2
+I0715 19:34:06.889459   32622 log.go:34] raft.node: 2 elected leader 2 at term 2
+I0715 19:34:07.783997   32622 admin.go:568] Error reading GraphQL schema: Dgraph execution failed because cannot retrieve predicate information: No connection exists.
+I0715 19:34:07.877592   32622 groups.go:865] Leader idx=0x2 of group=2 is connecting to Zero for txn updates
+I0715 19:34:07.877613   32622 groups.go:874] Got Zero leader: localhost:5080
+I0715 19:34:12.887807   32622 admin.go:577] No GraphQL schema in Dgraph; serving empty GraphQL API
+I0715 19:34:12.913334   32622 admin.go:354] Updating GraphQL schema from subscription.
+E0715 19:34:12.913793   32622 admin.go:384] Error processing GraphQL schema: input: No schema specified.  

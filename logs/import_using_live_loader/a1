@@ -1,0 +1,223 @@
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/15 19:25:58 Integration installed: ContextifyFrames
+[Sentry] 2020/07/15 19:25:58 Integration installed: Environment
+[Sentry] 2020/07/15 19:25:58 Integration installed: Modules
+[Sentry] 2020/07/15 19:25:58 Integration installed: IgnoreErrors
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/15 19:25:59 Integration installed: ContextifyFrames
+[Sentry] 2020/07/15 19:25:59 Integration installed: Environment
+[Sentry] 2020/07/15 19:25:59 Integration installed: Modules
+[Sentry] 2020/07/15 19:25:59 Integration installed: IgnoreErrors
+I0715 19:25:59.567745   32420 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
+I0715 19:25:59.569084   32420 config.go:102] LRU memory (--lru_mb) set to 2048MB, 25% of the total RAM found (8192MB)
+For more information on --lru_mb please read https://docs.dgraph.io/deploy/#config
+I0715 19:25:59.824319   32420 init.go:99] 
+
+Dgraph version   : v20.03.4-rc2
+Dgraph SHA-256   : 1bcd72d2bbb8d66d83bc37c0ced8caf0cf35a7ffd9c8b60b9f29aa56b5507f16
+Commit SHA-1     : f9401e303
+Commit timestamp : 2020-07-14 20:46:44 -0700
+Branch           : HEAD
+Go version       : go1.14.4
+
+For Dgraph official documentation, visit https://docs.dgraph.io.
+For discussions about Dgraph     , visit https://discuss.dgraph.io.
+To say hi to the community       , visit https://dgraph.slack.com.
+
+Licensed variously under the Apache Public License 2.0 and Dgraph Community License.
+Copyright 2015-2020 Dgraph Labs, Inc.
+
+
+I0715 19:25:59.824358   32420 run.go:609] x.Config: {PortOffset:1 QueryEdgeLimit:1000000 NormalizeNodeLimit:10000}
+I0715 19:25:59.824459   32420 run.go:610] x.WorkerConfig: {ExportPath:export NumPendingProposals:256 Tracing:0.01 MyAddr: ZeroAddr:[localhost:5080] RaftId:0 WhiteListedIPRanges:[] MaxRetries:-1 StrictMutations:false AclEnabled:false AbortOlderThan:5m0s SnapshotAfter:10000 ProposedGroupId:0 StartTime:2020-07-15 19:25:59.047454 +0530 IST m=+0.022393509 LudicrousMode:false BadgerKeyFile:}
+I0715 19:25:59.824588   32420 run.go:611] worker.Config: {PostingDir:p1 BadgerTables:mmap BadgerVlog:mmap BadgerKeyFile: BadgerCompressionLevel:3 WALDir:w1 MutationsMode:0 AuthToken: AllottedMemory:2048 HmacSecret:**** AccessJwtTtl:0s RefreshJwtTtl:0s AclRefreshInterval:0s}
+I0715 19:25:59.837222   32420 server_state.go:83] Setting Badger Compression Level: 3
+I0715 19:25:59.837430   32420 server_state.go:92] Setting Badger table load option: mmap
+I0715 19:25:59.837468   32420 server_state.go:104] Setting Badger value log load option: mmap
+I0715 19:25:59.837517   32420 server_state.go:149] Opening write-ahead log BadgerDB with options: {Dir:w1 ValueDir:w1 SyncWrites:false TableLoadingMode:1 ValueLogLoadingMode:2 NumVersionsToKeep:1 ReadOnly:false Truncate:true Logger:0x5d23648 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1048576 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:10485760 MaxBfCacheSize:0 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:10000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:false KeepBlocksInCache:false managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0715 19:25:59.945381   32420 log.go:34] All 0 tables opened in 0s
+I0715 19:25:59.989361   32420 server_state.go:83] Setting Badger Compression Level: 3
+I0715 19:25:59.989436   32420 server_state.go:92] Setting Badger table load option: mmap
+I0715 19:25:59.989452   32420 server_state.go:104] Setting Badger value log load option: mmap
+I0715 19:25:59.989467   32420 server_state.go:173] Opening postings BadgerDB with options: {Dir:p1 ValueDir:p1 SyncWrites:false TableLoadingMode:2 ValueLogLoadingMode:2 NumVersionsToKeep:2147483647 ReadOnly:false Truncate:true Logger:0x5d23648 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1024 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:1073741824 MaxBfCacheSize:524288000 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:1000000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:true KeepBlocksInCache:true managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0715 19:26:00.112060   32420 log.go:34] All 0 tables opened in 0s
+I0715 19:26:00.127825   32420 groups.go:107] Current Raft Id: 0x0
+I0715 19:26:00.128602   32420 worker.go:96] Worker listening at address: [::]:7081
+I0715 19:26:00.131709   32420 run.go:480] Bringing up GraphQL HTTP API at 0.0.0.0:8081/graphql
+I0715 19:26:00.131780   32420 run.go:481] Bringing up GraphQL HTTP admin API at 0.0.0.0:8081/admin
+I0715 19:26:00.131837   32420 run.go:512] gRPC server started.  Listening on port 9081
+I0715 19:26:00.131850   32420 run.go:513] HTTP server started.  Listening on port 8081
+I0715 19:26:00.230013   32420 pool.go:160] CONNECTING to localhost:5080
+I0715 19:26:04.250202   32420 groups.go:135] Connected to group zero. Assigned group: 1
+I0715 19:26:04.250225   32420 groups.go:137] Raft Id after connection to Zero: 0x1
+I0715 19:26:04.250780   32420 pool.go:160] CONNECTING to localhost:7081
+W0715 19:26:04.253298   32420 pool.go:254] Connection lost with localhost:7081. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0715 19:26:04.282535   32420 draft.go:196] Node ID: 0x1 with GroupID: 1
+I0715 19:26:04.282628   32420 node.go:148] Setting raft.Config to: &{ID:1 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc000754380 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x5d23648 DisableProposalForwarding:false}
+I0715 19:26:04.282887   32420 node.go:326] Group 1 found 0 entries
+I0715 19:26:04.282915   32420 draft.go:1591] New Node for group: 1
+I0715 19:26:04.282981   32420 log.go:34] 1 became follower at term 0
+I0715 19:26:04.283051   32420 log.go:34] newRaft 1 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+I0715 19:26:04.283062   32420 log.go:34] 1 became follower at term 1
+I0715 19:26:04.283123   32420 draft.go:146] Operation started with id: opRollup
+I0715 19:26:04.283177   32420 groups.go:155] Server is ready
+I0715 19:26:04.283539   32420 draft.go:969] Found Raft progress: 0
+I0715 19:26:04.283709   32420 groups.go:782] Got address of a Zero leader: localhost:5080
+I0715 19:26:04.283816   32420 groups.go:796] Starting a new membership stream receive from localhost:5080.
+I0715 19:26:04.286456   32420 groups.go:813] Received first state update from Zero: counter:4 groups:<key:1 value:<members:<key:1 value:<id:1 group_id:1 addr:"localhost:7081" > > > > groups:<key:2 value:<members:<key:2 value:<id:2 group_id:2 addr:"localhost:7080" > > > > zeros:<key:1 value:<id:1 addr:"localhost:5080" leader:true > > maxRaftId:2 
+I0715 19:26:04.286994   32420 pool.go:160] CONNECTING to localhost:7080
+W0715 19:26:04.289981   32420 pool.go:254] Connection lost with localhost:7080. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0715 19:26:04.297850   32420 node.go:185] Setting conf state to nodes:1 
+I0715 19:26:04.298307   32420 log.go:34] 1 is starting a new election at term 1
+I0715 19:26:04.298399   32420 log.go:34] 1 became pre-candidate at term 1
+I0715 19:26:04.298411   32420 log.go:34] 1 received MsgPreVoteResp from 1 at term 1
+I0715 19:26:04.298439   32420 log.go:34] 1 became candidate at term 2
+I0715 19:26:04.298447   32420 log.go:34] 1 received MsgVoteResp from 1 at term 2
+I0715 19:26:04.298481   32420 log.go:34] 1 became leader at term 2
+I0715 19:26:04.298499   32420 log.go:34] raft.node: 1 elected leader 1 at term 2
+I0715 19:26:05.182967   32420 admin.go:568] Error reading GraphQL schema: Dgraph execution failed because cannot retrieve predicate information: No connection exists.
+I0715 19:26:05.283736   32420 groups.go:865] Leader idx=0x1 of group=1 is connecting to Zero for txn updates
+I0715 19:26:05.283815   32420 groups.go:874] Got Zero leader: localhost:5080
+E0715 19:26:05.392297   32420 draft.go:631] Applying proposal. Error: Pending transactions found. Please retry operation. Proposal: "mutations:<group_id:1 start_ts:3 schema:<predicate:\"dgraph.type\" value_type:STRING directive:INDEX tokenizer:\"exact\" list:true > > key:\"01-747670655933368337\" index:6 ".
+E0715 19:26:05.394493   32420 groups.go:253] Error while proposing initial schema: Pending transactions found. Please retry operation
+I0715 19:26:05.420826   32420 draft.go:1287] TryAbort 1 txns with start ts. Error: <nil>
+I0715 19:26:05.420986   32420 draft.go:1303] TryAbort: No aborts found. Quitting.
+I0715 19:26:05.421057   32420 mutation.go:841] tryAbortTransactions for 1 txns. Error: <nil>
+E0715 19:26:05.513560   32420 draft.go:631] Applying proposal. Error: Pending transactions found. Please retry operation. Proposal: "mutations:<group_id:1 start_ts:3 schema:<predicate:\"dgraph.type\" value_type:STRING directive:INDEX tokenizer:\"exact\" list:true > > key:\"01-7969067503073458534\" index:9 ".
+E0715 19:26:05.514005   32420 groups.go:253] Error while proposing initial schema: Pending transactions found. Please retry operation
+I0715 19:26:05.527487   32420 draft.go:1287] TryAbort 1 txns with start ts. Error: <nil>
+I0715 19:26:05.527519   32420 draft.go:1303] TryAbort: No aborts found. Quitting.
+I0715 19:26:05.527533   32420 mutation.go:841] tryAbortTransactions for 1 txns. Error: <nil>
+E0715 19:26:05.635191   32420 draft.go:631] Applying proposal. Error: Pending transactions found. Please retry operation. Proposal: "mutations:<group_id:1 start_ts:3 schema:<predicate:\"dgraph.type\" value_type:STRING directive:INDEX tokenizer:\"exact\" list:true > > key:\"01-14785652104004017740\" index:10 ".
+E0715 19:26:05.635495   32420 groups.go:253] Error while proposing initial schema: Pending transactions found. Please retry operation
+I0715 19:26:05.650106   32420 draft.go:1287] TryAbort 1 txns with start ts. Error: <nil>
+I0715 19:26:05.650171   32420 draft.go:1303] TryAbort: No aborts found. Quitting.
+I0715 19:26:05.650195   32420 mutation.go:841] tryAbortTransactions for 1 txns. Error: <nil>
+E0715 19:26:05.753361   32420 draft.go:631] Applying proposal. Error: Pending transactions found. Please retry operation. Proposal: "mutations:<group_id:1 start_ts:3 schema:<predicate:\"dgraph.type\" value_type:STRING directive:INDEX tokenizer:\"exact\" list:true > > key:\"01-3698459568158559644\" index:11 ".
+E0715 19:26:05.753609   32420 groups.go:253] Error while proposing initial schema: Pending transactions found. Please retry operation
+I0715 19:26:05.778586   32420 draft.go:1287] TryAbort 1 txns with start ts. Error: <nil>
+I0715 19:26:05.778633   32420 draft.go:1303] TryAbort: No aborts found. Quitting.
+I0715 19:26:05.778651   32420 mutation.go:841] tryAbortTransactions for 1 txns. Error: <nil>
+E0715 19:26:05.869398   32420 draft.go:631] Applying proposal. Error: Pending transactions found. Please retry operation. Proposal: "mutations:<group_id:1 start_ts:3 schema:<predicate:\"dgraph.type\" value_type:STRING directive:INDEX tokenizer:\"exact\" list:true > > key:\"01-13086662007475874088\" index:12 ".
+E0715 19:26:05.869763   32420 groups.go:253] Error while proposing initial schema: Pending transactions found. Please retry operation
+I0715 19:26:05.882532   32420 draft.go:1287] TryAbort 1 txns with start ts. Error: <nil>
+I0715 19:26:05.882596   32420 draft.go:1303] TryAbort: No aborts found. Quitting.
+I0715 19:26:05.882660   32420 mutation.go:841] tryAbortTransactions for 1 txns. Error: <nil>
+E0715 19:26:05.990282   32420 draft.go:631] Applying proposal. Error: Pending transactions found. Please retry operation. Proposal: "mutations:<group_id:1 start_ts:3 schema:<predicate:\"dgraph.type\" value_type:STRING directive:INDEX tokenizer:\"exact\" list:true > > key:\"01-14631638565223295176\" index:13 ".
+E0715 19:26:05.990507   32420 groups.go:253] Error while proposing initial schema: Pending transactions found. Please retry operation
+I0715 19:26:06.005628   32420 admin.go:354] Updating GraphQL schema from subscription.
+E0715 19:26:06.005743   32420 admin.go:384] Error processing GraphQL schema: input: No schema specified.  
+I0715 19:26:06.015972   32420 draft.go:1287] TryAbort 1 txns with start ts. Error: <nil>
+I0715 19:26:06.016016   32420 draft.go:1303] TryAbort: No aborts found. Quitting.
+I0715 19:26:06.016034   32420 mutation.go:841] tryAbortTransactions for 1 txns. Error: <nil>
+I0715 19:26:06.105641   32420 draft.go:146] Operation started with id: opIndexing
+I0715 19:26:06.105753   32420 index.go:881] Deleting index for attr dgraph.type and tokenizers []
+I0715 19:26:06.105792   32420 index.go:895] Deleting index for attr dgraph.type and tokenizers [exact]
+I0715 19:26:06.105770   32420 draft.go:112] Operation completed with id: opRollup
+I0715 19:26:06.105826   32420 log.go:34] DropPrefix Called
+I0715 19:26:06.105853   32420 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:26:06.137459   32420 log.go:34] Got compaction priority: {level:0 score:1.74 dropPrefixes:[[0 0 11 100 103 114 97 112 104 46 116 121 112 101 2 2] [33 98 97 100 103 101 114 33 109 111 118 101 0 0 11 100 103 114 97 112 104 46 116 121 112 101 2 2]]}
+I0715 19:26:06.137515   32420 log.go:34] Running for level: 0
+I0715 19:26:06.165367   32420 log.go:34] LOG Compact 0->1, del 1 tables, add 1 tables, took 27.728112ms
+I0715 19:26:06.165438   32420 log.go:34] Compaction for level: 0 DONE
+I0715 19:26:06.165524   32420 log.go:34] DropPrefix done
+I0715 19:26:06.165553   32420 log.go:34] Resuming writes
+I0715 19:26:06.165599   32420 log.go:34] DropPrefix Called
+I0715 19:26:06.165633   32420 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:26:06.169459   32420 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:26:06.202943   32420 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 33.38643ms
+I0715 19:26:06.202988   32420 log.go:34] DropPrefix done
+I0715 19:26:06.203015   32420 log.go:34] Resuming writes
+I0715 19:26:06.203172   32420 log.go:34] DropPrefix Called
+I0715 19:26:06.203208   32420 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:26:06.207648   32420 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:26:06.242908   32420 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 35.085212ms
+I0715 19:26:06.242949   32420 log.go:34] DropPrefix done
+I0715 19:26:06.242969   32420 log.go:34] Resuming writes
+I0715 19:26:06.242998   32420 log.go:34] DropPrefix Called
+I0715 19:26:06.243137   32420 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:26:06.329478   32420 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:26:06.358640   32420 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 29.108937ms
+I0715 19:26:06.358683   32420 log.go:34] DropPrefix done
+I0715 19:26:06.358703   32420 log.go:34] Resuming writes
+I0715 19:26:06.358784   32420 index.go:926] Rebuilding index for attr dgraph.type and tokenizers [exact]
+I0715 19:26:06.506829   32420 log.go:34] All 0 tables opened in 0s
+I0715 19:26:06.521743   32420 log.go:34] Rebuilding index for predicate dgraph.type (1/2): Created batch of size: 58 B in 72.026µs.
+I0715 19:26:06.521781   32420 log.go:34] Rebuilding index for predicate dgraph.type (1/2): Sent 1 keys
+I0715 19:26:06.538594   32420 log.go:34] Rebuilding index for predicate dgraph.type (2/2): Created batch of size: 61 B in 62.902µs.
+I0715 19:26:06.538663   32420 log.go:34] Rebuilding index for predicate dgraph.type (2/2): Sent 1 keys
+I0715 19:26:06.580726   32420 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0715 19:26:06.580769   32420 log.go:34] Running for level: 0
+I0715 19:26:06.611947   32420 log.go:34] LOG Compact 0->1, del 1 tables, add 1 tables, took 31.139865ms
+I0715 19:26:06.612001   32420 log.go:34] Compaction for level: 0 DONE
+I0715 19:26:06.612019   32420 log.go:34] Force compaction on level 0 done
+I0715 19:26:06.630117   32420 mutation.go:190] Done schema update predicate:"dgraph.type" value_type:STRING directive:INDEX tokenizer:"exact" list:true 
+I0715 19:26:06.630303   32420 draft.go:112] Operation completed with id: opIndexing
+I0715 19:26:06.631816   32420 draft.go:146] Operation started with id: opIndexing
+I0715 19:26:06.631891   32420 index.go:881] Deleting index for attr dgraph.graphql.xid and tokenizers []
+I0715 19:26:06.631910   32420 index.go:895] Deleting index for attr dgraph.graphql.xid and tokenizers [exact]
+I0715 19:26:06.631932   32420 log.go:34] DropPrefix Called
+I0715 19:26:06.631954   32420 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:26:06.666881   32420 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:26:06.696382   32420 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 29.445837ms
+I0715 19:26:06.696434   32420 log.go:34] Got compaction priority: {level:0 score:1.74 dropPrefixes:[[0 0 18 100 103 114 97 112 104 46 103 114 97 112 104 113 108 46 120 105 100 2 2] [33 98 97 100 103 101 114 33 109 111 118 101 0 0 18 100 103 114 97 112 104 46 103 114 97 112 104 113 108 46 120 105 100 2 2]]}
+I0715 19:26:06.696528   32420 log.go:34] Running for level: 0
+I0715 19:26:06.727850   32420 log.go:34] LOG Compact 0->1, del 2 tables, add 1 tables, took 31.278688ms
+I0715 19:26:06.727943   32420 log.go:34] Compaction for level: 0 DONE
+I0715 19:26:06.727973   32420 log.go:34] DropPrefix done
+I0715 19:26:06.727997   32420 log.go:34] Resuming writes
+I0715 19:26:06.728017   32420 log.go:34] DropPrefix Called
+I0715 19:26:06.728044   32420 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:26:06.731556   32420 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:26:06.758849   32420 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 27.231868ms
+I0715 19:26:06.758892   32420 log.go:34] DropPrefix done
+I0715 19:26:06.758915   32420 log.go:34] Resuming writes
+I0715 19:26:06.758977   32420 log.go:34] DropPrefix Called
+I0715 19:26:06.759004   32420 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:26:06.762153   32420 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:26:06.797906   32420 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 35.711096ms
+I0715 19:26:06.797942   32420 log.go:34] DropPrefix done
+I0715 19:26:06.797959   32420 log.go:34] Resuming writes
+I0715 19:26:06.798014   32420 log.go:34] DropPrefix Called
+I0715 19:26:06.798045   32420 log.go:34] Writes flushed. Stopping compactions now...
+I0715 19:26:06.801201   32420 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0715 19:26:06.832279   32420 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 31.005972ms
+I0715 19:26:06.832329   32420 log.go:34] DropPrefix done
+I0715 19:26:06.832347   32420 log.go:34] Resuming writes
+I0715 19:26:06.832491   32420 index.go:926] Rebuilding index for attr dgraph.graphql.xid and tokenizers [exact]
+I0715 19:26:06.883283   32420 log.go:34] All 0 tables opened in 0s
+I0715 19:26:06.897691   32420 log.go:34] Rebuilding index for predicate dgraph.graphql.xid (1/2): Created batch of size: 72 B in 49.323µs.
+I0715 19:26:06.897730   32420 log.go:34] Rebuilding index for predicate dgraph.graphql.xid (1/2): Sent 1 keys
+I0715 19:26:06.912301   32420 log.go:34] Rebuilding index for predicate dgraph.graphql.xid (2/2): Created batch of size: 75 B in 50.888µs.
+I0715 19:26:06.912344   32420 log.go:34] Rebuilding index for predicate dgraph.graphql.xid (2/2): Sent 1 keys
+I0715 19:26:06.955997   32420 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0715 19:26:06.956054   32420 log.go:34] Running for level: 0
+I0715 19:26:06.983732   32420 log.go:34] LOG Compact 0->1, del 1 tables, add 1 tables, took 27.632065ms
+I0715 19:26:06.983820   32420 log.go:34] Compaction for level: 0 DONE
+I0715 19:26:06.983849   32420 log.go:34] Force compaction on level 0 done
+I0715 19:26:07.000339   32420 mutation.go:190] Done schema update predicate:"dgraph.graphql.xid" value_type:STRING directive:INDEX tokenizer:"exact" upsert:true 
+I0715 19:26:07.000433   32420 draft.go:112] Operation completed with id: opIndexing
+I0715 19:26:10.233712   32420 admin.go:577] No GraphQL schema in Dgraph; serving empty GraphQL API
+I0715 19:26:16.632508   32420 draft.go:146] Operation started with id: opRollup
+W0715 19:27:00.380446   32420 draft.go:1190] Raft.Ready took too long to process: Timer Total: 357ms. Breakdown: [{disk 217ms} {proposals 107ms} {sync 32ms} {advance 0s}] Num entries: 2. MustSync: true
+W0715 19:27:04.489565   32420 draft.go:1190] Raft.Ready took too long to process: Timer Total: 346ms. Breakdown: [{sync 345ms} {disk 1ms} {proposals 0s} {advance 0s}] Num entries: 1. MustSync: true
+I0715 19:31:23.229675   32420 run.go:652] Caught Ctrl-C. Terminating now (this may take a few seconds)...
+E0715 19:31:23.229774   32420 run.go:391] GRPC listener canceled: accept tcp [::]:9081: use of closed network connection
+E0715 19:31:23.229842   32420 run.go:410] Stopped taking more http(s) requests. Err: accept tcp [::]:8081: use of closed network connection
+I0715 19:31:23.229879   32420 run.go:675] GRPC and HTTP stopped.
+I0715 19:31:23.229887   32420 worker.go:112] Stopping group...
+I0715 19:31:23.230131   32420 worker.go:116] Updating RAFT state before shutting down...
+E0715 19:31:23.230440   32420 groups.go:905] Error in oracle delta stream. Error: rpc error: code = Canceled desc = context canceled
+E0715 19:31:23.230518   32420 groups.go:804] Unable to sync memberships. Error: rpc error: code = Canceled desc = context canceled. State: <nil>
+I0715 19:31:23.231141   32420 run.go:652] Caught Ctrl-C. Terminating now (this may take a few seconds)...
+I0715 19:31:23.244421   32420 worker.go:121] Stopping node...
+I0715 19:31:23.245456   32420 draft.go:911] Stopping node.Run
+I0715 19:31:23.245501   32420 draft.go:980] Raft node done.
+I0715 19:31:23.260898   32420 draft.go:173] Stopped all ongoing registered tasks.
+I0715 19:31:23.260920   32420 worker.go:124] Stopping raftwal store...
+I0715 19:31:23.260942   32420 worker.go:127] Stopping worker server...
+I0715 19:31:23.260971   32420 draft.go:112] Operation completed with id: opRollup
+E0715 19:31:23.262308   32420 groups.go:1105] Error from worker subscribe stream: rpc error: code = Unavailable desc = transport is closing
+I0715 19:31:23.262364   32420 run.go:679] Disposing server state.
+I0715 19:31:23.272191   32420 run.go:652] Caught Ctrl-C. Terminating now (this may take a few seconds)...
+I0715 19:31:23.272279   32420 run.go:654] Signaled thrice. Aborting!

@@ -1,42 +1,42 @@
 [Decoder]: Using assembly version of decoder
-I0714 18:20:10.430116   21364 init.go:98] 
+I0715 19:26:13.794219   32431 init.go:99] 
 
-Dgraph version   : v2.0.0-rc1-25-g17ce5d31a
-Dgraph SHA-256   : bb010038d002b2ceef0d348b283a5aff68e2c6dfe3c0a312fcb07a113a10ff73
-Commit SHA-1     : 17ce5d31a
-Commit timestamp : 2020-02-20 15:02:16 -0800
-Branch           : release/v2.0
-Go version       : go1.14.2
+Dgraph version   : v20.03.4-rc2
+Dgraph SHA-256   : 1bcd72d2bbb8d66d83bc37c0ced8caf0cf35a7ffd9c8b60b9f29aa56b5507f16
+Commit SHA-1     : f9401e303
+Commit timestamp : 2020-07-14 20:46:44 -0700
+Branch           : HEAD
+Go version       : go1.14.4
 
 For Dgraph official documentation, visit https://docs.dgraph.io.
 For discussions about Dgraph     , visit https://discuss.dgraph.io.
 To say hi to the community       , visit https://dgraph.slack.com.
 
 Licensed variously under the Apache Public License 2.0 and Dgraph Community License.
-Copyright 2015-2018 Dgraph Labs, Inc.
+Copyright 2015-2020 Dgraph Labs, Inc.
 
 
 
 Running transaction with dgraph endpoint: 127.0.0.1:9080
 
-Processing schema file "/Users/neerajbattan/go/src/github.com/dgraph-io/foo/run_here/1million.schema"
-Processed schema file "/Users/neerajbattan/go/src/github.com/dgraph-io/foo/run_here/1million.schema"
+Processing schema file "/Users/neerajbattan/go/src/github.com/dgraph-io/foo/manual_testing/1million.schema"
+Processed schema file "/Users/neerajbattan/go/src/github.com/dgraph-io/foo/manual_testing/1million.schema"
 
 Found 1 data file(s) to process
-Processing data file "/Users/neerajbattan/go/src/github.com/dgraph-io/foo/run_here/1million.rdf"
-[18:20:18+0530] Elapsed: 05s Txns: 44 N-Quads: 44000 N-Quads/s [last 5s]:  8800 Aborts: 0
-[18:20:23+0530] Elapsed: 10s Txns: 98 N-Quads: 98000 N-Quads/s [last 5s]: 10800 Aborts: 0
-[18:20:28+0530] Elapsed: 15s Txns: 174 N-Quads: 174000 N-Quads/s [last 5s]: 15200 Aborts: 0
-[18:20:33+0530] Elapsed: 20s Txns: 282 N-Quads: 282000 N-Quads/s [last 5s]: 21600 Aborts: 0
-[18:20:38+0530] Elapsed: 25s Txns: 362 N-Quads: 362000 N-Quads/s [last 5s]: 16000 Aborts: 0
-[18:20:43+0530] Elapsed: 30s Txns: 453 N-Quads: 453000 N-Quads/s [last 5s]: 18200 Aborts: 0
-[18:20:48+0530] Elapsed: 35s Txns: 588 N-Quads: 588000 N-Quads/s [last 5s]: 27000 Aborts: 0
-[18:20:53+0530] Elapsed: 40s Txns: 709 N-Quads: 709000 N-Quads/s [last 5s]: 24200 Aborts: 0
-[18:20:58+0530] Elapsed: 45s Txns: 825 N-Quads: 825000 N-Quads/s [last 5s]: 23200 Aborts: 0
-[18:21:03+0530] Elapsed: 50s Txns: 920 N-Quads: 919684 N-Quads/s [last 5s]: 18937 Aborts: 0
-[18:21:08+0530] Elapsed: 55s Txns: 982 N-Quads: 981684 N-Quads/s [last 5s]: 12400 Aborts: 0
-[18:21:13+0530] Elapsed: 01m00s Txns: 1034 N-Quads: 1033684 N-Quads/s [last 5s]: 10400 Aborts: 0
+Processing data file "/Users/neerajbattan/go/src/github.com/dgraph-io/foo/manual_testing/1million.rdf"
+[19:26:24+0530] Elapsed: 05s Txns: 40 N-Quads: 40000 N-Quads/s [last 5s]:  8000 Aborts: 0
+[19:26:29+0530] Elapsed: 10s Txns: 100 N-Quads: 100000 N-Quads/s [last 5s]: 12000 Aborts: 0
+[19:26:34+0530] Elapsed: 15s Txns: 223 N-Quads: 223000 N-Quads/s [last 5s]: 24600 Aborts: 0
+[19:26:39+0530] Elapsed: 20s Txns: 335 N-Quads: 335000 N-Quads/s [last 5s]: 22400 Aborts: 0
+[19:26:44+0530] Elapsed: 25s Txns: 434 N-Quads: 434000 N-Quads/s [last 5s]: 19800 Aborts: 0
+[19:26:49+0530] Elapsed: 30s Txns: 562 N-Quads: 562000 N-Quads/s [last 5s]: 25600 Aborts: 0
+[19:26:54+0530] Elapsed: 35s Txns: 650 N-Quads: 650000 N-Quads/s [last 5s]: 17600 Aborts: 0
+[19:26:59+0530] Elapsed: 40s Txns: 722 N-Quads: 722000 N-Quads/s [last 5s]: 14400 Aborts: 0
+[19:27:04+0530] Elapsed: 45s Txns: 785 N-Quads: 785000 N-Quads/s [last 5s]: 12600 Aborts: 0
+[19:27:09+0530] Elapsed: 50s Txns: 897 N-Quads: 896684 N-Quads/s [last 5s]: 22337 Aborts: 0
+[19:27:14+0530] Elapsed: 55s Txns: 974 N-Quads: 973684 N-Quads/s [last 5s]: 15400 Aborts: 0
+[19:27:19+0530] Elapsed: 01m00s Txns: 1018 N-Quads: 1017684 N-Quads/s [last 5s]:  8800 Aborts: 0
                                                                                                     Number of TXs run            : 1042
 Number of N-Quads processed  : 1041684
-Time spent                   : 1m3.789132516s
-N-Quads processed per second : 16534
+Time spent                   : 1m9.05102512s
+N-Quads processed per second : 15096

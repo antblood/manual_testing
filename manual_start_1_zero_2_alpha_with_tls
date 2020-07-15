@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pkill -f dgraph;pkill -f dgraph;pkill -f dgraph;
+
 test_name=$0
 
 logs_dir=$PWD"/logs/${test_name:2}"
@@ -16,11 +18,11 @@ then
 	dgraph cert -n localhost
 fi
 
-o="1"
+o="0"
 dgraph zero -w "z$o" --cwd $data_dir &> "$logs_dir/z1" &
 
-o="1"
+o="0"
 dgraph alpha -o $o -p "p$o" -w "w$o" --cwd $data_dir --tls_dir "$PWD/tls" &> "$logs_dir/a$o" &
 
-o="2"
+o="1"
 dgraph alpha -o $o -p "p$o" -w "w$o" --cwd $data_dir --tls_dir "$PWD/tls" &> "$logs_dir/a$o" &

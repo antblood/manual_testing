@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pkill -f dgraph;pkill -f dgraph;pkill -f dgraph;
+
 test_name=$0
 
 logs_dir=$PWD"/logs/${test_name:2}"
@@ -14,11 +16,11 @@ then
 	dd if=/dev/random bs=1 count=32 of=enc_key_file	#create the encryption file if it doesn't exist
 fi
 
-o="1"
+o="0"
 dgraph zero -w "z$o" --cwd $data_dir &> "$logs_dir/z1" &
 
-o="1"
+o="0"
 dgraph alpha -o $o -p "p$o" -w "w$o" --cwd $data_dir --encryption_key_file "$PWD/enc_key_file" &> "$logs_dir/a$o" &
 
-o="2"
+o="1"
 dgraph alpha -o $o -p "p$o" -w "w$o" --cwd $data_dir --encryption_key_file "$PWD/enc_key_file" &> "$logs_dir/a$o" &

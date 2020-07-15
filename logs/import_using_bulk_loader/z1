@@ -1,22 +1,22 @@
 [Decoder]: Using assembly version of decoder
-[Sentry] 2020/07/14 16:44:59 Integration installed: ContextifyFrames
-[Sentry] 2020/07/14 16:44:59 Integration installed: Environment
-[Sentry] 2020/07/14 16:44:59 Integration installed: Modules
-[Sentry] 2020/07/14 16:44:59 Integration installed: IgnoreErrors
+[Sentry] 2020/07/15 19:34:01 Integration installed: ContextifyFrames
+[Sentry] 2020/07/15 19:34:01 Integration installed: Environment
+[Sentry] 2020/07/15 19:34:01 Integration installed: Modules
+[Sentry] 2020/07/15 19:34:01 Integration installed: IgnoreErrors
 [Decoder]: Using assembly version of decoder
-[Sentry] 2020/07/14 16:44:59 Integration installed: ContextifyFrames
-[Sentry] 2020/07/14 16:44:59 Integration installed: Environment
-[Sentry] 2020/07/14 16:44:59 Integration installed: Modules
-[Sentry] 2020/07/14 16:44:59 Integration installed: IgnoreErrors
-I0714 16:45:00.538894   17364 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
-I0714 16:45:01.073840   17364 init.go:99] 
+[Sentry] 2020/07/15 19:34:01 Integration installed: ContextifyFrames
+[Sentry] 2020/07/15 19:34:01 Integration installed: Environment
+[Sentry] 2020/07/15 19:34:01 Integration installed: Modules
+[Sentry] 2020/07/15 19:34:01 Integration installed: IgnoreErrors
+I0715 19:34:02.190601   32623 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
+I0715 19:34:02.415908   32623 init.go:99] 
 
-Dgraph version   : v20.03.4-rc1-12-g322139c8f
-Dgraph SHA-256   : 7ccfecbb652bc14b2773dd3b8ef60d4238730c7b74eba7f664f85b1e446f4176
-Commit SHA-1     : 322139c8f
-Commit timestamp : 2020-07-13 15:55:04 +0530
-Branch           : new_branch
-Go version       : go1.14.2
+Dgraph version   : v20.03.4-rc2
+Dgraph SHA-256   : 1bcd72d2bbb8d66d83bc37c0ced8caf0cf35a7ffd9c8b60b9f29aa56b5507f16
+Commit SHA-1     : f9401e303
+Commit timestamp : 2020-07-14 20:46:44 -0700
+Branch           : HEAD
+Go version       : go1.14.4
 
 For Dgraph official documentation, visit https://docs.dgraph.io.
 For discussions about Dgraph     , visit https://discuss.dgraph.io.
@@ -26,53 +26,63 @@ Licensed variously under the Apache Public License 2.0 and Dgraph Community Lice
 Copyright 2015-2020 Dgraph Labs, Inc.
 
 
-I0714 16:45:01.074021   17364 run.go:108] Setting up grpc listener at: 0.0.0.0:5080
-I0714 16:45:01.074665   17364 run.go:108] Setting up http listener at: 0.0.0.0:6080
-badger 2020/07/14 16:45:01 INFO: All 0 tables opened in 0s
-I0714 16:45:01.251878   17364 node.go:148] Setting raft.Config to: &{ID:1 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc0001a4280 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x5d2d648 DisableProposalForwarding:false}
-I0714 16:45:01.252399   17364 node.go:326] Group 0 found 0 entries
-I0714 16:45:01.252477   17364 log.go:34] 1 became follower at term 0
-I0714 16:45:01.252532   17364 log.go:34] newRaft 1 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
-I0714 16:45:01.252542   17364 log.go:34] 1 became follower at term 1
-I0714 16:45:01.252978   17364 run.go:314] Running Dgraph Zero...
-E0714 16:45:01.253047   17364 raft.go:518] While proposing CID: Not Zero leader. Aborting proposal: cid:"654f122c-1328-4e21-ac4b-68608b5f405c" . Retrying...
-I0714 16:45:01.266743   17364 node.go:185] Setting conf state to nodes:1 
-I0714 16:45:01.280551   17364 raft.go:708] Done applying conf change at 0x1
-I0714 16:45:01.416662   17364 zero.go:422] Got connection request: cluster_info_only:true 
-I0714 16:45:01.416961   17364 log.go:34] 1 no leader at term 1; dropping index reading msg
-I0714 16:45:03.252934   17364 log.go:34] 1 is starting a new election at term 1
-I0714 16:45:03.252969   17364 log.go:34] 1 became pre-candidate at term 1
-I0714 16:45:03.252981   17364 log.go:34] 1 received MsgPreVoteResp from 1 at term 1
-I0714 16:45:03.253006   17364 log.go:34] 1 became candidate at term 2
-I0714 16:45:03.253015   17364 log.go:34] 1 received MsgVoteResp from 1 at term 2
-I0714 16:45:03.253039   17364 log.go:34] 1 became leader at term 2
-I0714 16:45:03.253053   17364 log.go:34] raft.node: 1 elected leader 1 at term 2
-I0714 16:45:03.253086   17364 raft.go:673] I've become the leader, updating leases.
-I0714 16:45:03.253101   17364 assign.go:42] Updated Lease id: 1. Txn Ts: 1
-W0714 16:45:03.417686   17364 node.go:674] [0x1] Read index context timed out
-I0714 16:45:03.417939   17364 zero.go:440] Connected: cluster_info_only:true 
-I0714 16:45:03.418082   17364 zero.go:422] Got connection request: cluster_info_only:true 
-I0714 16:45:03.418178   17364 zero.go:440] Connected: cluster_info_only:true 
-I0714 16:45:03.418679   17364 zero.go:422] Got connection request: addr:"localhost:7080" 
-I0714 16:45:03.419069   17364 pool.go:160] CONNECTING to localhost:7080
-W0714 16:45:03.422623   17364 pool.go:254] Connection lost with localhost:7080. Error: rpc error: code = Unknown desc = No node has been set up yet
-I0714 16:45:03.435260   17364 zero.go:571] Connected: id:1 group_id:1 addr:"localhost:7080" 
-I0714 16:45:03.435421   17364 zero.go:422] Got connection request: addr:"localhost:7082" 
-I0714 16:45:03.435797   17364 pool.go:160] CONNECTING to localhost:7082
-W0714 16:45:03.438667   17364 pool.go:254] Connection lost with localhost:7082. Error: rpc error: code = Unknown desc = No node has been set up yet
-I0714 16:45:03.446704   17364 zero.go:571] Connected: id:2 group_id:2 addr:"localhost:7082" 
-I0714 16:45:04.294850   17364 raft.go:510] CID set for cluster: 4c3ac084-2346-4e1f-8df0-a36009b913f5
-I0714 16:45:04.307401   17364 license_ee.go:45] Enterprise trial license proposed to the cluster: key:"z1-8047669715647248180" license:<maxNodes:18446744073709551615 expiryTs:1597317304 > 
-I0714 16:47:19.059601   17364 run.go:277] --- Received terminated signal
-I0714 16:47:19.061121   17364 run.go:296] Shutting down...
-E0714 16:47:19.061215   17364 http.go:252] Stopped taking more http(s) requests. Err: accept tcp [::]:6080: use of closed network connection
-I0714 16:47:19.061250   17364 http.go:256] All http(s) requests finished.
-I0714 16:47:19.061293   17364 raft.go:637] Zero Node.Run finished.
-I0714 16:47:19.061372   17364 run.go:146] gRPC server stopped : accept tcp [::]:5080: use of closed network connection
-I0714 16:47:19.329597   17364 run.go:316] All done.
-badger 2020/07/14 16:47:19 INFO: Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-badger 2020/07/14 16:47:19 INFO: Running for level: 0
-badger 2020/07/14 16:47:19 INFO: LOG Compact 0->1, del 1 tables, add 1 tables, took 39.146404ms
-badger 2020/07/14 16:47:19 INFO: Compaction for level: 0 DONE
-badger 2020/07/14 16:47:19 INFO: Force compaction on level 0 done
-[Sentry] 2020/07/14 16:47:19 Buffer flushed successfully.
+I0715 19:34:02.415998   32623 run.go:108] Setting up grpc listener at: 0.0.0.0:5080
+I0715 19:34:02.416407   32623 run.go:108] Setting up http listener at: 0.0.0.0:6080
+badger 2020/07/15 19:34:02 INFO: All 0 tables opened in 0s
+I0715 19:34:02.603816   32623 node.go:148] Setting raft.Config to: &{ID:1 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc000342200 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x5d23648 DisableProposalForwarding:false}
+I0715 19:34:02.604306   32623 node.go:326] Group 0 found 0 entries
+I0715 19:34:02.604368   32623 log.go:34] 1 became follower at term 0
+I0715 19:34:02.604414   32623 log.go:34] newRaft 1 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+I0715 19:34:02.604423   32623 log.go:34] 1 became follower at term 1
+I0715 19:34:02.604769   32623 run.go:314] Running Dgraph Zero...
+E0715 19:34:02.605067   32623 raft.go:518] While proposing CID: Not Zero leader. Aborting proposal: cid:"79f1b416-83ed-402b-8275-526b4e6e3e99" . Retrying...
+I0715 19:34:02.637836   32623 node.go:185] Setting conf state to nodes:1 
+I0715 19:34:02.664174   32623 raft.go:708] Done applying conf change at 0x1
+I0715 19:34:02.836352   32623 zero.go:422] Got connection request: cluster_info_only:true 
+I0715 19:34:02.836502   32623 log.go:34] 1 no leader at term 1; dropping index reading msg
+W0715 19:34:04.839225   32623 node.go:674] [0x1] Read index context timed out
+I0715 19:34:04.839312   32623 log.go:34] 1 no leader at term 1; dropping index reading msg
+E0715 19:34:05.666126   32623 raft.go:518] While proposing CID: Not Zero leader. Aborting proposal: cid:"6935a32c-1834-4b7c-9235-9d505b0adcf8" . Retrying...
+I0715 19:34:05.710222   32623 log.go:34] 1 is starting a new election at term 1
+I0715 19:34:05.710248   32623 log.go:34] 1 became pre-candidate at term 1
+I0715 19:34:05.710263   32623 log.go:34] 1 received MsgPreVoteResp from 1 at term 1
+I0715 19:34:05.710288   32623 log.go:34] 1 became candidate at term 2
+I0715 19:34:05.710314   32623 log.go:34] 1 received MsgVoteResp from 1 at term 2
+I0715 19:34:05.710375   32623 log.go:34] 1 became leader at term 2
+I0715 19:34:05.710396   32623 log.go:34] raft.node: 1 elected leader 1 at term 2
+I0715 19:34:05.710468   32623 raft.go:673] I've become the leader, updating leases.
+I0715 19:34:05.710482   32623 assign.go:42] Updated Lease id: 1. Txn Ts: 1
+W0715 19:34:06.839609   32623 node.go:674] [0x1] Read index context timed out
+I0715 19:34:06.839963   32623 zero.go:440] Connected: cluster_info_only:true 
+I0715 19:34:06.840481   32623 zero.go:422] Got connection request: cluster_info_only:true 
+I0715 19:34:06.840709   32623 zero.go:440] Connected: cluster_info_only:true 
+I0715 19:34:06.842171   32623 zero.go:422] Got connection request: addr:"localhost:7080" 
+I0715 19:34:06.842935   32623 pool.go:160] CONNECTING to localhost:7080
+W0715 19:34:06.846693   32623 pool.go:254] Connection lost with localhost:7080. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0715 19:34:06.854465   32623 zero.go:571] Connected: id:1 group_id:1 addr:"localhost:7080" 
+I0715 19:34:06.854954   32623 zero.go:422] Got connection request: addr:"localhost:7081" 
+I0715 19:34:06.855334   32623 pool.go:160] CONNECTING to localhost:7081
+W0715 19:34:06.859034   32623 pool.go:254] Connection lost with localhost:7081. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0715 19:34:06.870371   32623 zero.go:571] Connected: id:2 group_id:2 addr:"localhost:7081" 
+I0715 19:34:08.681235   32623 raft.go:510] CID set for cluster: 5f92cc39-4837-47e1-a9ff-da21bb615e22
+I0715 19:34:08.720998   32623 license_ee.go:45] Enterprise trial license proposed to the cluster: key:"z1-17653672670255059225" license:<maxNodes:18446744073709551615 expiryTs:1597413848 > 
+I0715 19:42:02.641507   32623 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:667}]
+
+I0715 19:42:02.641670   32623 tablet.go:213] size_diff 667
+I0715 19:50:02.656607   32623 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:667}]
+
+I0715 19:50:02.656718   32623 tablet.go:213] size_diff 667
+I0715 19:58:02.697556   32623 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:1640}]
+
+I0715 19:58:02.697647   32623 tablet.go:213] size_diff 1640
+I0715 20:06:02.711274   32623 tablet.go:208] 
+
+Groups sorted by size: [{gid:2 size:0} {gid:1 size:1640}]
+
+I0715 20:06:02.711392   32623 tablet.go:213] size_diff 1640
