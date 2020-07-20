@@ -1,14 +1,14 @@
 [Decoder]: Using assembly version of decoder
-I0715 19:34:16.663953   32632 init.go:99] 
+I0720 15:57:29.745082   17386 init.go:99] 
 
-Dgraph version   : v20.03.4-rc2
-Dgraph SHA-256   : 1bcd72d2bbb8d66d83bc37c0ced8caf0cf35a7ffd9c8b60b9f29aa56b5507f16
-Commit SHA-1     : f9401e303
-Commit timestamp : 2020-07-14 20:46:44 -0700
+Dgraph version   : v20.07.0-beta.Jun22-63-g052023a7c
+Dgraph SHA-256   : 299c35f338eddfb3bb5cfc42ea91dc969786db42f79e395bce16e999924db228
+Commit SHA-1     : 052023a7c
+Commit timestamp : 2020-07-16 14:18:30 -0700
 Branch           : HEAD
-Go version       : go1.14.4
+Go version       : go1.14.2
 
-For Dgraph official documentation, visit https://docs.dgraph.io.
+For Dgraph official documentation, visit https://dgraph.io/docs/.
 For discussions about Dgraph     , visit https://discuss.dgraph.io.
 To say hi to the community       , visit https://dgraph.slack.com.
 
@@ -16,73 +16,38 @@ Licensed variously under the Apache Public License 2.0 and Dgraph Community Lice
 Copyright 2015-2020 Dgraph Labs, Inc.
 
 
-{
-	"DataFiles": "/Users/neerajbattan/go/src/github.com/dgraph-io/foo/manual_testing/1million.rdf",
-	"DataFormat": "",
-	"SchemaFile": "/Users/neerajbattan/go/src/github.com/dgraph-io/foo/manual_testing/1million.schema",
-	"GqlSchemaFile": "",
-	"OutDir": "./out",
-	"ReplaceOutDir": false,
-	"TmpDir": "tmp",
-	"NumGoroutines": 1,
-	"MapBufSize": 67108864,
-	"SkipMapPhase": false,
-	"CleanupTmp": true,
-	"NumReducers": 1,
-	"Version": false,
-	"StoreXids": false,
-	"ZeroAddr": "localhost:5080",
-	"HttpAddr": "localhost:8080",
-	"IgnoreErrors": false,
-	"CustomTokenizers": "",
-	"NewUids": false,
-	"Encrypted": false,
-	"MapShards": 1,
-	"ReduceShards": 1,
-	"BadgerKeyFile": "",
-	"BadgerCompressionLevel": 1
-}
+I0720 15:57:29.745676   17386 util_ee.go:126] KeyReader instantiated of type <nil>
 [32m
 The bulk loader needs to open many files at once. This number depends on the size of the data set loaded, the map file output size, and the level of indexing. 100,000 is adequate for most data set sizes. See `man ulimit` for details of how to change the limit.
 [33mCurrent max open files limit: 256
 [0m
 Connecting to zero at localhost:5080
 Processing file (1 out of 1): /Users/neerajbattan/go/src/github.com/dgraph-io/foo/manual_testing/1million.rdf
-[19:34:17+0530] MAP 01s nquad_count:16.75k err_count:0.000 nquad_speed:16.26k/sec edge_count:68.92k edge_speed:66.89k/sec
-[19:34:18+0530] MAP 02s nquad_count:40.54k err_count:0.000 nquad_speed:19.95k/sec edge_count:166.8k edge_speed:82.08k/sec
-[19:34:19+0530] MAP 03s nquad_count:56.75k err_count:0.000 nquad_speed:18.70k/sec edge_count:233.5k edge_speed:76.94k/sec
-[19:34:20+0530] MAP 04s nquad_count:82.33k err_count:0.000 nquad_speed:20.40k/sec edge_count:314.7k edge_speed:77.98k/sec
-[19:34:21+0530] MAP 05s nquad_count:157.3k err_count:0.000 nquad_speed:31.21k/sec edge_count:447.4k edge_speed:88.75k/sec
-[19:34:22+0530] MAP 06s nquad_count:237.9k err_count:0.000 nquad_speed:39.37k/sec edge_count:589.9k edge_speed:97.62k/sec
-[19:34:23+0530] MAP 07s nquad_count:301.3k err_count:0.000 nquad_speed:42.65k/sec edge_count:702.6k edge_speed:99.45k/sec
-[19:34:24+0530] MAP 08s nquad_count:396.1k err_count:0.000 nquad_speed:49.08k/sec edge_count:870.8k edge_speed:107.9k/sec
-[19:34:25+0530] MAP 09s nquad_count:484.4k err_count:0.000 nquad_speed:53.41k/sec edge_count:1.028M edge_speed:113.4k/sec
-[19:34:26+0530] MAP 10s nquad_count:549.2k err_count:0.000 nquad_speed:54.38k/sec edge_count:1.143M edge_speed:113.2k/sec
-[19:34:27+0530] MAP 11s nquad_count:653.5k err_count:0.000 nquad_speed:58.76k/sec edge_count:1.328M edge_speed:119.5k/sec
-[19:34:28+0530] MAP 12s nquad_count:741.0k err_count:0.000 nquad_speed:61.13k/sec edge_count:1.484M edge_speed:122.4k/sec
-[19:34:29+0530] MAP 13s nquad_count:826.3k err_count:0.000 nquad_speed:62.96k/sec edge_count:1.635M edge_speed:124.6k/sec
-[19:34:30+0530] MAP 14s nquad_count:889.8k err_count:0.000 nquad_speed:63.00k/sec edge_count:1.758M edge_speed:124.5k/sec
-[19:34:31+0530] MAP 15s nquad_count:997.3k err_count:0.000 nquad_speed:65.85k/sec edge_count:1.973M edge_speed:130.3k/sec
-[19:34:32+0530] MAP 16s nquad_count:1.042M err_count:0.000 nquad_speed:64.48k/sec edge_count:2.062M edge_speed:127.6k/sec
-[19:34:33+0530] MAP 17s nquad_count:1.042M err_count:0.000 nquad_speed:60.71k/sec edge_count:2.062M edge_speed:120.2k/sec
-[19:34:34+0530] MAP 18s nquad_count:1.042M err_count:0.000 nquad_speed:57.36k/sec edge_count:2.062M edge_speed:113.6k/sec
-[19:34:35+0530] MAP 19s nquad_count:1.042M err_count:0.000 nquad_speed:54.35k/sec edge_count:2.062M edge_speed:107.6k/sec
-[19:34:36+0530] MAP 20s nquad_count:1.042M err_count:0.000 nquad_speed:51.64k/sec edge_count:2.062M edge_speed:102.2k/sec
-[19:34:37+0530] MAP 21s nquad_count:1.042M err_count:0.000 nquad_speed:49.19k/sec edge_count:2.062M edge_speed:97.38k/sec
-[19:34:38+0530] MAP 22s nquad_count:1.042M err_count:0.000 nquad_speed:46.97k/sec edge_count:2.062M edge_speed:92.98k/sec
-[19:34:39+0530] MAP 23s nquad_count:1.042M err_count:0.000 nquad_speed:44.94k/sec edge_count:2.062M edge_speed:88.97k/sec
-[19:34:40+0530] MAP 24s nquad_count:1.042M err_count:0.000 nquad_speed:43.05k/sec edge_count:2.062M edge_speed:85.21k/sec
-[19:34:41+0530] MAP 25s nquad_count:1.042M err_count:0.000 nquad_speed:41.32k/sec edge_count:2.062M edge_speed:81.80k/sec
+[15:57:30+0530] MAP 01s nquad_count:23.86k err_count:0.000 nquad_speed:23.38k/sec edge_count:98.19k edge_speed:96.18k/sec
+[15:57:31+0530] MAP 02s nquad_count:58.02k err_count:0.000 nquad_speed:28.67k/sec edge_count:238.8k edge_speed:118.0k/sec
+[15:57:32+0530] MAP 03s nquad_count:125.1k err_count:0.000 nquad_speed:41.36k/sec edge_count:389.9k edge_speed:128.9k/sec
+[15:57:33+0530] MAP 04s nquad_count:217.8k err_count:0.000 nquad_speed:54.10k/sec edge_count:554.5k edge_speed:137.7k/sec
+[15:57:34+0530] MAP 05s nquad_count:309.3k err_count:0.000 nquad_speed:61.49k/sec edge_count:716.7k edge_speed:142.5k/sec
+[15:57:35+0530] MAP 06s nquad_count:407.4k err_count:0.000 nquad_speed:67.55k/sec edge_count:891.3k edge_speed:147.8k/sec
+[15:57:36+0530] MAP 07s nquad_count:498.0k err_count:0.000 nquad_speed:70.83k/sec edge_count:1.052M edge_speed:149.6k/sec
+[15:57:37+0530] MAP 08s nquad_count:597.4k err_count:0.000 nquad_speed:73.61k/sec edge_count:1.229M edge_speed:151.4k/sec
+[15:57:38+0530] MAP 09s nquad_count:686.6k err_count:0.000 nquad_speed:75.29k/sec edge_count:1.388M edge_speed:152.1k/sec
+[15:57:39+0530] MAP 10s nquad_count:774.9k err_count:0.000 nquad_speed:76.57k/sec edge_count:1.544M edge_speed:152.6k/sec
+[15:57:40+0530] MAP 11s nquad_count:844.4k err_count:0.000 nquad_speed:75.88k/sec edge_count:1.668M edge_speed:149.9k/sec
+[15:57:41+0530] MAP 12s nquad_count:936.3k err_count:0.000 nquad_speed:77.20k/sec edge_count:1.851M edge_speed:152.7k/sec
+[15:57:42+0530] MAP 13s nquad_count:1.011M err_count:0.000 nquad_speed:77.02k/sec edge_count:2.002M edge_speed:152.4k/sec
+[15:57:43+0530] MAP 14s nquad_count:1.042M err_count:0.000 nquad_speed:73.70k/sec edge_count:2.062M edge_speed:145.9k/sec
+[15:57:44+0530] MAP 15s nquad_count:1.042M err_count:0.000 nquad_speed:68.82k/sec edge_count:2.062M edge_speed:136.2k/sec
+[15:57:45+0530] MAP 16s nquad_count:1.042M err_count:0.000 nquad_speed:64.55k/sec edge_count:2.062M edge_speed:127.8k/sec
+[15:57:46+0530] MAP 17s nquad_count:1.042M err_count:0.000 nquad_speed:60.77k/sec edge_count:2.062M edge_speed:120.3k/sec
+[15:57:47+0530] MAP 18s nquad_count:1.042M err_count:0.000 nquad_speed:57.42k/sec edge_count:2.062M edge_speed:113.7k/sec
+[15:57:48+0530] MAP 19s nquad_count:1.042M err_count:0.000 nquad_speed:54.41k/sec edge_count:2.062M edge_speed:107.7k/sec
 Shard tmp/map_output/000 -> Reduce tmp/shards/shard_0/000
-[19:34:42+0530] REDUCE 26s 0.00% edge_count:0.000 edge_speed:0.000/sec plist_count:0.000 plist_speed:0.000/sec. Num Encoding: 0
 Num CPUs: 4
-[19:34:43+0530] REDUCE 27s 0.00% edge_count:0.000 edge_speed:0.000/sec plist_count:0.000 plist_speed:0.000/sec. Num Encoding: 0
-[19:34:44+0530] REDUCE 28s 6.77% edge_count:139.6k edge_speed:68.69k/sec plist_count:100.7k plist_speed:49.54k/sec. Num Encoding: 4
-[19:34:45+0530] REDUCE 29s 31.61% edge_count:651.9k edge_speed:214.9k/sec plist_count:251.6k plist_speed:82.94k/sec. Num Encoding: 3
-[19:34:46+0530] REDUCE 30s 53.47% edge_count:1.103M edge_speed:273.3k/sec plist_count:495.4k plist_speed:122.8k/sec. Num Encoding: 9
-[19:34:47+0530] REDUCE 31s 66.55% edge_count:1.372M edge_speed:272.5k/sec plist_count:733.6k plist_speed:145.7k/sec. Num Encoding: 6
-[19:34:48+0530] REDUCE 32s 81.04% edge_count:1.671M edge_speed:276.3k/sec plist_count:840.8k plist_speed:139.0k/sec. Num Encoding: 3
-[19:34:49+0530] REDUCE 33s 99.73% edge_count:2.056M edge_speed:291.8k/sec plist_count:1.207M plist_speed:171.3k/sec. Num Encoding: 2
-[19:34:51+0530] REDUCE 34s 100.00% edge_count:2.062M edge_speed:252.0k/sec plist_count:1.213M plist_speed:148.2k/sec. Num Encoding: 0
-[19:34:51+0530] REDUCE 34s 100.00% edge_count:2.062M edge_speed:243.0k/sec plist_count:1.213M plist_speed:142.9k/sec. Num Encoding: 0
-Total: 34s
+[15:57:49+0530] REDUCE 20s 0.00% edge_count:0.000 edge_speed:0.000/sec plist_count:0.000 plist_speed:0.000/sec. Num Encoding: 0
+[15:57:51+0530] REDUCE 21s 29.73% edge_count:613.0k edge_speed:575.7k/sec plist_count:225.0k plist_speed:211.3k/sec. Num Encoding: 5
+[15:57:52+0530] REDUCE 22s 53.54% edge_count:1.104M edge_speed:534.5k/sec plist_count:497.8k plist_speed:241.0k/sec. Num Encoding: 8
+[15:57:53+0530] REDUCE 23s 81.32% edge_count:1.677M edge_speed:546.5k/sec plist_count:840.5k plist_speed:273.9k/sec. Num Encoding: 3
+[15:57:54+0530] REDUCE 24s 100.00% edge_count:2.062M edge_speed:506.8k/sec plist_count:1.213M plist_speed:298.0k/sec. Num Encoding: 0
+[15:57:54+0530] REDUCE 24s 100.00% edge_count:2.062M edge_speed:474.0k/sec plist_count:1.213M plist_speed:278.8k/sec. Num Encoding: 0
+Total: 24s

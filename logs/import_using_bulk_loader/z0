@@ -1,0 +1,72 @@
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/20 15:57:14 Integration installed: ContextifyFrames
+[Sentry] 2020/07/20 15:57:14 Integration installed: Environment
+[Sentry] 2020/07/20 15:57:14 Integration installed: Modules
+[Sentry] 2020/07/20 15:57:14 Integration installed: IgnoreErrors
+[Decoder]: Using assembly version of decoder
+[Sentry] 2020/07/20 15:57:15 Integration installed: ContextifyFrames
+[Sentry] 2020/07/20 15:57:15 Integration installed: Environment
+[Sentry] 2020/07/20 15:57:15 Integration installed: Modules
+[Sentry] 2020/07/20 15:57:15 Integration installed: IgnoreErrors
+I0720 15:57:15.224999   17384 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
+I0720 15:57:15.453442   17384 init.go:99] 
+
+Dgraph version   : v20.07.0-beta.Jun22-63-g052023a7c
+Dgraph SHA-256   : 299c35f338eddfb3bb5cfc42ea91dc969786db42f79e395bce16e999924db228
+Commit SHA-1     : 052023a7c
+Commit timestamp : 2020-07-16 14:18:30 -0700
+Branch           : HEAD
+Go version       : go1.14.2
+
+For Dgraph official documentation, visit https://dgraph.io/docs/.
+For discussions about Dgraph     , visit https://discuss.dgraph.io.
+To say hi to the community       , visit https://dgraph.slack.com.
+
+Licensed variously under the Apache Public License 2.0 and Dgraph Community License.
+Copyright 2015-2020 Dgraph Labs, Inc.
+
+
+I0720 15:57:15.453529   17384 run.go:108] Setting up grpc listener at: 0.0.0.0:5080
+I0720 15:57:15.453832   17384 run.go:108] Setting up http listener at: 0.0.0.0:6080
+badger 2020/07/20 15:57:15 INFO: All 0 tables opened in 0s
+I0720 15:57:15.550772   17384 node.go:148] Setting raft.Config to: &{ID:1 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc0006e23c0 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x60283d0 DisableProposalForwarding:false}
+I0720 15:57:15.551069   17384 node.go:326] Group 0 found 0 entries
+I0720 15:57:15.551133   17384 log.go:34] 1 became follower at term 0
+I0720 15:57:15.551184   17384 log.go:34] newRaft 1 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+I0720 15:57:15.551193   17384 log.go:34] 1 became follower at term 1
+E0720 15:57:15.554823   17384 raft.go:518] While proposing CID: Not Zero leader. Aborting proposal: cid:"f8eb5cfa-6bed-425f-9a25-dad480d4a89a" . Retrying...
+I0720 15:57:15.554846   17384 run.go:311] Running Dgraph Zero...
+I0720 15:57:15.565878   17384 node.go:185] Setting conf state to nodes:1 
+I0720 15:57:15.570786   17384 raft.go:708] Done applying conf change at 0x1
+I0720 15:57:16.557616   17384 log.go:34] 1 no leader at term 1; dropping index reading msg
+W0720 15:57:18.557865   17384 node.go:674] [0x1] Read index context timed out
+I0720 15:57:18.557928   17384 log.go:34] 1 no leader at term 1; dropping index reading msg
+E0720 15:57:18.573676   17384 raft.go:518] While proposing CID: Not Zero leader. Aborting proposal: cid:"88e1d8a2-32b2-459b-9cd7-246c1fe504ad" . Retrying...
+I0720 15:57:19.355070   17384 log.go:34] 1 is starting a new election at term 1
+I0720 15:57:19.355119   17384 log.go:34] 1 became pre-candidate at term 1
+I0720 15:57:19.355128   17384 log.go:34] 1 received MsgPreVoteResp from 1 at term 1
+I0720 15:57:19.355191   17384 log.go:34] 1 became candidate at term 2
+I0720 15:57:19.355203   17384 log.go:34] 1 received MsgVoteResp from 1 at term 2
+I0720 15:57:19.355234   17384 log.go:34] 1 became leader at term 2
+I0720 15:57:19.355265   17384 log.go:34] raft.node: 1 elected leader 1 at term 2
+I0720 15:57:19.355331   17384 raft.go:673] I've become the leader, updating leases.
+I0720 15:57:19.355348   17384 assign.go:42] Updated Lease id: 1. Txn Ts: 1
+W0720 15:57:20.558659   17384 node.go:674] [0x1] Read index context timed out
+I0720 15:57:21.585733   17384 raft.go:510] CID set for cluster: 9296a8d0-8a69-4574-b753-e171f7924585
+I0720 15:57:21.603008   17384 license_ee.go:45] Enterprise trial license proposed to the cluster: key:"z1-5317874111688206545" license:<maxNodes:18446744073709551615 expiryTs:1597832841 > 
+I0720 15:59:14.681273   17384 zero.go:422] Got connection request: cluster_info_only:true 
+I0720 15:59:14.685264   17384 zero.go:440] Connected: cluster_info_only:true 
+I0720 15:59:14.688169   17384 zero.go:422] Got connection request: group_id:1 addr:"localhost:7080" force_group_id:true 
+I0720 15:59:14.688552   17384 pool.go:160] CONNECTING to localhost:7080
+W0720 15:59:14.699604   17384 pool.go:254] Connection lost with localhost:7080. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0720 15:59:14.701186   17384 zero.go:571] Connected: id:1 group_id:1 addr:"localhost:7080" force_group_id:true 
+I0720 19:12:37.610808   17384 run.go:274] --- Received terminated signal
+I0720 19:12:37.611060   17384 run.go:274] --- Received terminated signal
+I0720 19:12:37.611084   17384 run.go:283] --- Ignoring interrupt signal.
+I0720 19:12:37.611099   17384 run.go:293] Shutting down...
+E0720 19:12:37.611162   17384 http.go:252] Stopped taking more http(s) requests. Err: accept tcp [::]:6080: use of closed network connection
+I0720 19:12:37.611201   17384 http.go:256] All http(s) requests finished.
+I0720 19:12:37.611229   17384 raft.go:637] Zero Node.Run finished.
+I0720 19:12:37.611296   17384 run.go:146] gRPC server stopped : accept tcp [::]:5080: use of closed network connection
+I0720 19:12:37.612128   17384 run.go:313] All done.
+I0720 19:12:37.638194   17382 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.

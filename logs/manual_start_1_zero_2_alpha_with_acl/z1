@@ -1,24 +1,24 @@
 [Decoder]: Using assembly version of decoder
-[Sentry] 2020/07/15 19:17:49 Integration installed: ContextifyFrames
-[Sentry] 2020/07/15 19:17:49 Integration installed: Environment
-[Sentry] 2020/07/15 19:17:49 Integration installed: Modules
-[Sentry] 2020/07/15 19:17:49 Integration installed: IgnoreErrors
+[Sentry] 2020/07/20 14:29:54 Integration installed: ContextifyFrames
+[Sentry] 2020/07/20 14:29:54 Integration installed: Environment
+[Sentry] 2020/07/20 14:29:54 Integration installed: Modules
+[Sentry] 2020/07/20 14:29:54 Integration installed: IgnoreErrors
 [Decoder]: Using assembly version of decoder
-[Sentry] 2020/07/15 19:17:50 Integration installed: ContextifyFrames
-[Sentry] 2020/07/15 19:17:50 Integration installed: Environment
-[Sentry] 2020/07/15 19:17:50 Integration installed: Modules
-[Sentry] 2020/07/15 19:17:50 Integration installed: IgnoreErrors
-I0715 19:17:50.407010   32051 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
-I0715 19:17:50.660461   32051 init.go:99] 
+[Sentry] 2020/07/20 14:29:54 Integration installed: ContextifyFrames
+[Sentry] 2020/07/20 14:29:54 Integration installed: Environment
+[Sentry] 2020/07/20 14:29:54 Integration installed: Modules
+[Sentry] 2020/07/20 14:29:54 Integration installed: IgnoreErrors
+I0720 14:29:55.336460   14984 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
+I0720 14:29:55.669296   14984 init.go:99] 
 
-Dgraph version   : v20.03.4-rc2
-Dgraph SHA-256   : 1bcd72d2bbb8d66d83bc37c0ced8caf0cf35a7ffd9c8b60b9f29aa56b5507f16
-Commit SHA-1     : f9401e303
-Commit timestamp : 2020-07-14 20:46:44 -0700
+Dgraph version   : v20.07.0-beta.Jun22-63-g052023a7c
+Dgraph SHA-256   : 299c35f338eddfb3bb5cfc42ea91dc969786db42f79e395bce16e999924db228
+Commit SHA-1     : 052023a7c
+Commit timestamp : 2020-07-16 14:18:30 -0700
 Branch           : HEAD
-Go version       : go1.14.4
+Go version       : go1.14.2
 
-For Dgraph official documentation, visit https://docs.dgraph.io.
+For Dgraph official documentation, visit https://dgraph.io/docs/.
 For discussions about Dgraph     , visit https://discuss.dgraph.io.
 To say hi to the community       , visit https://dgraph.slack.com.
 
@@ -26,49 +26,52 @@ Licensed variously under the Apache Public License 2.0 and Dgraph Community Lice
 Copyright 2015-2020 Dgraph Labs, Inc.
 
 
-I0715 19:17:50.660725   32051 run.go:108] Setting up grpc listener at: 0.0.0.0:5080
-I0715 19:17:50.661072   32051 run.go:108] Setting up http listener at: 0.0.0.0:6080
-badger 2020/07/15 19:17:50 INFO: All 0 tables opened in 0s
-I0715 19:17:50.801558   32051 node.go:148] Setting raft.Config to: &{ID:1 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc0007d82c0 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x5d23648 DisableProposalForwarding:false}
-I0715 19:17:50.802319   32051 node.go:326] Group 0 found 0 entries
-I0715 19:17:50.802422   32051 log.go:34] 1 became follower at term 0
-I0715 19:17:50.802506   32051 log.go:34] newRaft 1 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
-I0715 19:17:50.802520   32051 log.go:34] 1 became follower at term 1
-I0715 19:17:50.803221   32051 run.go:314] Running Dgraph Zero...
-E0715 19:17:50.804521   32051 raft.go:518] While proposing CID: Not Zero leader. Aborting proposal: cid:"9999917e-b7b5-44f6-bf65-096719d84a35" . Retrying...
-I0715 19:17:50.840039   32051 node.go:185] Setting conf state to nodes:1 
-I0715 19:17:50.855463   32051 raft.go:708] Done applying conf change at 0x1
-I0715 19:17:51.053654   32051 zero.go:422] Got connection request: cluster_info_only:true 
-I0715 19:17:51.053802   32051 log.go:34] 1 no leader at term 1; dropping index reading msg
-I0715 19:17:52.806179   32051 log.go:34] 1 is starting a new election at term 1
-I0715 19:17:52.806251   32051 log.go:34] 1 became pre-candidate at term 1
-I0715 19:17:52.806297   32051 log.go:34] 1 received MsgPreVoteResp from 1 at term 1
-I0715 19:17:52.806493   32051 log.go:34] 1 became candidate at term 2
-I0715 19:17:52.806509   32051 log.go:34] 1 received MsgVoteResp from 1 at term 2
-I0715 19:17:52.806607   32051 log.go:34] 1 became leader at term 2
-I0715 19:17:52.806646   32051 log.go:34] raft.node: 1 elected leader 1 at term 2
-I0715 19:17:52.806732   32051 raft.go:673] I've become the leader, updating leases.
-I0715 19:17:52.806754   32051 assign.go:42] Updated Lease id: 1. Txn Ts: 1
-W0715 19:17:53.054259   32051 node.go:674] [0x1] Read index context timed out
-I0715 19:17:53.054636   32051 zero.go:440] Connected: cluster_info_only:true 
-I0715 19:17:53.054844   32051 zero.go:422] Got connection request: cluster_info_only:true 
-I0715 19:17:53.055701   32051 zero.go:440] Connected: cluster_info_only:true 
-I0715 19:17:53.055806   32051 zero.go:422] Got connection request: addr:"localhost:7080" 
-I0715 19:17:53.056655   32051 pool.go:160] CONNECTING to localhost:7080
-W0715 19:17:53.061324   32051 pool.go:254] Connection lost with localhost:7080. Error: rpc error: code = Unknown desc = No node has been set up yet
-I0715 19:17:53.070117   32051 zero.go:571] Connected: id:1 group_id:1 addr:"localhost:7080" 
-I0715 19:17:53.070426   32051 zero.go:422] Got connection request: addr:"localhost:7081" 
-I0715 19:17:53.070750   32051 pool.go:160] CONNECTING to localhost:7081
-W0715 19:17:53.074098   32051 pool.go:254] Connection lost with localhost:7081. Error: rpc error: code = Unknown desc = No node has been set up yet
-I0715 19:17:53.084103   32051 zero.go:571] Connected: id:2 group_id:2 addr:"localhost:7081" 
-I0715 19:17:53.873262   32051 raft.go:510] CID set for cluster: bc161a1b-446d-4385-bef1-8fac4ba617f9
-I0715 19:17:53.889627   32051 license_ee.go:45] Enterprise trial license proposed to the cluster: key:"z1-18146178982747463958" license:<maxNodes:18446744073709551615 expiryTs:1597412873 > 
-I0715 19:18:57.683462   32051 run.go:277] --- Received terminated signal
-I0715 19:18:57.685228   32051 run.go:277] --- Received terminated signal
-I0715 19:18:57.685255   32051 run.go:286] --- Ignoring interrupt signal.
-I0715 19:18:57.685290   32051 run.go:296] Shutting down...
-E0715 19:18:57.685375   32051 http.go:252] Stopped taking more http(s) requests. Err: accept tcp [::]:6080: use of closed network connection
-I0715 19:18:57.685408   32051 http.go:256] All http(s) requests finished.
-I0715 19:18:57.685434   32051 raft.go:637] Zero Node.Run finished.
-I0715 19:18:57.685487   32051 run.go:146] gRPC server stopped : accept tcp [::]:5080: use of closed network connection
-I0715 19:18:57.721503   32043 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
+I0720 14:29:55.669474   14984 run.go:108] Setting up grpc listener at: 0.0.0.0:5080
+I0720 14:29:55.669777   14984 run.go:108] Setting up http listener at: 0.0.0.0:6080
+badger 2020/07/20 14:29:55 INFO: All 0 tables opened in 0s
+I0720 14:29:55.827938   14984 node.go:148] Setting raft.Config to: &{ID:1 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc0002e4b80 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x60283d0 DisableProposalForwarding:false}
+I0720 14:29:55.828919   14984 node.go:326] Group 0 found 0 entries
+I0720 14:29:55.829014   14984 log.go:34] 1 became follower at term 0
+I0720 14:29:55.829171   14984 log.go:34] newRaft 1 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+I0720 14:29:55.829189   14984 log.go:34] 1 became follower at term 1
+I0720 14:29:55.829415   14984 run.go:311] Running Dgraph Zero...
+E0720 14:29:55.829835   14984 raft.go:518] While proposing CID: Not Zero leader. Aborting proposal: cid:"42e299b9-01e1-479a-bc3a-a843f430997e" . Retrying...
+I0720 14:29:55.850100   14984 node.go:185] Setting conf state to nodes:1 
+I0720 14:29:55.902256   14984 raft.go:708] Done applying conf change at 0x1
+I0720 14:29:56.023120   14984 zero.go:422] Got connection request: cluster_info_only:true 
+I0720 14:29:56.023261   14984 log.go:34] 1 no leader at term 1; dropping index reading msg
+W0720 14:29:58.023767   14984 node.go:674] [0x1] Read index context timed out
+I0720 14:29:58.023845   14984 log.go:34] 1 no leader at term 1; dropping index reading msg
+I0720 14:29:58.431882   14984 log.go:34] 1 is starting a new election at term 1
+I0720 14:29:58.431961   14984 log.go:34] 1 became pre-candidate at term 1
+I0720 14:29:58.431970   14984 log.go:34] 1 received MsgPreVoteResp from 1 at term 1
+I0720 14:29:58.432002   14984 log.go:34] 1 became candidate at term 2
+I0720 14:29:58.432009   14984 log.go:34] 1 received MsgVoteResp from 1 at term 2
+I0720 14:29:58.432029   14984 log.go:34] 1 became leader at term 2
+I0720 14:29:58.432045   14984 log.go:34] raft.node: 1 elected leader 1 at term 2
+I0720 14:29:58.432099   14984 raft.go:673] I've become the leader, updating leases.
+I0720 14:29:58.432114   14984 assign.go:42] Updated Lease id: 1. Txn Ts: 1
+E0720 14:29:58.903512   14984 raft.go:518] While proposing CID: Not Zero leader. Aborting proposal: cid:"fe485070-12e9-4db8-881a-f87dad8f1e37" . Retrying...
+W0720 14:30:00.024028   14984 node.go:674] [0x1] Read index context timed out
+I0720 14:30:00.024217   14984 zero.go:440] Connected: cluster_info_only:true 
+I0720 14:30:00.024503   14984 zero.go:422] Got connection request: cluster_info_only:true 
+I0720 14:30:00.024775   14984 zero.go:440] Connected: cluster_info_only:true 
+I0720 14:30:00.025780   14984 zero.go:422] Got connection request: addr:"localhost:7081" 
+I0720 14:30:00.026118   14984 pool.go:160] CONNECTING to localhost:7081
+W0720 14:30:00.029190   14984 pool.go:254] Connection lost with localhost:7081. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0720 14:30:00.039198   14984 zero.go:571] Connected: id:1 group_id:1 addr:"localhost:7081" 
+I0720 14:30:00.039306   14984 zero.go:422] Got connection request: addr:"localhost:7080" 
+I0720 14:30:00.039629   14984 pool.go:160] CONNECTING to localhost:7080
+W0720 14:30:00.042990   14984 pool.go:254] Connection lost with localhost:7080. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0720 14:30:00.050696   14984 zero.go:571] Connected: id:2 group_id:2 addr:"localhost:7080" 
+I0720 14:30:01.936269   14984 raft.go:510] CID set for cluster: 9d9ecad9-d226-4093-a771-f5a3faf7d511
+I0720 14:30:01.949148   14984 license_ee.go:45] Enterprise trial license proposed to the cluster: key:"z1-5489492935676597999" license:<maxNodes:18446744073709551615 expiryTs:1597827601 > 
+I0720 14:31:00.607396   14984 run.go:274] --- Received terminated signal
+I0720 14:31:00.608813   14984 run.go:274] --- Received terminated signal
+I0720 14:31:00.608832   14984 run.go:283] --- Ignoring interrupt signal.
+I0720 14:31:00.608864   14984 run.go:293] Shutting down...
+E0720 14:31:00.608928   14984 http.go:252] Stopped taking more http(s) requests. Err: accept tcp [::]:6080: use of closed network connection
+I0720 14:31:00.608950   14984 http.go:256] All http(s) requests finished.
+I0720 14:31:00.608994   14984 raft.go:637] Zero Node.Run finished.
+I0720 14:31:00.609166   14984 run.go:146] gRPC server stopped : accept tcp [::]:5080: use of closed network connection
+I0720 14:31:00.646095   14977 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.

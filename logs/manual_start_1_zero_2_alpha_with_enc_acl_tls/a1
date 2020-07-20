@@ -1,27 +1,28 @@
 [Decoder]: Using assembly version of decoder
-[Sentry] 2020/07/15 19:18:58 Integration installed: ContextifyFrames
-[Sentry] 2020/07/15 19:18:58 Integration installed: Environment
-[Sentry] 2020/07/15 19:18:58 Integration installed: Modules
-[Sentry] 2020/07/15 19:18:58 Integration installed: IgnoreErrors
+[Sentry] 2020/07/20 14:33:45 Integration installed: ContextifyFrames
+[Sentry] 2020/07/20 14:33:45 Integration installed: Environment
+[Sentry] 2020/07/20 14:33:45 Integration installed: Modules
+[Sentry] 2020/07/20 14:33:45 Integration installed: IgnoreErrors
 [Decoder]: Using assembly version of decoder
-[Sentry] 2020/07/15 19:18:58 Integration installed: ContextifyFrames
-[Sentry] 2020/07/15 19:18:58 Integration installed: Environment
-[Sentry] 2020/07/15 19:18:58 Integration installed: Modules
-[Sentry] 2020/07/15 19:18:58 Integration installed: IgnoreErrors
-I0715 19:18:59.087644   32141 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
-I0715 19:18:59.091784   32141 run.go:561] HMAC secret loaded successfully.
-I0715 19:18:59.092007   32141 config.go:102] LRU memory (--lru_mb) set to 2048MB, 25% of the total RAM found (8192MB)
-For more information on --lru_mb please read https://docs.dgraph.io/deploy/#config
-I0715 19:18:59.323883   32141 init.go:99] 
+[Sentry] 2020/07/20 14:33:46 Integration installed: ContextifyFrames
+[Sentry] 2020/07/20 14:33:46 Integration installed: Environment
+[Sentry] 2020/07/20 14:33:46 Integration installed: Modules
+[Sentry] 2020/07/20 14:33:46 Integration installed: IgnoreErrors
+I0720 14:33:47.145641   15130 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
+I0720 14:33:47.154237   15130 run.go:598] HMAC secret loaded successfully.
+I0720 14:33:47.161691   15130 config.go:100] LRU memory (--lru_mb) set to 2048MB, 25% of the total RAM found (8192MB)
+For more information on --lru_mb please read https://dgraph.io/docs/deploy/#config
+I0720 14:33:47.168754   15130 util_ee.go:126] KeyReader instantiated of type *enc.localKeyReader
+I0720 14:33:47.661640   15130 init.go:99] 
 
-Dgraph version   : v20.03.4-rc2
-Dgraph SHA-256   : 1bcd72d2bbb8d66d83bc37c0ced8caf0cf35a7ffd9c8b60b9f29aa56b5507f16
-Commit SHA-1     : f9401e303
-Commit timestamp : 2020-07-14 20:46:44 -0700
+Dgraph version   : v20.07.0-beta.Jun22-63-g052023a7c
+Dgraph SHA-256   : 299c35f338eddfb3bb5cfc42ea91dc969786db42f79e395bce16e999924db228
+Commit SHA-1     : 052023a7c
+Commit timestamp : 2020-07-16 14:18:30 -0700
 Branch           : HEAD
-Go version       : go1.14.4
+Go version       : go1.14.2
 
-For Dgraph official documentation, visit https://docs.dgraph.io.
+For Dgraph official documentation, visit https://dgraph.io/docs/.
 For discussions about Dgraph     , visit https://discuss.dgraph.io.
 To say hi to the community       , visit https://dgraph.slack.com.
 
@@ -29,80 +30,93 @@ Licensed variously under the Apache Public License 2.0 and Dgraph Community Lice
 Copyright 2015-2020 Dgraph Labs, Inc.
 
 
-I0715 19:18:59.323922   32141 run.go:609] x.Config: {PortOffset:1 QueryEdgeLimit:1000000 NormalizeNodeLimit:10000}
-I0715 19:18:59.324199   32141 run.go:610] x.WorkerConfig: {ExportPath:export NumPendingProposals:256 Tracing:0.01 MyAddr: ZeroAddr:[localhost:5080] RaftId:0 WhiteListedIPRanges:[] MaxRetries:-1 StrictMutations:false AclEnabled:true AbortOlderThan:5m0s SnapshotAfter:10000 ProposedGroupId:0 StartTime:2020-07-15 19:18:58.415642 +0530 IST m=+0.024553043 LudicrousMode:false BadgerKeyFile:/Users/neerajbattan/go/src/github.com/dgraph-io/foo/manual_testing/enc_key_file}
-I0715 19:18:59.324308   32141 run.go:611] worker.Config: {PostingDir:p1 BadgerTables:mmap BadgerVlog:mmap BadgerKeyFile:/Users/neerajbattan/go/src/github.com/dgraph-io/foo/manual_testing/enc_key_file BadgerCompressionLevel:3 WALDir:w1 MutationsMode:0 AuthToken: AllottedMemory:2048 HmacSecret:**** AccessJwtTtl:6h0m0s RefreshJwtTtl:720h0m0s AclRefreshInterval:30s}
-I0715 19:18:59.426667   32141 pool.go:160] CONNECTING to localhost:5080
-I0715 19:19:03.455220   32141 groups.go:1054] Retry Zero Connection
-I0715 19:19:04.568513   32141 groups.go:1054] Retry Zero Connection
-I0715 19:19:05.686346   32141 server_state.go:126] Encryption feature enabled. Using encryption key file: /Users/neerajbattan/go/src/github.com/dgraph-io/foo/manual_testing/enc_key_file
-I0715 19:19:05.693443   32141 server_state.go:83] Setting Badger Compression Level: 3
-I0715 19:19:05.693507   32141 server_state.go:92] Setting Badger table load option: mmap
-I0715 19:19:05.693519   32141 server_state.go:104] Setting Badger value log load option: mmap
-I0715 19:19:05.693527   32141 server_state.go:149] Opening write-ahead log BadgerDB with options: {Dir:w1 ValueDir:w1 SyncWrites:false TableLoadingMode:1 ValueLogLoadingMode:2 NumVersionsToKeep:1 ReadOnly:false Truncate:true Logger:0x5d23648 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1048576 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:10485760 MaxBfCacheSize:0 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:10000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:false KeepBlocksInCache:false managedTxns:false maxBatchCount:0 maxBatchSize:0}
-I0715 19:19:05.768108   32141 log.go:34] All 0 tables opened in 0s
-I0715 19:19:05.822350   32141 server_state.go:83] Setting Badger Compression Level: 3
-I0715 19:19:05.822387   32141 server_state.go:92] Setting Badger table load option: mmap
-I0715 19:19:05.822524   32141 server_state.go:104] Setting Badger value log load option: mmap
-I0715 19:19:05.822657   32141 server_state.go:173] Opening postings BadgerDB with options: {Dir:p1 ValueDir:p1 SyncWrites:false TableLoadingMode:2 ValueLogLoadingMode:2 NumVersionsToKeep:2147483647 ReadOnly:false Truncate:true Logger:0x5d23648 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1024 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:1073741824 MaxBfCacheSize:524288000 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:1000000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:true KeepBlocksInCache:true managedTxns:false maxBatchCount:0 maxBatchSize:0}
-I0715 19:19:05.911967   32141 log.go:34] All 0 tables opened in 0s
-I0715 19:19:05.942873   32141 groups.go:107] Current Raft Id: 0x0
-I0715 19:19:05.943363   32141 worker.go:96] Worker listening at address: [::]:7081
-I0715 19:19:06.064924   32141 groups.go:135] Connected to group zero. Assigned group: 2
-I0715 19:19:06.064949   32141 groups.go:137] Raft Id after connection to Zero: 0x2
-I0715 19:19:06.065060   32141 pool.go:160] CONNECTING to localhost:7080
-I0715 19:19:06.065915   32141 draft.go:196] Node ID: 0x2 with GroupID: 2
-I0715 19:19:06.065979   32141 node.go:148] Setting raft.Config to: &{ID:2 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc00007d800 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x5d23648 DisableProposalForwarding:false}
-I0715 19:19:06.066128   32141 node.go:326] Group 2 found 0 entries
-I0715 19:19:06.066153   32141 draft.go:1591] New Node for group: 2
-I0715 19:19:06.066212   32141 log.go:34] 2 became follower at term 0
-I0715 19:19:06.066263   32141 log.go:34] newRaft 2 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
-I0715 19:19:06.066272   32141 log.go:34] 2 became follower at term 1
-I0715 19:19:06.066326   32141 draft.go:146] Operation started with id: opRollup
-I0715 19:19:06.066353   32141 groups.go:155] Server is ready
-I0715 19:19:06.066835   32141 groups.go:782] Got address of a Zero leader: localhost:5080
-I0715 19:19:06.066865   32141 draft.go:969] Found Raft progress: 0
-I0715 19:19:06.067956   32141 groups.go:796] Starting a new membership stream receive from localhost:5080.
-I0715 19:19:06.069599   32141 groups.go:813] Received first state update from Zero: counter:7 groups:<key:1 value:<members:<key:1 value:<id:1 group_id:1 addr:"localhost:7080" leader:true last_update:1594820946 > > > > groups:<key:2 value:<members:<key:2 value:<id:2 group_id:2 addr:"localhost:7081" > > > > zeros:<key:1 value:<id:1 addr:"localhost:5080" leader:true > > maxRaftId:2 cid:"1d68f8e8-b678-47a1-8e7b-11036ef36011" license:<maxNodes:18446744073709551615 expiryTs:1597412945 enabled:true > 
-I0715 19:19:06.077946   32141 node.go:185] Setting conf state to nodes:2 
-I0715 19:19:06.078140   32141 log.go:34] 2 is starting a new election at term 1
-I0715 19:19:06.078151   32141 log.go:34] 2 became pre-candidate at term 1
-I0715 19:19:06.078157   32141 log.go:34] 2 received MsgPreVoteResp from 2 at term 1
-I0715 19:19:06.078194   32141 log.go:34] 2 became candidate at term 2
-I0715 19:19:06.078204   32141 log.go:34] 2 received MsgVoteResp from 2 at term 2
-I0715 19:19:06.078239   32141 log.go:34] 2 became leader at term 2
-I0715 19:19:06.078252   32141 log.go:34] raft.node: 2 elected leader 2 at term 2
-I0715 19:19:06.292879   32141 run.go:480] Bringing up GraphQL HTTP API at 0.0.0.0:8081/graphql
-I0715 19:19:06.293135   32141 run.go:481] Bringing up GraphQL HTTP admin API at 0.0.0.0:8081/admin
-I0715 19:19:06.294290   32141 run.go:512] gRPC server started.  Listening on port 9081
-I0715 19:19:06.294520   32141 run.go:513] HTTP server started.  Listening on port 8081
-I0715 19:19:07.070884   32141 groups.go:865] Leader idx=0x2 of group=2 is connecting to Zero for txn updates
-I0715 19:19:07.070937   32141 groups.go:874] Got Zero leader: localhost:5080
-I0715 19:19:11.492340   32141 admin.go:568] Error reading GraphQL schema: Dgraph execution failed because rpc error: code = Aborted desc = Transaction has been aborted. Please retry.
-I0715 19:19:11.563908   32141 admin.go:354] Updating GraphQL schema from subscription.
-E0715 19:19:11.563976   32141 admin.go:384] Error processing GraphQL schema: input: No schema specified.  
-I0715 19:19:11.672785   32141 access_ee.go:387] Successfully upserted the guardian group
-I0715 19:19:12.245125   32141 access_ee.go:440] Unable to upsert the groot account. Error: while upserting user with id groot: rpc error: code = Aborted desc = Transaction has been aborted. Please retry
-I0715 19:19:12.400642   32141 access_ee.go:421] Successfully upserted groot account
-I0715 19:19:16.539556   32141 admin.go:577] No GraphQL schema in Dgraph; serving empty GraphQL API
-I0715 19:20:47.627563   32141 run.go:652] Caught Ctrl-C. Terminating now (this may take a few seconds)...
-E0715 19:20:47.627820   32141 run.go:391] GRPC listener canceled: accept tcp [::]:9081: use of closed network connection
-E0715 19:20:47.627929   32141 run.go:410] Stopped taking more http(s) requests. Err: accept tcp [::]:8081: use of closed network connection
-I0715 19:20:47.627958   32141 run.go:652] Caught Ctrl-C. Terminating now (this may take a few seconds)...
-I0715 19:20:47.627978   32141 run.go:675] GRPC and HTTP stopped.
-I0715 19:20:47.627994   32141 worker.go:112] Stopping group...
-I0715 19:20:47.628340   32141 worker.go:116] Updating RAFT state before shutting down...
-I0715 19:20:47.628446   32141 worker.go:121] Stopping node...
-E0715 19:20:47.628520   32141 groups.go:905] Error in oracle delta stream. Error: rpc error: code = Canceled desc = context canceled
-I0715 19:20:47.628543   32141 draft.go:911] Stopping node.Run
-I0715 19:20:47.628574   32141 draft.go:980] Raft node done.
-E0715 19:20:47.628587   32141 groups.go:804] Unable to sync memberships. Error: rpc error: code = Canceled desc = context canceled. State: <nil>
-E0715 19:20:47.640156   32141 groups.go:1105] Error from worker subscribe stream: rpc error: code = Unavailable desc = transport is closing
-W0715 19:20:47.640581   32141 pool.go:254] Connection lost with localhost:7080. Error: rpc error: code = Unavailable desc = transport is closing
-E0715 19:20:47.643316   32141 groups.go:1096] Error from alpha client subscribe: rpc error: code = Unavailable desc = all SubConns are in TransientFailure, latest connection error: connection error: desc = "transport: Error while dialing dial tcp [::1]:7080: connect: connection refused"
-I0715 19:20:47.649620   32141 draft.go:173] Stopped all ongoing registered tasks.
-I0715 19:20:47.649653   32141 worker.go:124] Stopping raftwal store...
-I0715 19:20:47.649683   32141 worker.go:127] Stopping worker server...
-I0715 19:20:47.649815   32141 draft.go:112] Operation completed with id: opRollup
-I0715 19:20:47.655162   32141 run.go:652] Caught Ctrl-C. Terminating now (this may take a few seconds)...
-I0715 19:20:47.655182   32141 run.go:654] Signaled thrice. Aborting!
+I0720 14:33:47.661662   15130 run.go:651] x.Config: {PortOffset:1 QueryEdgeLimit:1000000 NormalizeNodeLimit:10000 PollInterval:1s GraphqlExtension:true}
+I0720 14:33:47.661781   15130 run.go:652] x.WorkerConfig: {ExportPath:export NumPendingProposals:256 Tracing:0.01 MyAddr: ZeroAddr:[localhost:5080] RaftId:0 WhiteListedIPRanges:[] MaxRetries:-1 StrictMutations:false AclEnabled:true AbortOlderThan:5m0s SnapshotAfter:10000 ProposedGroupId:0 StartTime:2020-07-20 14:33:46.271336 +0530 IST m=+0.022928450 LudicrousMode:false EncryptionKey:**** LogRequest:0}
+I0720 14:33:47.661880   15130 run.go:653] worker.Config: {PostingDir:p1 BadgerTables:mmap BadgerVlog:mmap BadgerCompressionLevel:3 WALDir:w1 MutationsMode:0 AuthToken: AllottedMemory:2048 HmacSecret:**** AccessJwtTtl:6h0m0s RefreshJwtTtl:720h0m0s AclRefreshInterval:30s}
+I0720 14:33:47.767597   15130 pool.go:160] CONNECTING to localhost:5080
+I0720 14:33:51.794224   15130 groups.go:1065] Retry Zero Connection
+I0720 14:33:52.906197   15130 groups.go:1065] Retry Zero Connection
+I0720 14:33:54.021733   15130 server_state.go:121] Encryption feature enabled.
+I0720 14:33:54.022021   15130 server_state.go:78] Setting Badger Compression Level: 3
+I0720 14:33:54.022033   15130 server_state.go:87] Setting Badger table load option: mmap
+I0720 14:33:54.022039   15130 server_state.go:99] Setting Badger value log load option: mmap
+I0720 14:33:54.022660   15130 server_state.go:144] Opening write-ahead log BadgerDB with options: {Dir:w1 ValueDir:w1 SyncWrites:false TableLoadingMode:1 ValueLogLoadingMode:2 NumVersionsToKeep:1 ReadOnly:false Truncate:true Logger:0x60283d0 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1048576 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:10485760 MaxBfCacheSize:0 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:10000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:false KeepBlocksInCache:false managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0720 14:33:54.085784   15130 log.go:34] All 0 tables opened in 0s
+I0720 14:33:54.108875   15130 server_state.go:78] Setting Badger Compression Level: 3
+I0720 14:33:54.108899   15130 server_state.go:87] Setting Badger table load option: mmap
+I0720 14:33:54.108909   15130 server_state.go:99] Setting Badger value log load option: mmap
+I0720 14:33:54.108921   15130 server_state.go:168] Opening postings BadgerDB with options: {Dir:p1 ValueDir:p1 SyncWrites:false TableLoadingMode:2 ValueLogLoadingMode:2 NumVersionsToKeep:2147483647 ReadOnly:false Truncate:true Logger:0x60283d0 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1024 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:1073741824 MaxBfCacheSize:524288000 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:1000000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:true KeepBlocksInCache:true managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0720 14:33:54.233772   15130 log.go:34] All 0 tables opened in 0s
+I0720 14:33:54.259626   15130 groups.go:107] Current Raft Id: 0x0
+I0720 14:33:54.263326   15130 worker.go:97] Worker listening at address: [::]:7081
+I0720 14:33:54.384253   15130 groups.go:135] Connected to group zero. Assigned group: 2
+I0720 14:33:54.384277   15130 groups.go:137] Raft Id after connection to Zero: 0x2
+I0720 14:33:54.384377   15130 pool.go:160] CONNECTING to localhost:7080
+I0720 14:33:54.395050   15130 draft.go:210] Node ID: 0x2 with GroupID: 2
+I0720 14:33:54.395159   15130 node.go:148] Setting raft.Config to: &{ID:2 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc00007f300 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x60283d0 DisableProposalForwarding:false}
+I0720 14:33:54.395317   15130 node.go:326] Group 2 found 0 entries
+I0720 14:33:54.395348   15130 draft.go:1632] New Node for group: 2
+I0720 14:33:54.395402   15130 log.go:34] 2 became follower at term 0
+I0720 14:33:54.396227   15130 log.go:34] newRaft 2 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+I0720 14:33:54.396278   15130 log.go:34] 2 became follower at term 1
+I0720 14:33:54.396379   15130 draft.go:160] Operation started with id: opRollup
+I0720 14:33:54.396405   15130 groups.go:155] Server is ready
+I0720 14:33:54.396527   15130 draft.go:1009] Found Raft progress: 0
+I0720 14:33:54.396575   15130 groups.go:790] Got address of a Zero leader: localhost:5080
+I0720 14:33:54.396712   15130 groups.go:804] Starting a new membership stream receive from localhost:5080.
+I0720 14:33:54.407412   15130 groups.go:821] Received first state update from Zero: counter:7 groups:<key:1 value:<members:<key:1 value:<id:1 group_id:1 addr:"localhost:7080" leader:true last_update:1595235834 > > > > groups:<key:2 value:<members:<key:2 value:<id:2 group_id:2 addr:"localhost:7081" > > > > zeros:<key:1 value:<id:1 addr:"localhost:5080" leader:true > > maxRaftId:2 cid:"604d11a5-c809-444d-a015-195c8bccc04c" license:<maxNodes:18446744073709551615 expiryTs:1597827833 enabled:true > 
+I0720 14:33:54.419746   15130 node.go:185] Setting conf state to nodes:2 
+I0720 14:33:54.420142   15130 log.go:34] 2 is starting a new election at term 1
+I0720 14:33:54.420163   15130 log.go:34] 2 became pre-candidate at term 1
+I0720 14:33:54.420169   15130 log.go:34] 2 received MsgPreVoteResp from 2 at term 1
+I0720 14:33:54.420208   15130 log.go:34] 2 became candidate at term 2
+I0720 14:33:54.420215   15130 log.go:34] 2 received MsgVoteResp from 2 at term 2
+I0720 14:33:54.420230   15130 log.go:34] 2 became leader at term 2
+I0720 14:33:54.420247   15130 log.go:34] raft.node: 2 elected leader 2 at term 2
+I0720 14:33:54.605981   15130 run.go:521] Bringing up GraphQL HTTP API at 0.0.0.0:8081/graphql
+I0720 14:33:54.606007   15130 run.go:522] Bringing up GraphQL HTTP admin API at 0.0.0.0:8081/admin
+I0720 14:33:54.606042   15130 run.go:554] gRPC server started.  Listening on port 9081
+I0720 14:33:54.606058   15130 run.go:555] HTTP server started.  Listening on port 8081
+I0720 14:33:55.397625   15130 groups.go:873] Leader idx=0x2 of group=2 is connecting to Zero for txn updates
+I0720 14:33:55.397796   15130 groups.go:882] Got Zero leader: localhost:5080
+E0720 14:33:55.853310   15130 groups.go:253] Error while proposing initial schema: rpc error: code = Unknown desc = operation opIndexing is already running
+E0720 14:33:56.243490   15130 groups.go:253] Error while proposing initial schema: rpc error: code = Unknown desc = operation opIndexing is already running
+E0720 14:33:56.578121   15130 groups.go:253] Error while proposing initial schema: rpc error: code = Unknown desc = operation opIndexing is already running
+E0720 14:33:57.210853   15130 groups.go:253] Error while proposing initial schema: rpc error: code = Unknown desc = operation opIndexing is already running
+E0720 14:33:57.833170   15130 groups.go:253] Error while proposing initial schema: rpc error: code = Unknown desc = operation opIndexing is already running
+I0720 14:33:58.503417   15130 access_ee.go:442] Unable to upsert the guardian group. Error: while upserting group with id guardians: rpc error: code = Aborted desc = Transaction has been aborted. Please retry
+I0720 14:33:58.648254   15130 access_ee.go:400] Successfully upserted the guardian group
+I0720 14:33:59.584100   15130 access_ee.go:453] Unable to upsert the groot account. Error: while upserting user with id groot: rpc error: code = Aborted desc = Transaction has been aborted. Please retry
+I0720 14:33:59.644923   15130 admin.go:605] No GraphQL schema in Dgraph; serving empty GraphQL API
+I0720 14:33:59.727593   15130 access_ee.go:434] Successfully upserted groot account
+I0720 14:40:15.069435   15130 run.go:693] Caught Ctrl-C. Terminating now (this may take a few seconds)...
+E0720 14:40:15.069578   15130 run.go:395] GRPC listener canceled: accept tcp [::]:9081: use of closed network connection
+E0720 14:40:15.069768   15130 run.go:414] Stopped taking more http(s) requests. Err: accept tcp [::]:8081: use of closed network connection
+I0720 14:40:15.069813   15130 run.go:716] GRPC and HTTP stopped.
+I0720 14:40:15.069829   15130 worker.go:113] Stopping group...
+I0720 14:40:15.070004   15130 worker.go:117] Updating RAFT state before shutting down...
+E0720 14:40:15.071011   15130 groups.go:812] Unable to sync memberships. Error: rpc error: code = Canceled desc = context canceled. State: <nil>
+I0720 14:40:15.071366   15130 worker.go:122] Stopping node...
+E0720 14:40:15.071831   15130 groups.go:913] Error in oracle delta stream. Error: rpc error: code = Canceled desc = context canceled
+I0720 14:40:15.072345   15130 run.go:693] Caught Ctrl-C. Terminating now (this may take a few seconds)...
+I0720 14:40:15.072422   15130 draft.go:951] Stopping node.Run
+I0720 14:40:15.072509   15130 draft.go:1020] Raft node done.
+I0720 14:40:15.088303   15130 draft.go:187] Stopped all ongoing registered tasks.
+I0720 14:40:15.088351   15130 worker.go:125] Stopping raftwal store...
+I0720 14:40:15.088378   15130 worker.go:128] Stopping worker server...
+I0720 14:40:15.088825   15130 draft.go:115] Operation completed with id: opRollup
+E0720 14:40:15.101894   15130 groups.go:1116] Error from worker subscribe stream: rpc error: code = Unavailable desc = transport is closing
+I0720 14:40:15.102021   15130 run.go:720] Disposing server state.
+W0720 14:40:15.102461   15130 pool.go:254] Connection lost with localhost:7080. Error: rpc error: code = Unavailable desc = transport is closing
+I0720 14:40:15.137845   15130 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 14:40:15.137931   15130 log.go:34] Running for level: 0
+I0720 14:40:15.162757   15130 log.go:34] LOG Compact 0->1, del 1 tables, add 1 tables, took 24.789983ms
+I0720 14:40:15.162816   15130 log.go:34] Compaction for level: 0 DONE
+I0720 14:40:15.162876   15130 log.go:34] Force compaction on level 0 done
+I0720 14:40:15.245286   15130 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 14:40:15.245322   15130 log.go:34] Running for level: 0
+I0720 14:40:15.274967   15130 log.go:34] LOG Compact 0->1, del 1 tables, add 1 tables, took 29.607455ms
+I0720 14:40:15.275030   15130 log.go:34] Compaction for level: 0 DONE
+I0720 14:40:15.275052   15130 log.go:34] Force compaction on level 0 done
+I0720 14:40:15.300604   15130 run.go:723] Server shutdown. Bye!
+[Sentry] 2020/07/20 14:40:15 Buffer flushed successfully.

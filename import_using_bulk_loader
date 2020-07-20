@@ -11,14 +11,18 @@ rm -rf $logs_dir; mkdir $logs_dir
 rm -rf $data_dir; mkdir $data_dir
 
 o="0"
-dgraph zero -w "z$o" --cwd $data_dir &> "$logs_dir/z1" &
+dgraph zero -w "z$o" --cwd $data_dir &> "$logs_dir/z$o" &
 
-o="0"
-dgraph alpha -o $o -p "p$o" -w "w$o" --cwd $data_dir &> "$logs_dir/a$o" &
-
-o="1"
-dgraph alpha -o $o -p "p$o" -w "w$o" --cwd $data_dir &> "$logs_dir/a$o" &
 
 sleep 15s
 
-dgraph bulk --cwd $data_dir -f "$PWD/1million.rdf" -s "$PWD/1million.schema" &> "$logs_dir/bulk_loader" &
+dgraph bulk -f "$PWD/1million.rdf" -s "$PWD/1million.schema" &> "$logs_dir/bulk_loader" &
+echo done
+
+sleep 120s
+
+#o="0"
+#dgraph alpha -o $o -p "out/0/p" -w "w$o" --cwd $data_dir &> "$logs_dir/a$o" &
+
+#o="1"
+#dgraph alpha -o $o -p "out/0/p" -w "w$o" --cwd $data_dir &> "$logs_dir/a$o" &

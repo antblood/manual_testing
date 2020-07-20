@@ -1,26 +1,27 @@
 [Decoder]: Using assembly version of decoder
-[Sentry] 2020/07/15 19:25:58 Integration installed: ContextifyFrames
-[Sentry] 2020/07/15 19:25:58 Integration installed: Environment
-[Sentry] 2020/07/15 19:25:58 Integration installed: Modules
-[Sentry] 2020/07/15 19:25:58 Integration installed: IgnoreErrors
+[Sentry] 2020/07/20 20:18:31 Integration installed: ContextifyFrames
+[Sentry] 2020/07/20 20:18:31 Integration installed: Environment
+[Sentry] 2020/07/20 20:18:31 Integration installed: Modules
+[Sentry] 2020/07/20 20:18:31 Integration installed: IgnoreErrors
 [Decoder]: Using assembly version of decoder
-[Sentry] 2020/07/15 19:25:59 Integration installed: ContextifyFrames
-[Sentry] 2020/07/15 19:25:59 Integration installed: Environment
-[Sentry] 2020/07/15 19:25:59 Integration installed: Modules
-[Sentry] 2020/07/15 19:25:59 Integration installed: IgnoreErrors
-I0715 19:25:59.581802   32421 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
-I0715 19:25:59.583130   32421 config.go:102] LRU memory (--lru_mb) set to 2048MB, 25% of the total RAM found (8192MB)
-For more information on --lru_mb please read https://docs.dgraph.io/deploy/#config
-I0715 19:25:59.857627   32421 init.go:99] 
+[Sentry] 2020/07/20 20:18:32 Integration installed: ContextifyFrames
+[Sentry] 2020/07/20 20:18:32 Integration installed: Environment
+[Sentry] 2020/07/20 20:18:32 Integration installed: Modules
+[Sentry] 2020/07/20 20:18:32 Integration installed: IgnoreErrors
+I0720 20:18:32.618812   20980 sentry_integration.go:48] This instance of Dgraph will send anonymous reports of panics back to Dgraph Labs via Sentry. No confidential information is sent. These reports help improve Dgraph. To opt-out, restart your instance with the --enable_sentry=false flag. For more info, see https://dgraph.io/docs/howto/#data-handling.
+I0720 20:18:32.620352   20980 config.go:100] LRU memory (--lru_mb) set to 2048MB, 25% of the total RAM found (8192MB)
+For more information on --lru_mb please read https://dgraph.io/docs/deploy/#config
+I0720 20:18:32.620600   20980 util_ee.go:126] KeyReader instantiated of type <nil>
+I0720 20:18:32.991622   20980 init.go:99] 
 
-Dgraph version   : v20.03.4-rc2
-Dgraph SHA-256   : 1bcd72d2bbb8d66d83bc37c0ced8caf0cf35a7ffd9c8b60b9f29aa56b5507f16
-Commit SHA-1     : f9401e303
-Commit timestamp : 2020-07-14 20:46:44 -0700
-Branch           : HEAD
-Go version       : go1.14.4
+Dgraph version   : v20.07.0-beta.Jun22-63-g052023a7c
+Dgraph SHA-256   : fbcb5b171ec05dd73f3929f24f83db5eeee9806a12cdaf99210ba1b2f44868d7
+Commit SHA-1     : 052023a7c
+Commit timestamp : 2020-07-16 14:18:30 -0700
+Branch           : neeraj/v20.07
+Go version       : go1.14.2
 
-For Dgraph official documentation, visit https://docs.dgraph.io.
+For Dgraph official documentation, visit https://dgraph.io/docs/.
 For discussions about Dgraph     , visit https://discuss.dgraph.io.
 To say hi to the community       , visit https://dgraph.slack.com.
 
@@ -28,253 +29,268 @@ Licensed variously under the Apache Public License 2.0 and Dgraph Community Lice
 Copyright 2015-2020 Dgraph Labs, Inc.
 
 
-I0715 19:25:59.857663   32421 run.go:609] x.Config: {PortOffset:0 QueryEdgeLimit:1000000 NormalizeNodeLimit:10000}
-I0715 19:25:59.857782   32421 run.go:610] x.WorkerConfig: {ExportPath:export NumPendingProposals:256 Tracing:0.01 MyAddr: ZeroAddr:[localhost:5080] RaftId:0 WhiteListedIPRanges:[] MaxRetries:-1 StrictMutations:false AclEnabled:false AbortOlderThan:5m0s SnapshotAfter:10000 ProposedGroupId:0 StartTime:2020-07-15 19:25:59.076421 +0530 IST m=+0.022294380 LudicrousMode:false BadgerKeyFile:}
-I0715 19:25:59.857889   32421 run.go:611] worker.Config: {PostingDir:p0 BadgerTables:mmap BadgerVlog:mmap BadgerKeyFile: BadgerCompressionLevel:3 WALDir:w0 MutationsMode:0 AuthToken: AllottedMemory:2048 HmacSecret:**** AccessJwtTtl:0s RefreshJwtTtl:0s AclRefreshInterval:0s}
-I0715 19:25:59.864679   32421 server_state.go:83] Setting Badger Compression Level: 3
-I0715 19:25:59.864701   32421 server_state.go:92] Setting Badger table load option: mmap
-I0715 19:25:59.864725   32421 server_state.go:104] Setting Badger value log load option: mmap
-I0715 19:25:59.864834   32421 server_state.go:149] Opening write-ahead log BadgerDB with options: {Dir:w0 ValueDir:w0 SyncWrites:false TableLoadingMode:1 ValueLogLoadingMode:2 NumVersionsToKeep:1 ReadOnly:false Truncate:true Logger:0x5d23648 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1048576 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:10485760 MaxBfCacheSize:0 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:10000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:false KeepBlocksInCache:false managedTxns:false maxBatchCount:0 maxBatchSize:0}
-I0715 19:26:00.022644   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:00.069689   32421 server_state.go:83] Setting Badger Compression Level: 3
-I0715 19:26:00.069731   32421 server_state.go:92] Setting Badger table load option: mmap
-I0715 19:26:00.069896   32421 server_state.go:104] Setting Badger value log load option: mmap
-I0715 19:26:00.069933   32421 server_state.go:173] Opening postings BadgerDB with options: {Dir:p0 ValueDir:p0 SyncWrites:false TableLoadingMode:2 ValueLogLoadingMode:2 NumVersionsToKeep:2147483647 ReadOnly:false Truncate:true Logger:0x5d23648 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1024 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:1073741824 MaxBfCacheSize:524288000 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:1000000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:true KeepBlocksInCache:true managedTxns:false maxBatchCount:0 maxBatchSize:0}
-I0715 19:26:00.144249   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:00.168850   32421 groups.go:107] Current Raft Id: 0x0
-I0715 19:26:00.171788   32421 worker.go:96] Worker listening at address: [::]:7080
-I0715 19:26:00.174588   32421 run.go:480] Bringing up GraphQL HTTP API at 0.0.0.0:8080/graphql
-I0715 19:26:00.174797   32421 run.go:481] Bringing up GraphQL HTTP admin API at 0.0.0.0:8080/admin
-I0715 19:26:00.175794   32421 run.go:512] gRPC server started.  Listening on port 9080
-I0715 19:26:00.176006   32421 run.go:513] HTTP server started.  Listening on port 8080
-I0715 19:26:00.270652   32421 pool.go:160] CONNECTING to localhost:5080
-I0715 19:26:04.268038   32421 groups.go:135] Connected to group zero. Assigned group: 2
-I0715 19:26:04.268059   32421 groups.go:137] Raft Id after connection to Zero: 0x2
-I0715 19:26:04.273003   32421 pool.go:160] CONNECTING to localhost:7081
-W0715 19:26:04.279740   32421 pool.go:254] Connection lost with localhost:7081. Error: rpc error: code = Unknown desc = No node has been set up yet
-I0715 19:26:04.309301   32421 draft.go:196] Node ID: 0x2 with GroupID: 2
-I0715 19:26:04.309527   32421 node.go:148] Setting raft.Config to: &{ID:2 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc0007403c0 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x5d23648 DisableProposalForwarding:false}
-I0715 19:26:04.309810   32421 node.go:326] Group 2 found 0 entries
-I0715 19:26:04.309846   32421 draft.go:1591] New Node for group: 2
-I0715 19:26:04.309931   32421 log.go:34] 2 became follower at term 0
-I0715 19:26:04.310001   32421 log.go:34] newRaft 2 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
-I0715 19:26:04.310015   32421 log.go:34] 2 became follower at term 1
-I0715 19:26:04.310380   32421 draft.go:146] Operation started with id: opRollup
-I0715 19:26:04.310483   32421 groups.go:155] Server is ready
-I0715 19:26:04.310836   32421 draft.go:969] Found Raft progress: 0
-I0715 19:26:04.310886   32421 groups.go:782] Got address of a Zero leader: localhost:5080
-I0715 19:26:04.311167   32421 groups.go:796] Starting a new membership stream receive from localhost:5080.
-I0715 19:26:04.323106   32421 groups.go:813] Received first state update from Zero: counter:5 groups:<key:1 value:<members:<key:1 value:<id:1 group_id:1 addr:"localhost:7081" leader:true last_update:1594821364 > > > > groups:<key:2 value:<members:<key:2 value:<id:2 group_id:2 addr:"localhost:7080" > > > > zeros:<key:1 value:<id:1 addr:"localhost:5080" leader:true > > maxRaftId:2 
-I0715 19:26:04.332181   32421 node.go:185] Setting conf state to nodes:2 
-I0715 19:26:04.332519   32421 log.go:34] 2 is starting a new election at term 1
-I0715 19:26:04.332585   32421 log.go:34] 2 became pre-candidate at term 1
-I0715 19:26:04.332602   32421 log.go:34] 2 received MsgPreVoteResp from 2 at term 1
-I0715 19:26:04.332644   32421 log.go:34] 2 became candidate at term 2
-I0715 19:26:04.332656   32421 log.go:34] 2 received MsgVoteResp from 2 at term 2
-I0715 19:26:04.332831   32421 log.go:34] 2 became leader at term 2
-I0715 19:26:04.332918   32421 log.go:34] raft.node: 2 elected leader 2 at term 2
-I0715 19:26:05.313697   32421 groups.go:865] Leader idx=0x2 of group=2 is connecting to Zero for txn updates
-I0715 19:26:05.313778   32421 groups.go:874] Got Zero leader: localhost:5080
-E0715 19:26:05.316356   32421 groups.go:253] Error while proposing initial schema: Schema does not contain a matching predicate for field dgraph.graphql.schema in type dgraph.graphql
-I0715 19:26:05.380303   32421 admin.go:577] No GraphQL schema in Dgraph; serving empty GraphQL API
-I0715 19:26:06.005688   32421 admin.go:354] Updating GraphQL schema from subscription.
-E0715 19:26:06.005755   32421 admin.go:384] Error processing GraphQL schema: input: No schema specified.  
-I0715 19:26:13.801252   32421 server.go:137] Received ALTER op: schema:"# Define Directives and index\n\nactor.film: [uid] @reverse .\ndirector.film: [uid] @reverse .\ngenre: [uid] @reverse .\ninitial_release_date: dateTime @index(year) .\nname: string @index(exact, term) @lang .\nstarring: [uid] .\nperformance.film: [uid] .\nperformance.character_note: string .\nperformance.character: [uid] .\nperformance.actor: [uid] .\nperformance.special_performance_type: [uid] .\ntype: [uid] .\n\n# Define Types\n\ntype Person {\n    name\n    director.film\n    actor.film\n}\n\ntype Movie {\n    name\n    initial_release_date\n    genre\n    starring\n}\n\ntype Genre {\n    name\n}\n\ntype Performance {\n    performance.film\n    performance.character\n    performance.actor\n}\n\n" 
-I0715 19:26:13.801290   32421 server.go:1127] Got Alter request from "127.0.0.1:64804"
-I0715 19:26:13.814457   32421 server.go:268] Got schema: &{Preds:[predicate:"actor.film" value_type:UID directive:REVERSE list:true  predicate:"director.film" value_type:UID directive:REVERSE list:true  predicate:"genre" value_type:UID directive:REVERSE list:true  predicate:"initial_release_date" value_type:DATETIME directive:INDEX tokenizer:"year"  predicate:"name" value_type:STRING directive:INDEX tokenizer:"exact" tokenizer:"term" lang:true  predicate:"starring" value_type:UID list:true  predicate:"performance.film" value_type:UID list:true  predicate:"performance.character_note" value_type:STRING  predicate:"performance.character" value_type:UID list:true  predicate:"performance.actor" value_type:UID list:true  predicate:"performance.special_performance_type" value_type:UID list:true  predicate:"type" value_type:UID list:true ] Types:[type_name:"Person" fields:<predicate:"name" > fields:<predicate:"director.film" > fields:<predicate:"actor.film" >  type_name:"Movie" fields:<predicate:"name" > fields:<predicate:"initial_release_date" > fields:<predicate:"genre" > fields:<predicate:"starring" >  type_name:"Genre" fields:<predicate:"name" >  type_name:"Performance" fields:<predicate:"performance.film" > fields:<predicate:"performance.character" > fields:<predicate:"performance.actor" > ]}
-I0715 19:26:13.875198   32421 groups.go:493] Serving tablet for: actor.film
-I0715 19:26:13.916648   32421 groups.go:493] Serving tablet for: director.film
-I0715 19:26:13.958545   32421 groups.go:493] Serving tablet for: genre
-I0715 19:26:14.000995   32421 groups.go:493] Serving tablet for: initial_release_date
-I0715 19:26:14.045935   32421 groups.go:493] Serving tablet for: name
-I0715 19:26:14.088279   32421 groups.go:493] Serving tablet for: starring
-I0715 19:26:14.146353   32421 groups.go:493] Serving tablet for: performance.film
-I0715 19:26:14.189623   32421 groups.go:493] Serving tablet for: performance.character_note
-I0715 19:26:14.224277   32421 groups.go:493] Serving tablet for: performance.character
-I0715 19:26:14.271718   32421 groups.go:493] Serving tablet for: performance.actor
-I0715 19:26:14.323413   32421 groups.go:493] Serving tablet for: performance.special_performance_type
-I0715 19:26:14.374759   32421 groups.go:493] Serving tablet for: type
-I0715 19:26:14.449901   32421 draft.go:146] Operation started with id: opIndexing
-I0715 19:26:14.450078   32421 index.go:1084] Deleting reverse index for actor.film
-I0715 19:26:14.450101   32421 log.go:34] DropPrefix Called
-I0715 19:26:14.450127   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:14.450446   32421 draft.go:112] Operation completed with id: opRollup
-I0715 19:26:14.508041   32421 log.go:34] Got compaction priority: {level:0 score:1.74 dropPrefixes:[[0 0 10 97 99 116 111 114 46 102 105 108 109 4] [33 98 97 100 103 101 114 33 109 111 118 101 0 0 10 97 99 116 111 114 46 102 105 108 109 4]]}
-I0715 19:26:14.508092   32421 log.go:34] Running for level: 0
-I0715 19:26:14.554204   32421 log.go:34] LOG Compact 0->1, del 1 tables, add 1 tables, took 46.071953ms
-I0715 19:26:14.554277   32421 log.go:34] Compaction for level: 0 DONE
-I0715 19:26:14.554372   32421 log.go:34] DropPrefix done
-I0715 19:26:14.554406   32421 log.go:34] Resuming writes
-I0715 19:26:14.554423   32421 log.go:34] DropPrefix Called
-I0715 19:26:14.554515   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:14.557271   32421 log.go:34] Dropping prefix at level 1 (1 tableGroups)
-I0715 19:26:14.613075   32421 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 55.754675ms
-I0715 19:26:14.613111   32421 log.go:34] DropPrefix done
-I0715 19:26:14.613124   32421 log.go:34] Resuming writes
-I0715 19:26:14.686522   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:14.729014   32421 log.go:34] Rebuilding index for predicate actor.film (1/2): Sent 0 keys
-I0715 19:26:14.742027   32421 log.go:34] Rebuilding index for predicate actor.film (2/2): Sent 0 keys
-I0715 19:26:14.755224   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:14.796844   32421 index.go:1084] Deleting reverse index for director.film
-I0715 19:26:14.796876   32421 log.go:34] DropPrefix Called
-I0715 19:26:14.796908   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:14.881362   32421 log.go:34] DropPrefix done
-I0715 19:26:14.881402   32421 log.go:34] Resuming writes
-I0715 19:26:14.881416   32421 log.go:34] DropPrefix Called
-I0715 19:26:14.881437   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:15.111436   32421 log.go:34] Dropping prefix at level 1 (1 tableGroups)
-I0715 19:26:15.145581   32421 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 34.059898ms
-I0715 19:26:15.145610   32421 log.go:34] DropPrefix done
-I0715 19:26:15.145623   32421 log.go:34] Resuming writes
-I0715 19:26:15.198095   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:15.216908   32421 log.go:34] Rebuilding index for predicate director.film (1/2): Sent 0 keys
-I0715 19:26:15.229001   32421 log.go:34] Rebuilding index for predicate director.film (2/2): Sent 0 keys
-I0715 19:26:15.229233   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:15.246758   32421 index.go:1084] Deleting reverse index for genre
-I0715 19:26:15.246781   32421 log.go:34] DropPrefix Called
-I0715 19:26:15.246798   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:15.248677   32421 log.go:34] DropPrefix done
-I0715 19:26:15.248739   32421 log.go:34] Resuming writes
-I0715 19:26:15.248769   32421 log.go:34] DropPrefix Called
-I0715 19:26:15.248787   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:15.252278   32421 log.go:34] Dropping prefix at level 1 (1 tableGroups)
-I0715 19:26:15.301351   32421 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 49.024971ms
-I0715 19:26:15.301734   32421 log.go:34] DropPrefix done
-I0715 19:26:15.301863   32421 log.go:34] Resuming writes
-I0715 19:26:15.349133   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:15.376914   32421 log.go:34] Rebuilding index for predicate genre (1/2): Sent 0 keys
-I0715 19:26:15.388489   32421 log.go:34] Rebuilding index for predicate genre (2/2): Sent 0 keys
-I0715 19:26:15.401402   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:15.431281   32421 index.go:881] Deleting index for attr initial_release_date and tokenizers []
-I0715 19:26:15.431300   32421 index.go:895] Deleting index for attr initial_release_date and tokenizers [year]
-I0715 19:26:15.431315   32421 log.go:34] DropPrefix Called
-I0715 19:26:15.431333   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:15.437460   32421 log.go:34] DropPrefix done
-I0715 19:26:15.437500   32421 log.go:34] Resuming writes
-I0715 19:26:15.437518   32421 log.go:34] DropPrefix Called
-I0715 19:26:15.437564   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:15.441094   32421 log.go:34] Dropping prefix at level 1 (1 tableGroups)
-I0715 19:26:15.482782   32421 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 41.629959ms
-I0715 19:26:15.482830   32421 log.go:34] DropPrefix done
-I0715 19:26:15.482848   32421 log.go:34] Resuming writes
-I0715 19:26:15.482965   32421 index.go:881] Deleting index for attr name and tokenizers []
-I0715 19:26:15.482979   32421 index.go:895] Deleting index for attr name and tokenizers [exact term]
-I0715 19:26:15.482995   32421 log.go:34] DropPrefix Called
-I0715 19:26:15.483020   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:15.487682   32421 log.go:34] DropPrefix done
-I0715 19:26:15.487717   32421 log.go:34] Resuming writes
-I0715 19:26:15.487728   32421 log.go:34] DropPrefix Called
-I0715 19:26:15.487753   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:15.490989   32421 log.go:34] Dropping prefix at level 1 (1 tableGroups)
-I0715 19:26:15.532259   32421 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 41.169621ms
-I0715 19:26:15.532290   32421 log.go:34] DropPrefix done
-I0715 19:26:15.532424   32421 log.go:34] Resuming writes
-I0715 19:26:15.532614   32421 log.go:34] DropPrefix Called
-I0715 19:26:15.532648   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:15.546666   32421 log.go:34] DropPrefix done
-I0715 19:26:15.546689   32421 log.go:34] Resuming writes
-I0715 19:26:15.546708   32421 log.go:34] DropPrefix Called
-I0715 19:26:15.546727   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:15.674222   32421 log.go:34] Dropping prefix at level 1 (1 tableGroups)
-I0715 19:26:15.701395   32421 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 27.122656ms
-I0715 19:26:15.701432   32421 log.go:34] DropPrefix done
-I0715 19:26:15.701451   32421 log.go:34] Resuming writes
-I0715 19:26:15.701473   32421 log.go:34] DropPrefix Called
-I0715 19:26:15.701501   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:15.829395   32421 log.go:34] DropPrefix done
-I0715 19:26:15.829563   32421 log.go:34] Resuming writes
-I0715 19:26:15.829646   32421 log.go:34] DropPrefix Called
-I0715 19:26:15.829807   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:26:16.055431   32421 log.go:34] Dropping prefix at level 1 (1 tableGroups)
-I0715 19:26:16.093330   32421 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 37.773026ms
-I0715 19:26:16.093376   32421 log.go:34] DropPrefix done
-I0715 19:26:16.093508   32421 log.go:34] Resuming writes
-I0715 19:26:16.369630   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:16.391998   32421 log.go:34] Rebuilding index for predicate starring (1/2): Sent 0 keys
-I0715 19:26:16.402490   32421 log.go:34] Rebuilding index for predicate starring (2/2): Sent 0 keys
-I0715 19:26:16.415140   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:16.655910   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:16.686313   32421 log.go:34] Rebuilding index for predicate performance.film (1/2): Sent 0 keys
-I0715 19:26:16.697860   32421 log.go:34] Rebuilding index for predicate performance.film (2/2): Sent 0 keys
-I0715 19:26:16.712518   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:16.936745   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:16.967157   32421 log.go:34] Rebuilding index for predicate performance.character (1/2): Sent 0 keys
-I0715 19:26:16.978319   32421 log.go:34] Rebuilding index for predicate performance.character (2/2): Sent 0 keys
-I0715 19:26:16.993446   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:17.209654   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:17.234673   32421 log.go:34] Rebuilding index for predicate performance.actor (1/2): Sent 0 keys
-I0715 19:26:17.248432   32421 log.go:34] Rebuilding index for predicate performance.actor (2/2): Sent 0 keys
-I0715 19:26:17.262704   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:17.509697   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:17.535563   32421 log.go:34] Rebuilding index for predicate performance.special_performance_type (1/2): Sent 0 keys
-I0715 19:26:17.548652   32421 log.go:34] Rebuilding index for predicate performance.special_performance_type (2/2): Sent 0 keys
-I0715 19:26:17.560668   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:17.624167   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:17.658368   32421 log.go:34] Rebuilding index for predicate type (1/2): Sent 0 keys
-I0715 19:26:17.669008   32421 log.go:34] Rebuilding index for predicate type (2/2): Sent 0 keys
-I0715 19:26:17.680656   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:17.716239   32421 index.go:1095] Rebuilding reverse index for actor.film
-I0715 19:26:17.716278   32421 index.go:1095] Rebuilding reverse index for director.film
-I0715 19:26:17.716366   32421 index.go:926] Rebuilding index for attr initial_release_date and tokenizers [year]
-I0715 19:26:17.716419   32421 index.go:1095] Rebuilding reverse index for genre
-I0715 19:26:17.716456   32421 index.go:926] Rebuilding index for attr name and tokenizers [exact term]
-I0715 19:26:17.810974   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:17.824463   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:17.836640   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:17.845126   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:17.870219   32421 log.go:34] All 0 tables opened in 0s
-I0715 19:26:17.876308   32421 log.go:34] Rebuilding index for predicate initial_release_date (1/2): Sent 0 keys
-I0715 19:26:17.876341   32421 log.go:34] Rebuilding index for predicate name (1/2): Sent 0 keys
-I0715 19:26:17.876646   32421 log.go:34] Rebuilding index for predicate actor.film (1/2): Sent 0 keys
-I0715 19:26:17.897687   32421 log.go:34] Rebuilding index for predicate initial_release_date (2/2): Sent 0 keys
-I0715 19:26:17.897717   32421 log.go:34] Rebuilding index for predicate actor.film (2/2): Sent 0 keys
-I0715 19:26:17.897865   32421 log.go:34] Rebuilding index for predicate name (2/2): Sent 0 keys
-I0715 19:26:17.908056   32421 log.go:34] Rebuilding index for predicate director.film (1/2): Sent 0 keys
-I0715 19:26:17.918317   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:17.918326   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:17.929408   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:17.929461   32421 log.go:34] Rebuilding index for predicate director.film (2/2): Sent 0 keys
-I0715 19:26:17.940791   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:17.964541   32421 log.go:34] Rebuilding index for predicate genre (1/2): Sent 0 keys
-I0715 19:26:17.985199   32421 log.go:34] Rebuilding index for predicate genre (2/2): Sent 0 keys
-I0715 19:26:17.996925   32421 mutation.go:190] Done schema update predicate:"name" value_type:STRING directive:INDEX tokenizer:"exact" tokenizer:"term" lang:true 
-I0715 19:26:17.997145   32421 mutation.go:190] Done schema update predicate:"initial_release_date" value_type:DATETIME directive:INDEX tokenizer:"year" 
-I0715 19:26:17.997156   32421 mutation.go:190] Done schema update predicate:"actor.film" value_type:UID directive:REVERSE list:true 
-I0715 19:26:17.997302   32421 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
-I0715 19:26:17.997452   32421 mutation.go:190] Done schema update predicate:"director.film" value_type:UID directive:REVERSE list:true 
-I0715 19:26:18.011096   32421 mutation.go:190] Done schema update predicate:"genre" value_type:UID directive:REVERSE list:true 
-I0715 19:26:18.011155   32421 draft.go:112] Operation completed with id: opIndexing
-I0715 19:26:19.717021   32421 server.go:287] ALTER op: schema:"# Define Directives and index\n\nactor.film: [uid] @reverse .\ndirector.film: [uid] @reverse .\ngenre: [uid] @reverse .\ninitial_release_date: dateTime @index(year) .\nname: string @index(exact, term) @lang .\nstarring: [uid] .\nperformance.film: [uid] .\nperformance.character_note: string .\nperformance.character: [uid] .\nperformance.actor: [uid] .\nperformance.special_performance_type: [uid] .\ntype: [uid] .\n\n# Define Types\n\ntype Person {\n    name\n    director.film\n    actor.film\n}\n\ntype Movie {\n    name\n    initial_release_date\n    genre\n    starring\n}\n\ntype Genre {\n    name\n}\n\ntype Performance {\n    performance.film\n    performance.character\n    performance.actor\n}\n\n"  done
-I0715 19:26:28.011715   32421 draft.go:146] Operation started with id: opRollup
-W0715 19:26:40.076622   32421 draft.go:1190] Raft.Ready took too long to process: Timer Total: 217ms. Breakdown: [{disk 185ms} {sync 31ms} {proposals 0s} {advance 0s}] Num entries: 1. MustSync: true
-I0715 19:31:04.336369   32421 predicate_move.go:195] Was instructed to delete tablet: dgraph.graphql
-I0715 19:31:04.371287   32421 index.go:1207] Dropping predicate: [dgraph.graphql]
-I0715 19:31:04.371342   32421 log.go:34] DropPrefix Called
-I0715 19:31:04.371403   32421 log.go:34] Writes flushed. Stopping compactions now...
-I0715 19:31:05.820832   32421 log.go:34] Got compaction priority: {level:0 score:1.74 dropPrefixes:[[0 0 14 100 103 114 97 112 104 46 103 114 97 112 104 113 108] [33 98 97 100 103 101 114 33 109 111 118 101 0 0 14 100 103 114 97 112 104 46 103 114 97 112 104 113 108]]}
-I0715 19:31:05.820983   32421 log.go:34] Running for level: 0
-I0715 19:31:11.010462   32421 log.go:34] LOG Compact 0->1, del 3 tables, add 1 tables, took 5.189001702s
-I0715 19:31:11.010631   32421 log.go:34] Compaction for level: 0 DONE
-I0715 19:31:11.010712   32421 log.go:34] DropPrefix done
-I0715 19:31:11.010754   32421 log.go:34] Resuming writes
-I0715 19:31:11.010892   32421 schema.go:103] Deleting schema for predicate: [dgraph.graphql]
-I0715 19:31:23.229493   32421 run.go:652] Caught Ctrl-C. Terminating now (this may take a few seconds)...
-E0715 19:31:23.229680   32421 run.go:391] GRPC listener canceled: accept tcp [::]:9080: use of closed network connection
-E0715 19:31:23.229792   32421 run.go:410] Stopped taking more http(s) requests. Err: accept tcp [::]:8080: use of closed network connection
-I0715 19:31:23.229831   32421 run.go:675] GRPC and HTTP stopped.
-I0715 19:31:23.229839   32421 worker.go:112] Stopping group...
-I0715 19:31:23.229902   32421 worker.go:116] Updating RAFT state before shutting down...
-E0715 19:31:23.229890   32421 groups.go:804] Unable to sync memberships. Error: rpc error: code = Canceled desc = context canceled. State: <nil>
-E0715 19:31:23.230075   32421 groups.go:905] Error in oracle delta stream. Error: rpc error: code = Canceled desc = context canceled
-I0715 19:31:23.230313   32421 worker.go:121] Stopping node...
-I0715 19:31:23.230911   32421 draft.go:911] Stopping node.Run
-I0715 19:31:23.230961   32421 draft.go:980] Raft node done.
-I0715 19:31:23.231018   32421 run.go:652] Caught Ctrl-C. Terminating now (this may take a few seconds)...
-I0715 19:31:23.244146   32421 draft.go:173] Stopped all ongoing registered tasks.
-I0715 19:31:23.244366   32421 worker.go:124] Stopping raftwal store...
-I0715 19:31:23.244396   32421 worker.go:127] Stopping worker server...
-I0715 19:31:23.244691   32421 draft.go:112] Operation completed with id: opRollup
-E0715 19:31:23.262042   32421 groups.go:1105] Error from worker subscribe stream: rpc error: code = Unavailable desc = transport is closing
-I0715 19:31:23.262104   32421 run.go:679] Disposing server state.
-I0715 19:31:23.267933   32421 run.go:652] Caught Ctrl-C. Terminating now (this may take a few seconds)...
-I0715 19:31:23.267952   32421 run.go:654] Signaled thrice. Aborting!
+I0720 20:18:32.991702   20980 run.go:651] x.Config: {PortOffset:0 QueryEdgeLimit:1000000 NormalizeNodeLimit:10000 PollInterval:1s GraphqlExtension:true}
+I0720 20:18:32.991815   20980 run.go:652] x.WorkerConfig: {ExportPath:export NumPendingProposals:256 Tracing:0.01 MyAddr: ZeroAddr:[localhost:5080] RaftId:0 WhiteListedIPRanges:[] MaxRetries:-1 StrictMutations:false AclEnabled:false AbortOlderThan:5m0s SnapshotAfter:10000 ProposedGroupId:0 StartTime:2020-07-20 20:18:31.991834 +0530 IST m=+0.024305371 LudicrousMode:false EncryptionKey:**** LogRequest:0}
+I0720 20:18:32.991966   20980 run.go:653] worker.Config: {PostingDir:p0 BadgerTables:mmap BadgerVlog:mmap BadgerCompressionLevel:3 WALDir:w0 MutationsMode:0 AuthToken: AllottedMemory:2048 HmacSecret:**** AccessJwtTtl:0s RefreshJwtTtl:0s AclRefreshInterval:0s}
+I0720 20:18:33.007446   20980 server_state.go:78] Setting Badger Compression Level: 3
+I0720 20:18:33.007501   20980 server_state.go:87] Setting Badger table load option: mmap
+I0720 20:18:33.007775   20980 server_state.go:99] Setting Badger value log load option: mmap
+I0720 20:18:33.007977   20980 server_state.go:144] Opening write-ahead log BadgerDB with options: {Dir:w0 ValueDir:w0 SyncWrites:false TableLoadingMode:1 ValueLogLoadingMode:2 NumVersionsToKeep:1 ReadOnly:false Truncate:true Logger:0x60283d0 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1048576 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:10485760 MaxBfCacheSize:0 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:10000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:false KeepBlocksInCache:false managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0720 20:18:33.143801   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:33.177512   20980 server_state.go:78] Setting Badger Compression Level: 3
+I0720 20:18:33.177572   20980 server_state.go:87] Setting Badger table load option: mmap
+I0720 20:18:33.177587   20980 server_state.go:99] Setting Badger value log load option: mmap
+I0720 20:18:33.177600   20980 server_state.go:168] Opening postings BadgerDB with options: {Dir:p0 ValueDir:p0 SyncWrites:false TableLoadingMode:2 ValueLogLoadingMode:2 NumVersionsToKeep:2147483647 ReadOnly:false Truncate:true Logger:0x60283d0 Compression:2 InMemory:false MaxTableSize:67108864 LevelSizeMultiplier:10 MaxLevels:7 ValueThreshold:1024 NumMemtables:5 BlockSize:4096 BloomFalsePositive:0.01 KeepL0InMemory:false MaxCacheSize:1073741824 MaxBfCacheSize:524288000 LoadBloomsOnOpen:false NumLevelZeroTables:5 NumLevelZeroTablesStall:10 LevelOneSize:268435456 ValueLogFileSize:1073741823 ValueLogMaxEntries:1000000 NumCompactors:2 CompactL0OnClose:true LogRotatesToFlush:2 ZSTDCompressionLevel:3 VerifyValueChecksum:false EncryptionKey:[] EncryptionKeyRotationDuration:240h0m0s BypassLockGuard:false ChecksumVerificationMode:0 DetectConflicts:false KeepBlockIndicesInCache:true KeepBlocksInCache:true managedTxns:false maxBatchCount:0 maxBatchSize:0}
+I0720 20:18:33.245661   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:33.268865   20980 groups.go:107] Current Raft Id: 0x0
+I0720 20:18:33.271938   20980 worker.go:97] Worker listening at address: [::]:7080
+I0720 20:18:33.273412   20980 run.go:521] Bringing up GraphQL HTTP API at 0.0.0.0:8080/graphql
+I0720 20:18:33.273431   20980 run.go:522] Bringing up GraphQL HTTP admin API at 0.0.0.0:8080/admin
+I0720 20:18:33.273555   20980 run.go:554] gRPC server started.  Listening on port 9080
+I0720 20:18:33.273610   20980 run.go:555] HTTP server started.  Listening on port 8080
+I0720 20:18:33.372890   20980 pool.go:160] CONNECTING to localhost:5080
+I0720 20:18:37.403520   20980 groups.go:135] Connected to group zero. Assigned group: 2
+I0720 20:18:37.403540   20980 groups.go:137] Raft Id after connection to Zero: 0x2
+I0720 20:18:37.403692   20980 pool.go:160] CONNECTING to localhost:7081
+I0720 20:18:37.404180   20980 draft.go:210] Node ID: 0x2 with GroupID: 2
+I0720 20:18:37.404294   20980 node.go:148] Setting raft.Config to: &{ID:2 peers:[] learners:[] ElectionTick:20 HeartbeatTick:1 Storage:0xc02f9e0100 Applied:0 MaxSizePerMsg:262144 MaxCommittedSizePerReady:67108864 MaxUncommittedEntriesSize:0 MaxInflightMsgs:256 CheckQuorum:false PreVote:true ReadOnlyOption:0 Logger:0x60283d0 DisableProposalForwarding:false}
+I0720 20:18:37.404644   20980 node.go:326] Group 2 found 0 entries
+I0720 20:18:37.404665   20980 draft.go:1632] New Node for group: 2
+I0720 20:18:37.404722   20980 log.go:34] 2 became follower at term 0
+I0720 20:18:37.404774   20980 log.go:34] newRaft 2 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+I0720 20:18:37.404786   20980 log.go:34] 2 became follower at term 1
+I0720 20:18:37.404860   20980 draft.go:160] Operation started with id: opRollup
+I0720 20:18:37.404913   20980 groups.go:155] Server is ready
+I0720 20:18:37.405143   20980 draft.go:1009] Found Raft progress: 0
+I0720 20:18:37.405198   20980 groups.go:790] Got address of a Zero leader: localhost:5080
+I0720 20:18:37.405352   20980 groups.go:804] Starting a new membership stream receive from localhost:5080.
+I0720 20:18:37.406231   20980 groups.go:821] Received first state update from Zero: counter:4 groups:<key:1 value:<members:<key:1 value:<id:1 group_id:1 addr:"localhost:7081" > > > > groups:<key:2 value:<members:<key:2 value:<id:2 group_id:2 addr:"localhost:7080" > > > > zeros:<key:1 value:<id:1 addr:"localhost:5080" leader:true > > maxRaftId:2 
+W0720 20:18:37.407424   20980 pool.go:254] Connection lost with localhost:7081. Error: rpc error: code = Unknown desc = No node has been set up yet
+I0720 20:18:37.417594   20980 node.go:185] Setting conf state to nodes:2 
+I0720 20:18:37.419065   20980 log.go:34] 2 is starting a new election at term 1
+I0720 20:18:37.419080   20980 log.go:34] 2 became pre-candidate at term 1
+I0720 20:18:37.419087   20980 log.go:34] 2 received MsgPreVoteResp from 2 at term 1
+I0720 20:18:37.419109   20980 log.go:34] 2 became candidate at term 2
+I0720 20:18:37.419114   20980 log.go:34] 2 received MsgVoteResp from 2 at term 2
+I0720 20:18:37.419131   20980 log.go:34] 2 became leader at term 2
+I0720 20:18:37.419144   20980 log.go:34] raft.node: 2 elected leader 2 at term 2
+I0720 20:18:38.290989   20980 admin.go:605] No GraphQL schema in Dgraph; serving empty GraphQL API
+I0720 20:18:38.407035   20980 groups.go:873] Leader idx=0x2 of group=2 is connecting to Zero for txn updates
+I0720 20:18:38.407075   20980 groups.go:882] Got Zero leader: localhost:5080
+I0720 20:18:46.823002   20980 server.go:297] Received ALTER op: schema:"# Define Directives and index\n\nactor.film: [uid] @reverse .\ndirector.film: [uid] @reverse .\ngenre: [uid] @reverse .\ninitial_release_date: dateTime @index(year) .\nname: string @index(exact, term) @lang .\nstarring: [uid] .\nperformance.film: [uid] .\nperformance.character_note: string .\nperformance.character: [uid] .\nperformance.actor: [uid] .\nperformance.special_performance_type: [uid] .\ntype: [uid] .\n\n# Define Types\n\ntype Person {\n    name\n    director.film\n    actor.film\n}\n\ntype Movie {\n    name\n    initial_release_date\n    genre\n    starring\n}\n\ntype Genre {\n    name\n}\n\ntype Performance {\n    performance.film\n    performance.character\n    performance.actor\n}\n\n" 
+I0720 20:18:46.823042   20980 server.go:1269] Got Alter request from: "127.0.0.1:61960"
+I0720 20:18:46.838055   20980 server.go:410] Got schema: &{Preds:[predicate:"actor.film" value_type:UID directive:REVERSE list:true  predicate:"director.film" value_type:UID directive:REVERSE list:true  predicate:"genre" value_type:UID directive:REVERSE list:true  predicate:"initial_release_date" value_type:DATETIME directive:INDEX tokenizer:"year"  predicate:"name" value_type:STRING directive:INDEX tokenizer:"exact" tokenizer:"term" lang:true  predicate:"starring" value_type:UID list:true  predicate:"performance.film" value_type:UID list:true  predicate:"performance.character_note" value_type:STRING  predicate:"performance.character" value_type:UID list:true  predicate:"performance.actor" value_type:UID list:true  predicate:"performance.special_performance_type" value_type:UID list:true  predicate:"type" value_type:UID list:true ] Types:[type_name:"Person" fields:<predicate:"name" > fields:<predicate:"director.film" > fields:<predicate:"actor.film" >  type_name:"Movie" fields:<predicate:"name" > fields:<predicate:"initial_release_date" > fields:<predicate:"genre" > fields:<predicate:"starring" >  type_name:"Genre" fields:<predicate:"name" >  type_name:"Performance" fields:<predicate:"performance.film" > fields:<predicate:"performance.character" > fields:<predicate:"performance.actor" > ]}
+I0720 20:18:46.878368   20980 groups.go:481] Serving tablet for: actor.film
+I0720 20:18:46.923443   20980 groups.go:481] Serving tablet for: director.film
+I0720 20:18:46.967448   20980 groups.go:481] Serving tablet for: genre
+I0720 20:18:47.002515   20980 groups.go:481] Serving tablet for: initial_release_date
+I0720 20:18:47.044039   20980 groups.go:481] Serving tablet for: name
+I0720 20:18:47.080109   20980 groups.go:481] Serving tablet for: starring
+I0720 20:18:47.114035   20980 groups.go:481] Serving tablet for: performance.film
+I0720 20:18:47.159671   20980 groups.go:481] Serving tablet for: performance.character_note
+I0720 20:18:47.195584   20980 groups.go:481] Serving tablet for: performance.character
+I0720 20:18:47.230763   20980 groups.go:481] Serving tablet for: performance.actor
+I0720 20:18:47.266354   20980 groups.go:481] Serving tablet for: performance.special_performance_type
+I0720 20:18:47.302608   20980 groups.go:481] Serving tablet for: type
+I0720 20:18:47.358902   20980 draft.go:160] Operation started with id: opIndexing
+I0720 20:18:47.359133   20980 index.go:1115] Deleting reverse index for actor.film
+I0720 20:18:47.359158   20980 log.go:34] DropPrefix Called
+I0720 20:18:47.359181   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:47.359646   20980 draft.go:115] Operation completed with id: opRollup
+I0720 20:18:47.400189   20980 log.go:34] Got compaction priority: {level:0 score:1.74 dropPrefixes:[[0 0 10 97 99 116 111 114 46 102 105 108 109 4] [33 98 97 100 103 101 114 33 109 111 118 101 0 0 10 97 99 116 111 114 46 102 105 108 109 4]]}
+I0720 20:18:47.400245   20980 log.go:34] Running for level: 0
+I0720 20:18:47.447680   20980 log.go:34] LOG Compact 0->1, del 1 tables, add 1 tables, took 47.397072ms
+I0720 20:18:47.447746   20980 log.go:34] Compaction for level: 0 DONE
+I0720 20:18:47.447840   20980 log.go:34] DropPrefix done
+I0720 20:18:47.447864   20980 log.go:34] Resuming writes
+I0720 20:18:47.447906   20980 log.go:34] DropPrefix Called
+I0720 20:18:47.447940   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:47.453981   20980 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0720 20:18:47.502858   20980 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 48.269348ms
+I0720 20:18:47.502891   20980 log.go:34] DropPrefix done
+I0720 20:18:47.502908   20980 log.go:34] Resuming writes
+I0720 20:18:47.657287   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:47.692310   20980 log.go:34] Rebuilding index for predicate actor.film (1/2): Sent 0 keys
+I0720 20:18:47.692758   20980 log.go:34] Rebuilding index for predicate actor.film (2/2): Sent 0 keys
+I0720 20:18:47.701488   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:47.736703   20980 index.go:1115] Deleting reverse index for director.film
+I0720 20:18:47.736725   20980 log.go:34] DropPrefix Called
+I0720 20:18:47.736742   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:47.738609   20980 log.go:34] DropPrefix done
+I0720 20:18:47.738646   20980 log.go:34] Resuming writes
+I0720 20:18:47.738659   20980 log.go:34] DropPrefix Called
+I0720 20:18:47.738676   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:47.740206   20980 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0720 20:18:47.766782   20980 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 26.492455ms
+I0720 20:18:47.766847   20980 log.go:34] DropPrefix done
+I0720 20:18:47.766873   20980 log.go:34] Resuming writes
+I0720 20:18:47.809729   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:47.822447   20980 log.go:34] Rebuilding index for predicate director.film (1/2): Sent 0 keys
+I0720 20:18:47.822679   20980 log.go:34] Rebuilding index for predicate director.film (2/2): Sent 0 keys
+I0720 20:18:47.822955   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:47.841430   20980 index.go:1115] Deleting reverse index for genre
+I0720 20:18:47.841460   20980 log.go:34] DropPrefix Called
+I0720 20:18:47.841488   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:47.844721   20980 log.go:34] DropPrefix done
+I0720 20:18:47.844768   20980 log.go:34] Resuming writes
+I0720 20:18:47.844803   20980 log.go:34] DropPrefix Called
+I0720 20:18:47.844870   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:47.849055   20980 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0720 20:18:47.876663   20980 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 27.531805ms
+I0720 20:18:47.876714   20980 log.go:34] DropPrefix done
+I0720 20:18:47.876734   20980 log.go:34] Resuming writes
+I0720 20:18:47.922948   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:47.938175   20980 log.go:34] Rebuilding index for predicate genre (1/2): Sent 0 keys
+I0720 20:18:47.938557   20980 log.go:34] Rebuilding index for predicate genre (2/2): Sent 0 keys
+I0720 20:18:47.938940   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:47.956020   20980 index.go:912] Deleting index for attr initial_release_date and tokenizers []
+I0720 20:18:47.956044   20980 index.go:926] Deleting index for attr initial_release_date and tokenizers [year]
+I0720 20:18:47.956058   20980 log.go:34] DropPrefix Called
+I0720 20:18:47.956081   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:47.958202   20980 log.go:34] DropPrefix done
+I0720 20:18:47.958261   20980 log.go:34] Resuming writes
+I0720 20:18:47.958280   20980 log.go:34] DropPrefix Called
+I0720 20:18:47.958301   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:47.960794   20980 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0720 20:18:47.990561   20980 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 28.201048ms
+I0720 20:18:47.990603   20980 log.go:34] DropPrefix done
+I0720 20:18:47.990621   20980 log.go:34] Resuming writes
+I0720 20:18:47.990690   20980 index.go:912] Deleting index for attr name and tokenizers []
+I0720 20:18:47.990717   20980 index.go:926] Deleting index for attr name and tokenizers [exact term]
+I0720 20:18:47.990734   20980 log.go:34] DropPrefix Called
+I0720 20:18:47.990759   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:48.001806   20980 log.go:34] DropPrefix done
+I0720 20:18:48.001852   20980 log.go:34] Resuming writes
+I0720 20:18:48.001865   20980 log.go:34] DropPrefix Called
+I0720 20:18:48.001884   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:48.057926   20980 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0720 20:18:48.084949   20980 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 26.970004ms
+I0720 20:18:48.085044   20980 log.go:34] DropPrefix done
+I0720 20:18:48.085100   20980 log.go:34] Resuming writes
+I0720 20:18:48.085243   20980 log.go:34] DropPrefix Called
+I0720 20:18:48.085269   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:48.143334   20980 log.go:34] DropPrefix done
+I0720 20:18:48.143433   20980 log.go:34] Resuming writes
+I0720 20:18:48.143476   20980 log.go:34] DropPrefix Called
+I0720 20:18:48.143500   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:48.209412   20980 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0720 20:18:48.238570   20980 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 29.043887ms
+I0720 20:18:48.238611   20980 log.go:34] DropPrefix done
+I0720 20:18:48.238626   20980 log.go:34] Resuming writes
+I0720 20:18:48.238647   20980 log.go:34] DropPrefix Called
+I0720 20:18:48.238672   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:48.307670   20980 log.go:34] DropPrefix done
+I0720 20:18:48.307714   20980 log.go:34] Resuming writes
+I0720 20:18:48.307727   20980 log.go:34] DropPrefix Called
+I0720 20:18:48.307747   20980 log.go:34] Writes flushed. Stopping compactions now...
+I0720 20:18:48.383954   20980 log.go:34] Dropping prefix at level 1 (1 tableGroups)
+I0720 20:18:48.411654   20980 log.go:34] LOG Compact 1->1, del 1 tables, add 1 tables, took 27.652533ms
+I0720 20:18:48.411721   20980 log.go:34] DropPrefix done
+I0720 20:18:48.411737   20980 log.go:34] Resuming writes
+I0720 20:18:48.517542   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:48.530432   20980 log.go:34] Rebuilding index for predicate starring (1/2): Sent 0 keys
+I0720 20:18:48.530804   20980 log.go:34] Rebuilding index for predicate starring (2/2): Sent 0 keys
+I0720 20:18:48.531179   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:48.674071   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:48.695799   20980 log.go:34] Rebuilding index for predicate performance.film (1/2): Sent 0 keys
+I0720 20:18:48.695970   20980 log.go:34] Rebuilding index for predicate performance.film (2/2): Sent 0 keys
+I0720 20:18:48.696297   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:48.861433   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:48.882733   20980 log.go:34] Rebuilding index for predicate performance.character (1/2): Sent 0 keys
+I0720 20:18:48.882814   20980 log.go:34] Rebuilding index for predicate performance.character (2/2): Sent 0 keys
+I0720 20:18:48.885070   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:48.959739   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:48.972994   20980 log.go:34] Rebuilding index for predicate performance.actor (1/2): Sent 0 keys
+I0720 20:18:48.973323   20980 log.go:34] Rebuilding index for predicate performance.actor (2/2): Sent 0 keys
+I0720 20:18:48.973587   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:49.042974   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:49.052606   20980 log.go:34] Rebuilding index for predicate performance.special_performance_type (1/2): Sent 0 keys
+I0720 20:18:49.052801   20980 log.go:34] Rebuilding index for predicate performance.special_performance_type (2/2): Sent 0 keys
+I0720 20:18:49.053293   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:49.124125   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:49.136617   20980 log.go:34] Rebuilding index for predicate type (1/2): Sent 0 keys
+I0720 20:18:49.137277   20980 log.go:34] Rebuilding index for predicate type (2/2): Sent 0 keys
+I0720 20:18:49.137689   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:49.155105   20980 index.go:1126] Rebuilding reverse index for actor.film
+I0720 20:18:49.155146   20980 index.go:957] Rebuilding index for attr name and tokenizers [exact term]
+I0720 20:18:49.155101   20980 index.go:1126] Rebuilding reverse index for genre
+I0720 20:18:49.155282   20980 index.go:957] Rebuilding index for attr initial_release_date and tokenizers [year]
+I0720 20:18:49.156025   20980 index.go:1126] Rebuilding reverse index for director.film
+I0720 20:18:49.254305   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:49.279964   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:49.292032   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:49.303009   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:49.331262   20980 log.go:34] Rebuilding index for predicate genre (1/2): Sent 0 keys
+I0720 20:18:49.331414   20980 log.go:34] Rebuilding index for predicate genre (2/2): Sent 0 keys
+I0720 20:18:49.342968   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:49.343337   20980 log.go:34] Rebuilding index for predicate name (1/2): Sent 0 keys
+I0720 20:18:49.343701   20980 log.go:34] Rebuilding index for predicate name (2/2): Sent 0 keys
+I0720 20:18:49.354713   20980 log.go:34] Rebuilding index for predicate initial_release_date (1/2): Sent 0 keys
+I0720 20:18:49.354826   20980 log.go:34] Rebuilding index for predicate initial_release_date (2/2): Sent 0 keys
+I0720 20:18:49.355044   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:49.355589   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:49.376903   20980 log.go:34] Rebuilding index for predicate actor.film (1/2): Sent 0 keys
+I0720 20:18:49.377065   20980 log.go:34] Rebuilding index for predicate actor.film (2/2): Sent 0 keys
+I0720 20:18:49.397289   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:49.436592   20980 mutation.go:186] Done schema update predicate:"name" value_type:STRING directive:INDEX tokenizer:"exact" tokenizer:"term" lang:true 
+I0720 20:18:49.438134   20980 mutation.go:186] Done schema update predicate:"genre" value_type:UID directive:REVERSE list:true 
+I0720 20:18:49.439194   20980 mutation.go:186] Done schema update predicate:"initial_release_date" value_type:DATETIME directive:INDEX tokenizer:"year" 
+I0720 20:18:49.440672   20980 mutation.go:186] Done schema update predicate:"actor.film" value_type:UID directive:REVERSE list:true 
+I0720 20:18:49.497745   20980 log.go:34] All 0 tables opened in 0s
+I0720 20:18:49.523680   20980 log.go:34] Rebuilding index for predicate director.film (1/2): Sent 0 keys
+I0720 20:18:49.523871   20980 log.go:34] Rebuilding index for predicate director.film (2/2): Sent 0 keys
+I0720 20:18:49.524233   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:18:49.540623   20980 mutation.go:186] Done schema update predicate:"director.film" value_type:UID directive:REVERSE list:true 
+I0720 20:18:49.540683   20980 draft.go:115] Operation completed with id: opIndexing
+I0720 20:18:51.157551   20980 server.go:424] ALTER op: schema:"# Define Directives and index\n\nactor.film: [uid] @reverse .\ndirector.film: [uid] @reverse .\ngenre: [uid] @reverse .\ninitial_release_date: dateTime @index(year) .\nname: string @index(exact, term) @lang .\nstarring: [uid] .\nperformance.film: [uid] .\nperformance.character_note: string .\nperformance.character: [uid] .\nperformance.actor: [uid] .\nperformance.special_performance_type: [uid] .\ntype: [uid] .\n\n# Define Types\n\ntype Person {\n    name\n    director.film\n    actor.film\n}\n\ntype Movie {\n    name\n    initial_release_date\n    genre\n    starring\n}\n\ntype Genre {\n    name\n}\n\ntype Performance {\n    performance.film\n    performance.character\n    performance.actor\n}\n\n"  done
+I0720 20:18:59.541048   20980 draft.go:160] Operation started with id: opRollup
+I0720 20:20:20.977285   20980 export.go:36] Got export request through GraphQL admin API
+I0720 20:20:20.978561   20980 export.go:718] Got readonly ts from Zero: 2097
+I0720 20:20:20.978583   20980 export.go:722] Requesting export for groups: [2 1]
+I0720 20:20:20.978620   20980 export.go:695] Sending export request to group: 1, addr: localhost:7081
+I0720 20:20:20.978839   20980 export.go:394] Export requested at 2097.
+I0720 20:20:21.028324   20980 export.go:400] Running export for group 2 at timestamp 2097.
+I0720 20:20:21.028594   20980 export.go:421] Exporting data for group: 2 at /Users/neerajbattan/go/src/github.com/dgraph-io/foo/manual_testing/data/import_using_live_loader/export/dgraph.r2097.u0720.1450/g02.rdf.gz
+I0720 20:20:21.035470   20980 export.go:432] Exporting schema for group: 2 at /Users/neerajbattan/go/src/github.com/dgraph-io/foo/manual_testing/data/import_using_live_loader/export/dgraph.r2097.u0720.1450/g02.schema.gz
+I0720 20:20:21.035867   20980 export.go:443] Exporting GraphQL schema at /Users/neerajbattan/go/src/github.com/dgraph-io/foo/manual_testing/data/import_using_live_loader/export/dgraph.r2097.u0720.1450/g02.gql_schema.gz
+I0720 20:20:24.362111   20980 log.go:34] Export Created batch of size: 4.4 MB in 2.368091174s.
+I0720 20:20:25.451259   20980 log.go:34] Export Created batch of size: 4.3 MB in 1.071832181s.
+I0720 20:20:25.451291   20980 log.go:34] Export Time elapsed: 04s, bytes sent: 8.7 MB, speed: 2.2 MB/sec
+I0720 20:20:28.014424   20980 log.go:34] Export Created batch of size: 13 MB in 2.544714231s.
+I0720 20:20:31.271326   20980 log.go:34] Export Created batch of size: 24 MB in 3.002320206s.
+I0720 20:20:31.271363   20980 log.go:34] Export Time elapsed: 10s, bytes sent: 45 MB, speed: 4.5 MB/sec
+I0720 20:20:31.271369   20980 log.go:34] Export Sent 646673 keys
+I0720 20:20:31.327590   20980 export.go:662] Export DONE for group 2 at timestamp 2097.
+I0720 20:20:31.327735   20980 export.go:746] Export at readTs 2097 DONE
+I0720 20:22:11.694664   20980 run.go:693] Caught Ctrl-C. Terminating now (this may take a few seconds)...
+E0720 20:22:11.694925   20980 run.go:395] GRPC listener canceled: accept tcp [::]:9080: use of closed network connection
+E0720 20:22:11.695256   20980 run.go:414] Stopped taking more http(s) requests. Err: accept tcp [::]:8080: use of closed network connection
+I0720 20:22:11.724961   20980 run.go:716] GRPC and HTTP stopped.
+I0720 20:22:11.724977   20980 worker.go:113] Stopping group...
+I0720 20:22:11.698353   20980 run.go:693] Caught Ctrl-C. Terminating now (this may take a few seconds)...
+E0720 20:22:11.703686   20980 groups.go:913] Error in oracle delta stream. Error: rpc error: code = Unknown desc = Server is being shut down
+E0720 20:22:11.704125   20980 groups.go:812] Unable to sync memberships. Error: rpc error: code = Unknown desc = Server is being shut down. State: <nil>
+E0720 20:22:11.712986   20980 groups.go:1116] Error from worker subscribe stream: rpc error: code = Unavailable desc = transport is closing
+I0720 20:22:11.725085   20980 worker.go:117] Updating RAFT state before shutting down...
+I0720 20:22:11.725336   20980 worker.go:122] Stopping node...
+I0720 20:22:11.725359   20980 draft.go:951] Stopping node.Run
+I0720 20:22:11.725394   20980 draft.go:1020] Raft node done.
+E0720 20:22:11.736087   20980 groups.go:1107] Error from alpha client subscribe: rpc error: code = Unavailable desc = all SubConns are in TransientFailure, latest connection error: connection error: desc = "transport: Error while dialing dial tcp [::1]:7081: connect: connection refused"
+I0720 20:22:11.740249   20980 draft.go:187] Stopped all ongoing registered tasks.
+I0720 20:22:11.740290   20980 worker.go:125] Stopping raftwal store...
+I0720 20:22:11.740310   20980 worker.go:128] Stopping worker server...
+I0720 20:22:11.740522   20980 draft.go:115] Operation completed with id: opRollup
+I0720 20:22:11.836625   20980 run.go:720] Disposing server state.
+I0720 20:22:12.858513   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:22:12.858579   20980 log.go:34] Running for level: 0
+I0720 20:22:15.762012   20980 log.go:34] LOG Compact 0->1, del 3 tables, add 1 tables, took 2.903316887s
+I0720 20:22:15.762084   20980 log.go:34] Compaction for level: 0 DONE
+I0720 20:22:15.762183   20980 log.go:34] Force compaction on level 0 done
+I0720 20:22:16.167886   20980 log.go:34] Got compaction priority: {level:0 score:1.73 dropPrefixes:[]}
+I0720 20:22:16.168195   20980 log.go:34] Running for level: 0
+W0720 20:22:16.707664   20980 pool.go:254] Connection lost with localhost:5080. Error: rpc error: code = Unavailable desc = transport is closing
+I0720 20:22:16.747044   20980 log.go:34] LOG Compact 0->1, del 1 tables, add 1 tables, took 578.627398ms
+I0720 20:22:16.747087   20980 log.go:34] Compaction for level: 0 DONE
+I0720 20:22:16.747113   20980 log.go:34] Force compaction on level 0 done
+I0720 20:22:16.771594   20980 run.go:723] Server shutdown. Bye!
+[Sentry] 2020/07/20 20:22:16 Buffer flushed successfully.
